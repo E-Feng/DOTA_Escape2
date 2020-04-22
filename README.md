@@ -3,8 +3,8 @@ Escape The Undying Dead 2 - Dota2 Custom Game
 
 <img src="https://i.imgur.com/dXvoMdb.png"/>
 
-Steamcommunity Workshop: https://steamcommunity.com/sharedfiles/filedetails/?id=2070583974
-Youtube Preview: https://youtu.be/7ScA5KILNRs
+Steamcommunity Workshop: https://steamcommunity.com/sharedfiles/filedetails/?id=2070583974 <br></br>
+Youtube Preview: https://youtu.be/7ScA5KILNRs <br></br>
 Gyf Preview: https://gfycat.com/weesneakydogwoodtwigborer
 
 <br></br>
