@@ -3,6 +3,7 @@ Escape The Undying Dead 2 - Dota2 Custom Game
 
 Steamcommunity link: https://steamcommunity.com/sharedfiles/filedetails/?id=2070583974
 
+<iframe src='https://gfycat.com/ifr/WeeSneakyDogwoodtwigborer' frameborder='0' scrolling='no' allowfullscreen width='640' height='404'></iframe>
 <img src="https://gfycat.com/weesneakydogwoodtwigborer" width="1000" height="562" />
 Fullsize gif: https://gfycat.com/ifr/SilentMedicalGangesdolphin
 
