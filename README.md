@@ -12,6 +12,7 @@ Sequel to the first Escape the Undying Dead game. A fun co-op maze/escape game p
 
 ## Escape The Undying Dead (prequel) 
 Steamcommunity Workshop: https://steamcommunity.com/sharedfiles/filedetails/?id=630768961 \
-Github: https://github.com/E-Feng/DOTA_Escape1 \
+Github: https://github.com/E-Feng/DOTA_Escape1 
 
+## Thanks
 Barebones code for creating a base custom game provided by https://github.com/DarkoniusXNG/barebones
