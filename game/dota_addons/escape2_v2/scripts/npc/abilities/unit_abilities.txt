@@ -1,0 +1,186 @@
+"DOTAAbilities"
+{
+  //===========================================================================================
+  "static_passive"
+  {
+    // General
+    "BaseClass"                 "ability_datadriven"
+    "AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+    "AbilityUnitTargetType"     "DOTA_UNIT_TARGET_ALL"
+    "AbilityTextureName"        "omniknight_guardian_angel"
+
+    // "Modifiers"
+    "Modifiers"
+    {
+      "patrol_unit_state"
+      {
+        "IsHidden"      "1"
+        "Passive"      "1"
+        "TextureName"  "fountain_glyph"
+         
+        "States"
+        {
+          "MODIFIER_STATE_NO_HEALTH_BAR"       "MODIFIER_STATE_VALUE_ENABLED"
+          //"MODIFIER_STATE_INVULNERABLE"        "MODIFIER_STATE_VALUE_ENABLED"
+          "MODIFIER_STATE_UNSELECTABLE"        "MODIFIER_STATE_VALUE_ENABLED"
+          "MODIFIER_STATE_NO_UNIT_COLLISION"   "MODIFIER_STATE_VALUE_ENABLED"
+          "MODIFIER_STATE_ROOTED"              "MODIFIER_STATE_VALUE_ENABLED"
+        }
+      }
+    }
+  }
+
+  //===========================================================================================
+  "slark_pounce_custom"
+  {
+    "BaseClass"                 "slark_pounce"
+    "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+    "AbilityUnitDamageType"     "DAMAGE_TYPE_MAGICAL" 
+    "SpellImmunityType"       "SPELL_IMMUNITY_ENEMIES_NO"
+    "FightRecapLevel"       "1"
+
+    "AbilityCooldown"       "1"
+    "AbilityManaCost"       "0"
+
+    "AbilitySpecial"
+    {
+      "01"
+      {
+        "var_type"        "FIELD_INTEGER"
+        "pounce_distance"   "700"
+      }
+      "02"
+      {
+        "var_type"        "FIELD_FLOAT"
+        "pounce_speed"      "933.33"
+      }
+      "03"
+      {
+        "var_type"        "FIELD_FLOAT"
+        "pounce_acceleration" "7000.0"
+      }
+      "04"
+      {
+        "var_type"        "FIELD_INTEGER"
+        "pounce_radius"     "95"
+      }
+      "05"
+      {
+        "var_type"        "FIELD_INTEGER"
+        "pounce_damage"     "0"
+      }
+      "06"
+      {
+        "var_type"        "FIELD_FLOAT"
+        "leash_duration"    "3.5"
+      }
+      "07"
+      {
+        "var_type"        "FIELD_INTEGER"
+        "leash_radius"      "325"
+      }
+    }
+  }
+
+	//=================================================================================================================
+	"shredder_timber_chain_custom"
+	{
+    "BaseClass"                 "shredder_timber_chain"
+
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING | DOTA_ABILITY_BEHAVIOR_ROOT_DISABLES"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_PURE"	
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"FightRecapLevel"				"1"
+		"AbilitySound"					"Hero_Shredder.TimberChain.Cast"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastPoint"				"0"
+		"AbilityCastRange"				"1200"
+		
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"0.6"
+		
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"0"
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"chain_radius"		"90 90 90 90"
+			}
+			"02"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"range"				"1200 1200 1200 1200"
+				"LinkedSpecialBonus"	"special_bonus_unique_timbersaw_3"
+			}
+			"03"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"radius"		"225 225 225 225"
+			}
+			"04"
+			{	
+				"var_type"			"FIELD_INTEGER"
+				"speed"				"1600"
+			}
+			"05"
+			{	
+				"var_type"			"FIELD_INTEGER"
+				"damage"			"0"
+			}
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_2"
+	}
+
+  //===========================================================================================
+  "earthshaker_fissure_custom"
+  {
+    "BaseClass"                 "earthshaker_fissure"
+
+    "AbilityTextureName"      "earthshaker_fissure"
+    "AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
+		"FightRecapLevel"				"1"
+		"AbilitySound"					"Hero_EarthShaker.Fissure"
+
+    "AbilityCooldown"       "5"
+    "AbilityManaCost"       "0"
+    "AbilityCastRange"				"950"
+    "AbilityCastPoint"				"0.5"
+
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"fissure_range"				"950"
+				"LinkedSpecialBonus"		"special_bonus_unique_earthshaker_3"
+			}
+			"02"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"fissure_duration"			"5.0"
+			}
+			"03"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"fissure_radius"				"225"
+			}
+			"04"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"stun_duration"				"1.0 1.25 1.5 1.75"
+			}
+		}
+    "AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_1"
+  }	
+}

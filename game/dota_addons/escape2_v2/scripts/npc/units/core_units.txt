@@ -1,0 +1,143 @@
+"DOTAUnits"
+{
+  "npc_creep_patrol"
+  {        
+    // General   
+    //----------------------------------------------------------------                            
+    "Model"                 "models/heroes/undying/undying_minion.vmdl" // Model.
+    "BaseClass"             "npc_dota_creature"
+    "Level"                 "7"
+    "ModelScale"               "1"
+    
+    // Abilities
+    //----------------------------------------------------------------
+    "Ability1"              "patrol_unit_passive"
+    "Ability2"              "kill_radius"
+    "Ability3"              ""
+    "Ability4"              ""
+
+    // Bounds
+    //----------------------------------------------------------------
+    "RingRadius"              "0"
+    "BoundsHullName"          "DOTA_HULL_SIZE_SMALL"
+
+    // Movement
+    //----------------------------------------------------------------
+    "MovementCapabilities"              "DOTA_UNIT_CAP_MOVE_GROUND"
+    "MovementSpeed"             "300"
+    
+    // Team
+    //----------------------------------------------------------------
+    //"TeamName"                  "DOTA_TEAM_BADGUYS"
+    //"CombatClassAttack"         "DOTA_COMBAT_CLASS_ATTACK_BASIC"
+    //"CombatClassDefend"         "DOTA_COMBAT_CLASS_DEFEND_BASIC"
+    //"UnitRelationshipClass"             "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+  }
+
+  "npc_creep_patrol_no_turn"
+  {        
+    // General   
+    //----------------------------------------------------------------                            
+    "Model"                 "models/heroes/undying/undying_minion.vmdl" // Model.
+    "BaseClass"             "npc_dota_creature"
+    "Level"                 "7"
+    "ModelScale"               "1"
+    
+    // Abilities
+    //----------------------------------------------------------------
+    "Ability1"              "patrol_unit_passive"
+    "Ability2"              "kill_radius"
+    "Ability3"              ""
+    "Ability4"              ""
+
+    // Bounds
+    //----------------------------------------------------------------
+    "RingRadius"              "0"
+    "BoundsHullName"          "DOTA_HULL_SIZE_SMALL"
+
+    // Movement
+    //----------------------------------------------------------------
+    "MovementCapabilities"              "DOTA_UNIT_CAP_MOVE_GROUND"
+    "MovementSpeed"             "300"
+    "MovementTurnRate"			"3"		// Turning rate.
+
+    
+    // Team
+    //----------------------------------------------------------------
+    //"TeamName"                  "DOTA_TEAM_BADGUYS"
+    //"CombatClassAttack"         "DOTA_COMBAT_CLASS_ATTACK_BASIC"
+    //"CombatClassDefend"         "DOTA_COMBAT_CLASS_DEFEND_BASIC"
+    //"UnitRelationshipClass"             "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+  }
+
+	"npc_creep_patrol_torso"
+  {        
+    // General   
+    //----------------------------------------------------------------                            
+    "Model"                 "models/heroes/undying/undying_minion_torso.vmdl"
+    "BaseClass"             "npc_dota_creature"
+    "Level"                 "7"
+    "ModelScale"               "1"
+    
+    // Abilities
+    //----------------------------------------------------------------
+    "Ability1"              "patrol_unit_passive"
+    "Ability2"              "kill_radius"
+    "Ability3"              ""
+    "Ability4"              ""
+
+    // Bounds
+    //----------------------------------------------------------------
+    "RingRadius"              "0"
+
+    // Movement
+    //----------------------------------------------------------------
+    "MovementCapabilities"              "DOTA_UNIT_CAP_MOVE_GROUND"
+    "MovementSpeed"             "300"
+    
+    // Team
+    //----------------------------------------------------------------
+    //"TeamName"                  "DOTA_TEAM_BADGUYS"
+    //"CombatClassAttack"         "DOTA_COMBAT_CLASS_ATTACK_BASIC"
+    //"CombatClassDefend"         "DOTA_COMBAT_CLASS_DEFEND_BASIC"
+    //"UnitRelationshipClass"             "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+  }
+
+  "npc_gate"
+  {
+    // General
+    //----------------------------------------------------------------
+    "BaseClass"                     "npc_dota_creature"
+    "Model"                         "models/heroes/undying/undying.vmdl"
+    "MaxLevel"                         "7"
+    "ModelScale"                     "1.25"
+    "BoundsHullName"                "DOTA_HULL_SIZE_HERO"
+    "RingRadius"                    "80"
+
+    // Abilities
+    //----------------------------------------------------------------
+    "Ability1"              "gate_unit_passive"
+    "Ability2"              ""
+    "Ability3"              ""
+    "Ability4"              ""
+
+    // Attack
+    //----------------------------------------------------------------
+    "AttackCapabilities"        "DOTA_UNIT_CAP_NO_ATTACK"
+    "AttackDamageMin"           "1"             
+    "AttackDamageMax"           "1"     
+
+    // Movement
+    //----------------------------------------------------------------
+    "MovementCapabilities"    "DOTA_UNIT_CAP_MOVE_GROUND"
+    "MovementSpeed"       "150"   
+    "MovementTurnRate"      "1.0" 
+
+    // Mana and Health
+    //----------------------------------------------------------------
+    "StatusHealth"                "800"
+    "StatusMana"                  "15" 
+    "StatusManaRegen"             "0"        
+    "StatusStartingMana"          "0"
+  }
+}

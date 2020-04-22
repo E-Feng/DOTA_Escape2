@@ -1,0 +1,342 @@
+"DOTAAbilities"
+{
+	//Shield
+	"item_example_item"
+	{
+		"ID"              			"1836"
+		"AbilityBehavior"       	"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"
+		"AbilityUnitTargetTeam"     "DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"     "DOTA_UNIT_TARGET_HERO"
+		"BaseClass"           		"item_datadriven"
+		"AbilityCastAnimation"      "ACT_DOTA_DISABLED"
+		"AbilityTextureName"		"item_example_item"
+
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"			"900"
+		"AbilityCastPoint"			"0.2"
+		"AbilityCooldown"			"13.0"
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"			"100"
+		"ItemCost"					"750"
+
+		"ItemPurchasable" 			"1"
+		"ItemDroppable"				"1"
+		"ItemSellable"				"1"
+
+		"ItemShareability"			"ITEM_NOT_SHAREABLE"
+
+		"precache"
+		{
+			"particle"				"particles/frostivus_herofx/queen_shadow_strike_linear_parent.vpcf"
+			"particle_folder"		"particles/test_particle"
+			"soundfile"				"soundevents/game_sounds_heroes/game_sounds_abaddon.vsndevts"
+		}
+
+		"OnSpellStart"
+		{
+			"LinearProjectile"
+			{
+				"EffectName"		"particles/frostivus_herofx/queen_shadow_strike_linear_parent.vpcf"
+				"MoveSpeed"			"%speed"
+				"FixedDistance"		"%distance"
+				"StartRadius"		"%radius"
+				"EndRadius"			"%radius"
+				"TargetTeams"		"DOTA_UNIT_TARGET_TEAM_ENEMY"
+				"TargetTypes"		"DOTA_UNIT_TARGET_HERO"
+				"TargetFlags"		"DOTA_UNIT_TARGET_FLAG_NONE"
+				"HasFrontalCone"	"0"
+				"ProvidesVision"	"0"
+				"VisionRadius"		"0"
+			}
+
+			"FireSound"
+			{
+				"EffectName"		"Hero_Abaddon.AphoticShield.Cast"
+				"Target"			"CASTER"
+			}
+
+			"ApplyModifier"
+			{
+				"Target"			"CASTER"
+				"ModifierName"		"modifier_item_shield"
+			}
+		}
+		
+		"OnProjectileHitUnit"
+		{     
+			"DeleteOnHit"			"0"
+
+			"Damage"
+			{
+				"Target"			"TARGET"
+				"Type"				"DAMAGE_TYPE_PURE"
+				"Damage"			"%damage"
+			}
+		}
+
+		"Modifiers"
+		{
+			"modifier_item_shield"
+			{
+				"IsHidden"			"0"
+				"IsBuff"			"1"
+				"IsPurgable"		"1"
+
+				"EffectName"		"particles/test_particle/damage_immunity.vpcf"
+				"EffectAttachType"	"follow_origin"
+				"Target"			"CASTER"
+			
+				"Duration"			"%duration"
+				"TextureName"		"abaddon_aphotic_shield"
+
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_INCOMING_DAMAGE_PERCENTAGE"		"%damage_reduction"
+				}
+			}
+
+			"modifier_item_example_passive"
+			{
+				"Passive"			"1"
+				"IsHidden"			"1"
+				"IsBuff"			"1"
+				"IsPurgable"		"0"
+
+				"Attributes"		"MODIFIER_ATTRIBUTE_MULTIPLE" // This makes duplicate items stack their properties
+
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_STATS_AGILITY_BONUS"    		"%bonus_agi"
+					"MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE"    	"%bonus_damage"
+				}
+			}
+		}
+		
+		// Special  
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"duration"			"4"
+			}
+
+			"02"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"damage_reduction"	"-50"
+			}
+
+			"03"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"radius"			"150"
+			}
+
+			"04"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"speed"				"1800"
+			}
+
+			"05"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"distance"			"900"
+			}
+
+			"06"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"damage"			"125"
+			}
+
+			"07"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"bonus_agi"			"13"
+			}
+
+			"08"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"bonus_damage"		"33"
+			}
+		}
+	}
+
+  // Custom Mango
+  "item_mango_custom"
+  {
+    // General
+    //----------------------------------------------------
+    "ID"                      "1001"
+    "BaseClass"                 "item_datadriven"
+    "AbilityBehavior"        "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"
+    "AbilityUnitTargetTeam"      "DOTA_UNIT_TARGET_TEAM_ENEMY"
+    "AbilityUnitTargetType"      "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+    "AbilityUnitTargetFlags"    "DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES"
+    "AbilityTextureName"         "item_enchanted_mango"
+    "Model"                      "models/props_gameplay/mango.vmdl"
+
+    "MaxUpgradeLevel"       "1"
+    "ItemBaseLevel"         "1"
+
+    // Properties
+    //-----------------------------------------------------
+    "ItemCost"               "150"
+    "ItemSellable"           "0"
+    "ItemKillable"           "0"
+    "ItemDroppable"          "1"
+    "ItemInitialCharges"     "1"
+    "ItemHideCharges"        "1"
+    "ItemRequiresCharges"    "0"
+    "ItemStackable"          "0"
+    "ItemPermanent"          "0"
+    "ItemShareability"       "ITEM_FULLY_SHAREABLE"
+    "ItemShopTags"           "consumable"
+    "ItemQuality"            "consumable"
+
+    // Abilities
+    //-----------------------------------------------------
+    "AbilityCastRange"              "400"
+    "AbilityCastPoint"              "0.0"
+    "AbilityCooldown"               "0"
+    "AbilityManaCost"               "0"   
+    
+    "AbilitySpecial"
+    {
+        "01"
+        {
+            "var_type"              "FIELD_INTEGER"
+            "mana_amount"           "1"
+        }
+        "02"
+        {
+            "var_type"              "FIELD_INTEGER"
+            "range_tooltip"         "400"
+        }        
+
+    }
+
+    "OnSpellStart"
+    {
+        "SpendCharge" 
+        {}
+        "RunScript"
+        {
+            "Target"        "TARGET"
+            "ScriptFile"    "items.lua"
+            "Function"      "MangoEaten"
+            "mana_amount"   "%mana_amount"
+        }
+
+        "FireSound"
+        {
+            "Target"        "CASTER"
+            "EffectName"    "DOTA_Item.Mango.Activate"
+        }
+
+        "FireEffect"
+        {
+            "Target"            "TARGET"
+            "EffectName"        "particles/items3_fx/mango_active.vpcf"
+            "EffectAttachType"  "follow_origin"
+        }
+    }
+
+    "OnOwnerDied"
+    {
+      "RunScript"
+      {
+        "Target"      "TARGET"
+        "ScriptFile"  "items.lua"
+        "Function"    "DropItemOnDeath"
+      }
+    }  
+  }
+
+  // Custom Cheese (extra life)
+  "item_cheese_custom"
+  {
+    // General
+    //----------------------------------------------------
+    "BaseClass"                 "item_datadriven"
+    "AbilityBehavior"        "DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+    "AbilityTextureName"         "item_cheese"
+    "Model"                      "models/props_gameplay/cheese.mdl"
+
+    "MaxUpgradeLevel"       "1"
+    "ItemBaseLevel"         "1"
+
+    // Properties
+    //-----------------------------------------------------
+    "ItemCost"               "150"
+    "ItemSellable"           "0"
+    "ItemKillable"           "0"
+    "ItemDroppable"          "1"
+    "ItemInitialCharges"     "1"
+    "ItemHideCharges"        "1"
+    "ItemRequiresCharges"    "0"
+    "ItemStackable"          "0"
+    "ItemPermanent"          "0"
+    "ItemShareability"       "ITEM_FULLY_SHAREABLE"
+    "ItemShopTags"           "consumable"
+    "ItemQuality"            "consumable"
+
+    // Abilities
+    //-----------------------------------------------------
+    "AbilityCastPoint"              "0.0"
+    "AbilityCooldown"               "0"
+    "AbilityManaCost"               "0"   
+    
+    "AbilitySpecial"
+    {
+        "01"
+        {
+            "var_type"              "FIELD_INTEGER"
+            "life_gained"           "1"
+        }
+    }
+
+    "OnSpellStart"
+    {
+        "SpendCharge" 
+        {}
+        "RunScript"
+        {
+            "Target"        "TARGET"
+            "ScriptFile"    "items.lua"
+            "Function"      "CheeseEaten"
+            "life_gained"   "%life_gained"
+        }
+
+        "FireSound"
+        {
+            "Target"        "CASTER"
+            "EffectName"    "DOTA_Item.Cheese.Activate"
+        }
+
+        //"FireEffect"
+        //{
+        //    "Target"            "TARGET"
+        //    "EffectName"        "particles/items3_fx/mango_active.vpcf"
+        //    "EffectAttachType"  "follow_origin"
+        //}
+    }
+
+    "OnOwnerDied"
+    {
+      "RunScript"
+      {
+        "Target"      "TARGET"
+        "ScriptFile"  "items.lua"
+        "Function"    "DropItemOnDeath"
+      }
+    }  
+  }	
+}

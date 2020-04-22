@@ -1,0 +1,64 @@
+"DOTAUnits"
+{
+  "npc_creep_patrol_big"
+  {        
+    // General   
+    //----------------------------------------------------------------                            
+    "Model"                 "models/items/undying/flesh_golem/frostivus_2018_undying_accursed_draugr_golem/frostivus_2018_undying_accursed_draugr_golem.vmdl" // Model.
+    "BaseClass"             "npc_dota_creature"
+    "Level"                 "7"
+    "ModelScale"            "1.2"
+    
+    // Abilities
+    //----------------------------------------------------------------
+    "Ability1"              "patrol_unit_passive"
+    "Ability2"              ""
+    "Ability3"              ""
+    "Ability4"              ""
+
+    // Bounds
+    //----------------------------------------------------------------
+    "RingRadius"              "0"
+    "BoundsHullName"          "DOTA_HULL_SIZE_HERO"
+
+    // Movement
+    //----------------------------------------------------------------
+    "MovementCapabilities"              "DOTA_UNIT_CAP_MOVE_GROUND"
+    "MovementSpeed"             "300"
+    
+    // Team
+    //----------------------------------------------------------------
+    //"TeamName"                  "DOTA_TEAM_BADGUYS"
+    //"CombatClassAttack"         "DOTA_COMBAT_CLASS_ATTACK_BASIC"
+    //"CombatClassDefend"         "DOTA_COMBAT_CLASS_DEFEND_BASIC"
+    //"UnitRelationshipClass"             "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+  }
+
+  "npc_zombie_static"
+  {        
+    // General   
+    //----------------------------------------------------------------                            
+    "Model"                 "models/heroes/undying/undying_flesh_golem.vmdl" // Model.
+    "BaseClass"             "npc_dota_creature"
+    "Level"                 "7"
+    "ModelScale"               "1"
+    
+    // Abilities
+    //----------------------------------------------------------------
+    "Ability1"              "patrol_unit_passive"
+    "Ability2"              "kill_radius"
+    "Ability3"              "static_passive"
+    "Ability4"              ""
+
+    // Bounds
+    //----------------------------------------------------------------
+    "RingRadius"              "0"
+    "BoundsHullName"          "DOTA_HULL_SIZE_SMALL"
+
+    // Movement
+    //----------------------------------------------------------------
+    "MovementCapabilities"              "DOTA_UNIT_CAP_MOVE_GROUND"
+    "MovementSpeed"             "300"
+    "MovementTurnRate"          "0.3"
+  }  
+}

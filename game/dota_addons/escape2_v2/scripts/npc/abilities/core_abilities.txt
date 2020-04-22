@@ -1,0 +1,217 @@
+"DOTAAbilities"
+{
+  //========================================================================================================================
+  "patrol_unit_passive"
+  {
+    // General
+    "BaseClass"                 "ability_datadriven"
+    "AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_PASSIVE" // | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+    "AbilityUnitTargetType"     "DOTA_UNIT_TARGET_ALL"
+    "AbilityTextureName"        "omniknight_guardian_angel"
+
+    // "Modifiers"
+    "Modifiers"
+    {
+      "patrol_unit_state"
+      {
+        "Passive"      "1"
+        "TextureName"  "fountain_glyph"
+         
+        "States"
+        {
+          "MODIFIER_STATE_NO_HEALTH_BAR"       "MODIFIER_STATE_VALUE_ENABLED"
+          "MODIFIER_STATE_INVULNERABLE"        "MODIFIER_STATE_VALUE_ENABLED"
+          "MODIFIER_STATE_UNSELECTABLE"        "MODIFIER_STATE_VALUE_ENABLED"
+          "MODIFIER_STATE_NO_UNIT_COLLISION"   "MODIFIER_STATE_VALUE_ENABLED"
+        }
+      }
+    }
+  }
+
+  //========================================================================================================================
+  "gate_unselectable"
+  {
+    // General
+    "BaseClass"                 "ability_datadriven"
+    "AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+    "AbilityUnitTargetType"     "DOTA_UNIT_TARGET_ALL"
+    "AbilityTextureName"        "omniknight_guardian_angel"
+
+    // "Modifiers"
+    "Modifiers"
+    {
+      "patrol_unit_state"
+      {
+        "Passive"      "1"
+        "TextureName"  "fountain_glyph"
+         
+        "States"
+        {
+          "MODIFIER_STATE_UNSELECTABLE"        "MODIFIER_STATE_VALUE_ENABLED"
+        }
+      }
+    }
+  }
+
+  //========================================================================================================================
+  "kill_radius"
+  {
+    // General
+    "BaseClass"                 "ability_datadriven"
+    "AbilityBehavior"        "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+    "AbilityUnitTargetTeam"      "DOTA_UNIT_TARGET_TEAM_ENEMY"
+    "AbilityUnitTargetType"      "DOTA_UNIT_TARGET_ALL"
+    "AbilityTextureName"        "ember_spirit_flame_guard"
+
+    // Special
+    "AbilitySpecial"
+    {
+      "01"
+      {
+        "var_type"           "FIELD_INTEGER"
+        "range"             "50 125 1000"
+      }
+      "02"
+      {
+        "var_type"            "FIELD_INTEGER"
+        "damage"              "1"
+      }
+    }
+
+    // Modifiers
+    "Modifiers"
+    {
+      "kill_aura"
+      {
+        "Passive"      "1"
+        //"IsHidden"      "1"
+    
+        "Aura"            "autokill"
+        "Aura_Radius"     "%range"
+        "Aura_Teams"      "DOTA_UNIT_TARGET_TEAM_ENEMY"
+        "Aura_Types"      "DOTA_UNIT_TARGET_ALL"
+
+        "ThinkInterval"  "1"
+        "OnIntervalThink"
+        {
+          "ApplyModifier"
+          {
+            "ModifierName"  "autokill"
+            "Target"     "TARGET"
+          }
+        }
+      }
+
+      "autokill"
+      {
+
+        //"Passive"         "0"
+        "IsDebuff"    "1"   
+        "OnCreated"
+        {
+          "Damage"
+          {
+            "Target"    "TARGET"
+            "Type"      "DAMAGE_TYPE_PURE"
+            "Damage"    "%damage"
+          }
+        }
+      }
+    }
+  }
+
+  //========================================================================================================================
+  "self_immolation"
+  {
+    "BaseClass"                 "ability_datadriven"
+    "AbilityTextureName"      "necrolyte_heartstopper_aura"
+    "AbilityBehavior"        "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+    "AbilityUnitTargetTeam"      "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+    "AbilityUnitTargetType"      "DOTA_UNIT_TARGET_ALL"
+    "AbilityUnitDamageType"      "DAMAGE_TYPE_MAGICAL"
+
+    "AbilitySpecial"
+    {
+      "01"
+      {
+        "var_type"      "FIELD_INTEGER"
+        "radius"      "0"
+      }
+      "02"
+      {
+        "var_type"       "FIELD_INTEGER"
+        "damage"        "2"
+      }
+    }
+
+    "Modifiers"
+    {
+      "self_damage_modifier"
+      {
+        "Passive"      "1"
+        "IsHidden"      "1"
+        "IsDebuff"      "1"
+    
+        "Aura"            "self_damage_aura"
+        "Aura_Radius"     "%radius"
+        "Aura_Teams"      "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+        "Aura_Types"      "DOTA_UNIT_TARGET_HERO"
+        "Aura_Flags"      "DOTA_UNIT_TARGET_FLAG_NONE"
+        "Aura_ApplyToCaster" "1"
+      }
+
+      "self_damage_aura"
+      {
+        "IsDebuff"         "1"
+        "IsHidden"         "1"
+
+        "ThinkInterval"  "0.03"
+        "OnIntervalThink"
+        {
+          "Damage"
+          {
+            "Target"    "TARGET"
+            "Type"      "DAMAGE_TYPE_MAGICAL"
+            "Damage"    "%damage"
+          }
+        }
+      }
+    }
+  }
+
+  //===========================================================================================
+  "gate_unit_passive"
+  {
+    "BaseClass"                 "ability_datadriven"
+    "AbilityTextureName"      "life_stealer_feast"
+    "AbilityBehavior"        "DOTA_ABILITY_BEHAVIOR_NO_TARGET" // | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+    "MaxLevel"             "4"
+
+    "AbilityManaCost"        "15"
+
+    "OnSpellStart"
+    {
+      "RunScript"
+      {
+        "ScriptFile"  "abilities.lua"
+        "Function"    "GateMove"
+      }
+    }
+
+    "Modifiers"
+    {
+      "gate_unit_modifier"
+      {
+        "Passive"      "1"
+        "IsHidden"      "1"
+
+        "States"
+        {
+          "MODIFIER_STATE_NO_HEALTH_BAR"       "MODIFIER_STATE_VALUE_ENABLED"
+          "MODIFIER_STATE_MAGIC_IMMUNE"        "MODIFIER_STATE_VALUE_ENABLED"
+          //"MODIFIER_STATE_INVULNERABLE"        "MODIFIER_STATE_VALUE_ENABLED"
+        }
+      }
+    }
+  }
+}

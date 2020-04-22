@@ -1,0 +1,602 @@
+// https://moddota.com/forums/discussion/1415/combining-kv-files-using-base
+//#base "abilities/dummy_unit_ability.txt"
+//#base "abilities/chaos_knight_reality_rift.txt"
+//#base "abilities/detonator_conjure_image.txt"
+#base "abilities/core_abilities.txt"
+#base "abilities/unit_abilities.txt"
+
+"DOTAAbilities"
+{
+	"Version"   "1"
+
+  //-------------------
+  // Dummy stuff
+  //-------------------
+  
+  "dummy_unit"
+  {
+    "AbilityBehavior"     "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+    "BaseClass"           "ability_datadriven"
+    "AbilityTextureName"            "rubick_empty1"
+    "MaxLevel"                      "1"
+    
+    "Modifiers"
+    {
+      "dummy_unit"
+      {
+          "Passive"                        "1"
+          "IsHidden"                        "1"    
+          "States"
+          {
+              "MODIFIER_STATE_UNSELECTABLE" "MODIFIER_STATE_VALUE_ENABLED"
+              "MODIFIER_STATE_INVULNERABLE"    "MODIFIER_STATE_VALUE_ENABLED"
+              "MODIFIER_STATE_NOT_ON_MINIMAP" "MODIFIER_STATE_VALUE_ENABLED"
+              "MODIFIER_STATE_NO_HEALTH_BAR"  "MODIFIER_STATE_VALUE_ENABLED"
+          }
+      }
+    }
+  }
+  
+  "barebones_empty1"
+  {
+    // General
+    //-------------------------------------------------------------------------------------------------------------
+    //"ID"              "5343"                            // unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+    "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE"
+    "MaxLevel"            "0"
+    "BaseClass"           "ability_datadriven"
+    "AbilityTextureName"            "rubick_empty1"
+  }
+  
+  "barebones_empty2"
+  {
+    // General
+    //-------------------------------------------------------------------------------------------------------------
+    //"ID"              "5343"                            // unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+    "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE"
+    "MaxLevel"            "0"
+    "BaseClass"           "ability_datadriven"
+    "AbilityTextureName"            "rubick_empty1"
+  }
+  
+  "barebones_empty3"
+  {
+    // General
+    //-------------------------------------------------------------------------------------------------------------
+    //"ID"              "5343"                            // unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+    "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE"
+    "MaxLevel"            "0"
+    "BaseClass"           "ability_datadriven"
+    "AbilityTextureName"            "rubick_empty1"
+  }
+  
+  "barebones_empty4"
+  {
+    // General
+    //-------------------------------------------------------------------------------------------------------------
+    //"ID"              "5343"                            // unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+    "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE"
+    "MaxLevel"            "0"
+    "BaseClass"           "ability_datadriven"
+    "AbilityTextureName"            "rubick_empty1"
+  }
+  
+  "barebones_empty5"
+  {
+    // General
+    //-------------------------------------------------------------------------------------------------------------
+    //"ID"              "5343"                            // unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+    "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE"
+    "MaxLevel"            "0"
+    "BaseClass"           "ability_datadriven"
+    "AbilityTextureName"            "rubick_empty1"
+  }
+  
+  "barebones_empty6"
+  {
+    // General
+    //-------------------------------------------------------------------------------------------------------------
+    //"ID"              "5343"                            // unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+    "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE"
+    "MaxLevel"            "0"
+    "BaseClass"           "ability_datadriven"
+    "AbilityTextureName"            "rubick_empty1"
+  }	
+
+	"example_ability"
+	{
+		"ID"							"80852"
+		"BaseClass"						"ability_datadriven"
+		"AbilityTextureName"			"holdout_blade_fury"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
+	//	Most used Ability Behaviors:
+	//	DOTA_ABILITY_BEHAVIOR_HIDDEN: This ability can be owned by a unit but can't be casted and wont show up on the HUD.
+	//	DOTA_ABILITY_BEHAVIOR_PASSIVE: Can't be casted like above but this one shows up on the ability HUD
+	//	DOTA_ABILITY_BEHAVIOR_NO_TARGET: Doesn't need a target to be cast, ability fires off as soon as the button is pressed
+	//	DOTA_ABILITY_BEHAVIOR_UNIT_TARGET: Ability needs a target to be casted on.
+	//	DOTA_ABILITY_BEHAVIOR_POINT: Ability can be cast anywhere the mouse cursor is (If a unit is clicked it will just be cast where the unit was standing)
+	//	DOTA_ABILITY_BEHAVIOR_AOE: This ability draws a radius where the ability will have effect. YOU STILL NEED A TARGETTING BEHAVIOR LIKE DOTA_ABILITY_BEHAVIOR_POINT FOR THIS TO WORK.
+	//	DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE: This ability probably can be casted or have a casting scheme but cannot be learned (these are usually abilities that are temporary)
+	//	DOTA_ABILITY_BEHAVIOR_CHANNELLED: This abillity is channelled. If the user moves or is silenced the ability is interrupted.
+	//	DOTA_ABILITY_BEHAVIOR_TOGGLE
+	//	DOTA_ABILITY_BEHAVIOR_AUTOCAST
+	//	DOTA_ABILITY_BEHAVIOR_DIRECTIONAL: Requires direction from the hero. Example: Mirana Arrow or Pudge Hook.
+	//	DOTA_ABILITY_BEHAVIOR_IMMEDIATE: Can be used with DOTA_ABILITY_BEHAVIOR_NO_TARGET and AbilityCastPoint 0 for instant cast while moving.
+	//	DOTA_ABILITY_BEHAVIOR_ATTACK: For attack modifiers that are not passive.
+	//	DOTA_ABILITY_BEHAVIOR_ROOT_DISABLES: Ability cannot be used while rooted.
+	//	DOTA_ABILITY_BEHAVIOR_UNRESTRICTED: Ability can be when commands are restricted.
+	//	DOTA_ABILITY_BEHAVIOR_IGNORE_PSEUDO_QUEUE: Can be executed while stunned, casting, or force-attacking. Only applicable to toggled abilities.
+	//	DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL: Ability will not cancel channels if used.
+		
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitTargetFlags"		"DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_PURE"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
+
+		"AbilityCastPoint"				"0.3"
+		"AbilityCooldown"				"10.0"
+		"AbilityChannelTime"			"2.0 1.8 1.6 1.5"
+		
+		"AbilityCastAnimation"			"ACT_DOTA_DISABLED"
+		"AbilityManaCost"				"300"
+		"AbilityProcsMagicStick"		"1"
+
+		"precache"
+		{
+			"particle"          "particles/econ/generic/generic_aoe_explosion_sphere_1/generic_aoe_explosion_sphere_1.vpcf"
+			"soundfile"         "soundevents/game_sounds_heroes/game_sounds_gyrocopter.vsndevts"
+		}
+
+		"OnSpellStart"
+		{
+			"ApplyModifier"
+			{
+				"Target"    	"CASTER"
+				"ModifierName"  "modifier_channel_start"
+			}
+			"FireSound"
+			{
+				"EffectName"    "Hero_Gyrocopter.CallDown.Fire"
+				"Target"      	"CASTER"
+			}
+		}
+
+		"OnChannelSucceeded"
+		{
+			"RemoveModifier"
+			{
+				"Target"        	"CASTER"
+				"ModifierName"      "modifier_channel_start"
+			}
+
+			"AttachEffect"
+			{
+				"EffectName"      		"particles/econ/generic/generic_aoe_explosion_sphere_1/generic_aoe_explosion_sphere_1.vpcf"
+				"EffectAttachType"    	"follow_origin"
+				"EffectRadius"      		"%radius"
+				"EffectDurationScale" 		"1"
+				"EffectLifeDurationScale" 	"1"
+				"EffectColorA"      		"255 0 0"
+				"EffectColorB"      		"255 0 0"
+				"Target"      				"CASTER"
+			}
+
+            "Damage"
+			{
+				"Type"          "DAMAGE_TYPE_PURE"
+				"Damage"        "%damage"
+				"Target"
+				{
+					"Center"		"CASTER"
+					"Radius"		"%radius"
+					"Teams"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+					"Types"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+					"Flags"			"DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES"
+				}
+			}
+
+			"Knockback"
+			{
+				"Center"  "CASTER"
+				"Target"
+				{
+					"Center"  	"CASTER"
+					"Radius"  	"%radius"
+					"Teams"   	"DOTA_UNIT_TARGET_TEAM_ENEMY"
+				}
+				"Duration"  "%duration"
+				"Distance"  "%distance"
+				"Height"  	"%height"
+			}
+
+      		"FireSound"
+			{
+				"EffectName"    "Hero_Gyrocopter.CallDown.Damage"
+				"Target"      	"CASTER"
+			}
+		}
+
+    	"OnChannelFinish"
+		{
+			"RemoveModifier"
+			{
+				"Target"        	"CASTER"
+				"ModifierName"      "modifier_channel_start"
+			}
+		}
+
+        "OnChannelInterrupted"
+		{
+			"RemoveModifier"
+			{
+				"Target"    		"CASTER"
+				"ModifierName"  	"modifier_channel_start"
+			}
+		}
+
+		"Modifiers"
+		{
+			"modifier_channel_start"
+			{
+				"IsHidden"			"1"
+				"IsBuff"			"1"
+				"IsDebuff"			"0"
+				"IsStunDebuff"		"0"
+				"IsPurgable"		"1"
+            
+				"EffectName"    	"particles/test_particle/channel_field_2.vpcf"//"gyro_calldown_marker_c"//"gyrocopter_call_down"
+				"EffectAttachType"  "follow_origin"
+                "EffectRadius"      "%radius"
+				"EffectColorA"      "255 0 0"
+				"EffectColorB"      "255 0 0"
+			}
+		}
+
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"						"FIELD_INTEGER"
+				"duration"						"1"
+			}
+		  
+			"02"
+			{
+				"var_type"						"FIELD_INTEGER"
+				"damage"						"400 600 800 1000"
+				"CalculateSpellDamageTooltip"	"1"
+			}
+		  
+			"03"
+			{
+				"var_type"						"FIELD_INTEGER"
+				"radius"						"550 550 600 650"
+				"LinkedSpecialBonus"			"special_bonus_unique_hero_name"
+			}
+		  
+			"04"
+			{
+				"var_type"						"FIELD_INTEGER"
+				"distance"						"400 500 600 700"
+			}
+		  
+			"05"
+			{
+				"var_type"						"FIELD_INTEGER"
+				"height"						"100 200 300 400"
+			}
+		}
+	}
+
+  //===========================================================================================
+  "batrider_flamebreak_custom"
+  {
+    "BaseClass"                 "batrider_flamebreak"
+    "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_POINT"
+    "AbilityUnitDamageType"     "DAMAGE_TYPE_MAGICAL"
+    "SpellImmunityType"       "SPELL_IMMUNITY_ENEMIES_NO"
+    "FightRecapLevel"       "1"
+    
+    "AbilityCastRange"        "5000"
+    "AbilityCastPoint"        "0.2 0.2 0.2 0.2"
+    "AbilityCooldown"       "0"
+    "AbilityManaCost"       "0"
+
+    "AbilitySpecial"
+    {
+      "01"
+      {
+        "var_type"        "FIELD_INTEGER"
+        "damage_per_second"   "0"
+      }
+      "02"
+      {
+        "var_type"        "FIELD_FLOAT"
+        "damage_duration"   "0"
+      }     
+      "03"
+      {
+        "var_type"        "FIELD_FLOAT"
+        "damage_total_tooltip"    "0"
+      }
+      "04"
+      {
+        "var_type"        "FIELD_INTEGER"
+        "explosion_radius"    "375 375 375 375"
+      }
+      "05"
+      {
+        "var_type"        "FIELD_INTEGER"
+        "collision_radius"    "100 100 100 100"
+      }
+      "06"
+      {
+        "var_type"        "FIELD_FLOAT"
+        "stun_duration"     "0.5 0.5 0.5 0.5"
+      }
+      "07"
+      {
+        "var_type"        "FIELD_INTEGER"
+        "speed"         "900"
+      }
+      "08"
+      {
+        "var_type"        "FIELD_FLOAT"
+        "knockback_max_distance"  "400"
+      }
+      "09"
+      {
+        "var_type"        "FIELD_INTEGER"
+        "knockback_height"    "100 100 100 100"
+      }
+      "10"
+      {
+        "var_type"        "FIELD_FLOAT"
+        "knockback_duration"  "0.25 0.25 0.25 0.25"
+      }     
+    }
+  }
+
+  //===========================================================================================
+  "windrunner_powershot_custom"
+  {
+    "BaseClass"                 "windrunner_powershot"
+    "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
+    "AbilityUnitDamageType"     "DAMAGE_TYPE_MAGICAL" 
+    "SpellImmunityType"       "SPELL_IMMUNITY_ENEMIES_NO"
+    "FightRecapLevel"       "1"
+
+    "AbilityCastRange"        "2600"
+    "AbilityCastPoint"        "0.0"
+    "AbilityCooldown"       "0"
+    "AbilityChannelTime"      "1.5"
+    "AbilityDamage"         "1 1 1 1"
+    "AbilityManaCost"       "0 0 0 0"
+
+    "AbilitySpecial"
+    {
+      "01"
+      {
+        "var_type"        "FIELD_FLOAT"
+        "damage_reduction"    "0 0 0 0"
+      }
+      "02"
+      {
+        "var_type"        "FIELD_FLOAT"
+        "speed_reduction"   "0.1 0.1 0.1 0.1"
+      }
+      "03"
+      {
+        "var_type"        "FIELD_INTEGER"
+        "arrow_width"     "125 125 125 125"
+      }
+      "04"
+      {
+        "var_type"        "FIELD_INTEGER"
+        "arrow_range"     "2000"
+      }
+      "05"
+      {
+        "var_type"        "FIELD_FLOAT"
+        "arrow_speed"     "3000.0 3000.0 3000.0 3000.0"
+      }
+      "06"
+      {
+        "var_type"        "FIELD_FLOAT"
+        "tree_width"      "75 75 75 75"
+      }
+      "07"
+      {
+        "var_type"        "FIELD_INTEGER"
+        "vision_radius"     "400"
+      }
+      "08"
+      {
+        "var_type"        "FIELD_FLOAT"
+        "vision_duration"   "3.34 3.34 3.34 3.34"
+      }
+    }
+  }
+
+  //=================================================================================================================
+  "batrider_sticky_custom"
+  {
+    "BaseClass"                 "batrider_sticky_napalm"
+    "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
+    "SpellImmunityType"       "SPELL_IMMUNITY_ENEMIES_NO"
+    
+    "AbilityCastRange"        "2000"
+    "AbilityCastPoint"        "0.2 0.2 0.2 0.2"
+    "AbilityCooldown"       "0"
+    "AbilityManaCost"       "0"
+
+    "AbilitySpecial"
+    {
+      "01"
+      {
+        "var_type"        "FIELD_INTEGER"
+        "damage"        "10 15 20 25"
+      }
+      "02"
+      {
+        "var_type"        "FIELD_INTEGER"
+        "radius"        "375 375 375 375"
+      }
+      "03"
+      {
+        "var_type"        "FIELD_FLOAT"
+        "duration"        "8.0 8.0 8.0 8.0"
+      }
+      "04"
+      {
+        "var_type"        "FIELD_INTEGER"
+        "movement_speed_pct"  "-3 -5 -7 -9"
+      }
+      "05"
+      {
+        "var_type"        "FIELD_INTEGER"
+        "turn_rate_pct"     "-70 -70 -70 -70"
+      }
+      "06"
+      {
+        "var_type"        "FIELD_INTEGER"
+        "max_stacks"      "10 10 10 10"
+      }
+    }
+  }
+
+  //=================================================================================================================
+	"rattletrap_rocket_flare_custom"
+	{
+    "BaseClass"                 "rattletrap_rocket_flare"
+
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"FightRecapLevel"				"1"
+		"AbilitySound"					"Hero_Rattletrap.Rocket_Flare.Fire"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastPoint"				"0"
+		"AbilityCastRange"				"0"
+		
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"0"
+		
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"0"
+		
+		// Damage.
+		//-------------------------------------------------------------------------------------------------------------
+		//"AbilityDamage"					"80 120 160 200"
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"radius"			"300"
+			}
+			"02"
+			{	
+				"var_type"			"FIELD_FLOAT"
+				"duration"			"5"
+			}
+			"03"
+			{	
+				"var_type"			"FIELD_INTEGER"
+				"speed"				"2250"
+			}
+			"04"
+			{	
+				"var_type"			"FIELD_INTEGER"
+				"vision_radius"		"300"
+			}
+			"05"
+			{	
+				"var_type"			"FIELD_INTEGER"
+				"damage"			"0"
+				"LinkedSpecialBonus"	"special_bonus_unique_clockwerk_2"
+			}
+			
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_3"
+	}
+
+  	"zuus_lightning_bolt_custom"
+	{
+    "BaseClass"                 "zuus_lightning_bolt"
+
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_POINT"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"FightRecapLevel"				"1"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"0"
+		"AbilityCastPoint"				"0"
+
+		// Damage.
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityDamage"					"0"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"0"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"0"
+
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityModifierSupportValue"	"0"	// just a ministun
+
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"true_sight_radius"		"300"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"sight_radius_day"		"750"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"sight_radius_night"	"750"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"sight_duration"		"5"
+			}
+			"05"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"spread_aoe"	"325"
+			}
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_2"
+	}
+}

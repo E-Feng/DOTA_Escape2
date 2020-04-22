@@ -1,0 +1,19 @@
+"AddonInfo"
+{
+	"TeamCount" 	      	"2"
+	"maps"      			"escape_map2"
+	"IsPlayable"  			"1"
+	"PenaltiesEnabled"  	"0"         // For enabling/disabling the leaver penalty
+	"CheckAFKPlayers" 		"1"			// For automatically kicking afk players from the lobby
+	"HeroGuidesSupported" 	"1"
+	//"EnablePickRules"		"1"			// For enabling/disabling banning phase; prevents skipping hero selection and force picking a hero!
+	
+	"escape_map2"
+	{
+	  "MaxPlayers"          "10"
+	}
+	"dota"
+	{
+	  "MaxPlayers"          "10"
+	}
+}
