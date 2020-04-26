@@ -63,7 +63,7 @@ function barebones:CreepPatrolLinked(unit, idx, turnDelay)
     if IsValidEntity(unit) then
       for i,waypoint in pairs(waypoints) do
         local posU = unit:GetAbsOrigin()
-        if CalcDist2D(posU, waypoint) < 5 then
+        if CalcDist2D(posU, waypoint) < 25 then
           unit.goal = newpos[i]
           if i == last then
             unit.done = true
@@ -71,6 +71,8 @@ function barebones:CreepPatrolLinked(unit, idx, turnDelay)
           else
             unit:MoveToPosition(unit.goal)
           end
+        else
+          unit:MoveToPosition(unit.goal)
         end
       end
       return turnDelay
@@ -363,7 +365,9 @@ function barebones:TimberChainThinker()
   Timers:CreateTimer(0.5, function()
     if GameRules.CLevel == 3 then
       local numInside = GetNumberInsideRectangle(boundsTL, boundsBR, true)
-      local numTrees = math.max(math.ceil(numInside/2), 1) + 1
+      local numInsideDead = GetNumberInsideRectangle(boundsTL, boundsBR, false)
+      local numTreeDead = math.floor(numInsideDead/3)
+      local numTrees = math.max(math.ceil(numInside/2), 1) + numTreeDead + 1
       --print(numInside, numTrees)
       for i = 1,numTrees do
         local x = RandomFloat(boundsTL.x, boundsBR.x)

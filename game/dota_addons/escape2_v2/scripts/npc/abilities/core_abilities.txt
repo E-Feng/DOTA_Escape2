@@ -69,7 +69,7 @@
       "01"
       {
         "var_type"           "FIELD_INTEGER"
-        "range"             "50 125 1000"
+        "range"             "50 150 1000"
       }
       "02"
       {

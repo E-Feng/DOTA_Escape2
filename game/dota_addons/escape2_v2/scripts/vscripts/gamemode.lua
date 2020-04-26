@@ -87,9 +87,11 @@ function barebones:OnGameInProgress()
 		end)
 	
 			-- Starts the thinker to check if everyones dead and to revive
-		Timers:CreateTimer(5, function()
-			barebones:CheckpointThinker()
-			return 1
+		Timers:CreateTimer(4, function()
+			if GameRules.Ongoing then
+				barebones:CheckpointThinker()
+				return 2
+			end
 		end)   
 end
 
@@ -112,6 +114,8 @@ function barebones:InitGameMode()
 	GameRules:SetStrategyTime(STRATEGY_TIME)
 
 	GameRules:SetTreeRegrowTime(TREE_REGROW_TIME)
+
+	GameRules:SetCustomGameEndDelay(10)
 
 	if USE_CUSTOM_HERO_LEVELS then
 		GameRules:SetUseCustomHeroXPValues(true)
@@ -244,7 +248,8 @@ function barebones:InitGameMode()
 	Linked = {}
   GameRules.Lives = 5
   GameRules.CLevel = 0
-  GameRules.Checkpoint = Vector(0, 0, 0)
+	GameRules.Checkpoint = Vector(0, 0, 0)
+	GameRules.Ongoing = true
 
   DOTA_TEAM_ZOMBIES = DOTA_TEAM_BADGUYS
 
@@ -459,8 +464,8 @@ function barebones:InitGameMode()
                 {1, ENT_MANGO, 0, "mango5_2", nil, false, true},
                 {1, ENT_MANGO, 0, "mango5_3", nil, false, true},
                 {1, ENT_MANGO, 0, "mango5_4", nil, false, true},
-								{2, ENT_BIGPT, 0, "p5_1a", "PatrolInitialBig", 40, 0.03, 375},
-								{2, ENT_BIGPT, 0, "p5_1a", "PatrolInitialBig", 41, 0.12, 375},
+								{2, ENT_BIGPT, 0, "p5_1a", "PatrolInitialBig", 40, 0.03, 250},
+								{2, ENT_BIGPT, 0, "p5_1a", "PatrolInitialBig", 41, 0.12, 250},
 								{2, ENT_PATRL, 0, "p5_1_1a", "PatrolInitial", 42, 0.03, 500},
 								{2, ENT_PATRL, 0, "p5_1_2a", "PatrolInitial", 43, 0.03, 500},
 								{2, ENT_PATRL, 0, "p5_2_1a", "PatrolInitial", 44, 0.03, 450},
@@ -471,10 +476,10 @@ function barebones:InitGameMode()
 								{2, ENT_PATRL, 0, "p5_3_3a", "PatrolInitial", 49, 0.03, 550, 0.25},
 								{2, ENT_PATRL, 0, "p5_4_1a", "PatrolInitial", 50, 0.03, 600, 0.25},
 								{2, ENT_PATRL, 0, "p5_4_2a", "PatrolInitial", 51, 0.03, 600, 0.25},
-								{2, ENT_PATTR, 0, "p5_5_1a", "PatrolInitial", 52, 0.03, 625, 0.25},
-								{2, ENT_PATTR, 0, "p5_5_2a", "PatrolInitial", 53, 0.03, 625, 0.25},
-								{2, ENT_PATTR, 0, "p5_6_1a", "PatrolInitial", 54, 0.03, 850, 0.25},
-								{2, ENT_PATTR, 0, "p5_6_2a", "PatrolInitial", 55, 0.03, 850, 0.25},
+								{2, ENT_PATTR, 0, "p5_5_1a", "PatrolInitial", 52, 0.03, 800, 0.08},
+								{2, ENT_PATTR, 0, "p5_5_2a", "PatrolInitial", 53, 0.03, 800, 0.08},
+								{2, ENT_PATTR, 0, "p5_6_1a", "PatrolInitial", 54, 0.03, 850, 0.20},
+								{2, ENT_PATTR, 0, "p5_6_2a", "PatrolInitial", 55, 0.03, 850, 0.20},
               },
               { -- Level 6
 								{1, ENT_MANGO, 0, "mango6_1", nil, false, true},

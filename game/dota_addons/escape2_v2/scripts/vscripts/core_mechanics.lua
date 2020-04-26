@@ -103,21 +103,23 @@ function barebones:CheckpointThinker()
   -- print("CheckpointThinker started, players:", numPlayers, "dead players:", numdead)
   if GameRules.Lives >= 0 and numPlayers == deadHeroes and numPlayers ~= 0 then
     deadHeroes = 0
-    barebones:ReviveAll()
-    GameRules.Lives = GameRules.Lives - 1
-    if GameRules.Lives >= 0 then
-      local str = "You now have " .. tostring(GameRules.Lives) .. " lives remaining!"
-      local msg = {
-        text = str,
-        duration = 5.0,
-        style={color="red", ["font-size"]="80px"}
-      }
-			Notifications:TopToAll(msg)
-      GameRules:SendCustomMessage(str, 0, 1)
-    end
+    Timers:CreateTimer(0.5, function()
+      barebones:ReviveAll()
+      GameRules.Lives = GameRules.Lives - 1
+      if GameRules.Lives >= 0 then
+        local str = "You now have " .. tostring(GameRules.Lives) .. " lives remaining!"
+        local msg = {
+          text = str,
+          duration = 5.0,
+          style={color="red", ["font-size"]="80px"}
+        }
+        Notifications:TopToAll(msg)
+        GameRules:SendCustomMessage(str, 0, 1)
+      end
+    end)
   elseif GameRules.Lives < 0 then
-    Timers:CreateTimer(2, function()
-      GameRules:SetCustomVictoryMessage("You're loser!")
+    Timers:CreateTimer(1, function()
+      GameRules.Ongoing = false
       GameRules:SetGameWinner(DOTA_TEAM_ZOMBIES)
       GameRules:SetSafeToLeave(true)
     end)
@@ -267,10 +269,13 @@ end
 function barebones:RemoveAllSkills()
   print("---------Removing All Skills------------")
   for _,hero in pairs(Players) do
+    -- Removing abilities
     for i = 0,5 do
       local abil = hero:GetAbilityByIndex(i)
       if abil then
-        hero:RemoveAbility(abil:GetAbilityName())
+        Timers:CreateTimer(1, function()
+          abil:SetLevel(0)
+        end)
       end
     end
   end

@@ -45,13 +45,13 @@ function DropItemOnDeath(event)
                 local item = killedUnit:GetItemInSlot( itemSlot ) -- uses a variable which gets the actual item in the slot specified starting at 0, 1st slot, and ending at 5,the 6th slot.
                 if item ~= nil and item:GetName() == itemName then -- makes sure that the item exists and making sure it is the correct item
                     local newItem = CreateItem(itemName, nil, nil) -- creates a new variable which recreates the item we want to drop and then sets it to have no owner
-                    CreateItemOnPositionSync(killedUnit:GetOrigin(), newItem) -- takes the newItem variable and creates the physical item at the killed unit's location
+                    killedUnit:RemoveItem(item) -- finally, the item is removed from the original units inventory.
+                    CreateItemOnPositionSync(killedUnit:GetAbsOrigin(), newItem) -- takes the newItem variable and creates the physical item at the killed unit's location
                     for i,entvals in pairs(EntList[level]) do
                         if entvals[ENT_INDEX] == itemid then
                             EntList[level][i][ENT_INDEX] = newItem:GetEntityIndex()
                         end
                     end
-                    killedUnit:RemoveItem(item) -- finally, the item is removed from the original units inventory.
                 end
             end
         end

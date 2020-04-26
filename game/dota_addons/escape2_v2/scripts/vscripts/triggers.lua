@@ -12,8 +12,8 @@ end
 function OnEndSafety(trigger)
 	local ent = trigger.activator
 	if not ent then return end
-	print(ent:GetName(), " has stepped off trigger")
 	if ent:IsRealHero() and ent:IsAlive() and ent:GetAbsOrigin().z < 135 then
+		print(ent:GetName(), " has stepped off trigger")
 		ent.isSafe = false
 		ent:SetBaseMagicalResistanceValue(25)
 		return
@@ -48,9 +48,9 @@ function UpdateCheckpoint(trigger)
 			barebones:SetUpLevel(level)
 			barebones:MoveCreeps(level, {})
 		elseif level == 7 then
-			Timers:CreateTimer(2, function()
+			Timers:CreateTimer(1, function()
+				GameRules.Ongoing = false
 				GameRules:SetGameWinner(DOTA_TEAM_GOODGUYS)
-				GameRules:SetCustomVictoryMessage("You're winner!")
 				GameRules:SetSafeToLeave(true)
 			end)
 		end
@@ -69,13 +69,30 @@ function GiveSkill(trigger)
 		-- Giving skills
 		if not hero:FindAbilityByName(abilName) then
 			print("Giving skill to player")
-			hero:AddAbility(abilName):SetLevel(1)
 			local partname = "particles/generic_hero_status/hero_levelup.vpcf"
 			local part = ParticleManager:CreateParticle(partname, PATTACH_ABSORIGIN_FOLLOW, hero)
+			hero:AddAbility(abilName):SetLevel(1)
 		else
 			print("Setting skill to level 1")
 			local abil = hero:FindAbilityByName(abilName)
-			abil:SetLevel(1)
+			local level = abil:GetLevel()
+			if level < 1 then
+				abil:SetLevel(1)
+				local partname = "particles/generic_hero_status/hero_levelup.vpcf"
+				local part = ParticleManager:CreateParticle(partname, PATTACH_ABSORIGIN_FOLLOW, hero)
+			end
+		end
+	end
+
+	-- Hack code to ensure no stuck timberchains
+	if GameRules.CLevel == 4 then
+		for _,hero in pairs(Players) do
+			-- Removing any modifiers
+			print("Checking for modifiers - ", hero:GetName())
+			if hero:HasModifier("modifier_shredder_timber_chain") then
+				print("Removing timberchain")
+				hero:RemoveModifierByName("modifier_shredder_timber_chain")
+			end
 		end
 	end
 end
@@ -88,7 +105,7 @@ function RemoveSkill(trigger)
 		local abilName = trig:GetName()
 		local abil = hero:FindAbilityByName(abilName)
 		if abil then
-			print("Removing slark pounce")
+			print("Removing ability")
 			abil:StartCooldown(5)
 			abil:SetLevel(0)
 			--Timers:CreateTimer(1, function()

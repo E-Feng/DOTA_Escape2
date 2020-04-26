@@ -103,6 +103,7 @@ end
 function barebones:OnHeroInGame(hero)
 	-- Initializing hero with proper skills 
 	hero:SetBaseMagicalResistanceValue(100)	
+	hero:SetAbilityPoints(0)
 
 	for i = 0,16 do
     local abil = hero:GetAbilityByIndex(i)
@@ -123,10 +124,9 @@ function barebones:OnHeroInGame(hero)
 		end
 	end
 
-	hero:SetAbilityPoints(0)
-	--hero:AddAbility("slark_pounce_custom"):SetLevel(1)
-	--hero:AddAbility("earthshaker_fissure_custom"):SetLevel(1)
-	--hero:AddAbility("shredder_timber_chain_custom"):SetLevel(1)
+	hero:AddAbility("slark_pounce_custom"):SetLevel(0)
+	hero:AddAbility("earthshaker_fissure_custom"):SetLevel(0)
+	hero:AddAbility("shredder_timber_chain_custom"):SetLevel(0)
 
 	Timers:CreateTimer(0.5, function()
 		local playerID = hero:GetPlayerID()	-- never nil (-1 by default), needs delay 1 or more frames
