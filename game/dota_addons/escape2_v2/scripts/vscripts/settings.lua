@@ -6,7 +6,7 @@ UNIVERSAL_SHOP_MODE = false             -- Should the shops contain all items?
 ALLOW_SAME_HERO_SELECTION = true       -- Should we let people select the same hero as each other
 LOCK_TEAMS = false                      -- Should we Lock (true) or unlock (false) team assignemnt. If team assignment is locked players cannot change teams.
 
-CUSTOM_GAME_SETUP_TIME = 5           -- How long should custom game setup last - the screen where players pick a team?
+CUSTOM_GAME_SETUP_TIME = 20           -- How long should custom game setup last - the screen where players pick a team?
 HERO_SELECTION_TIME = 20              -- How long should we let people select their hero? Should be at least 5 seconds.
 HERO_SELECTION_PENALTY_TIME = 20      -- How long should the penalty time for not picking a hero last? During this time player loses gold.
 ENABLE_BANNING_PHASE = false            -- Should we enable banning phase? Set to true if "EnablePickRules" is "1" in 'addoninfo.txt'
@@ -14,7 +14,7 @@ BANNING_PHASE_TIME = 0               -- How long should the banning phase last? 
 STRATEGY_TIME = 5                    -- How long should strategy time last? Bug: You can buy items during strategy time and it will not be spent!
 SHOWCASE_TIME = 0                    -- How long should show case time be?
 PRE_GAME_TIME = 2                    -- How long after showcase time should the horn blow and the game start?
-POST_GAME_TIME = 2                   -- How long should we let people stay around before closing the server automatically?
+POST_GAME_TIME = 60                   -- How long should we let people stay around before closing the server automatically?
 TREE_REGROW_TIME = 2               -- How long should it take individual trees to respawn after being cut down/destroyed?
 
 --GOLD_PER_TICK = 100                     -- How much gold should players get per tick? DOESN'T WORK

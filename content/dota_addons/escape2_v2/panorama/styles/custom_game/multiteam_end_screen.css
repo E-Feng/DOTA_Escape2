@@ -3,8 +3,9 @@
 .EndScreenRoot
 {
 	width: 100%;
-    height: 100%;
-    background-color: gradient( linear, 0% 0%, 0% 100%, from( #000000FF ), color-stop( 0.12, #000000ff ), color-stop( 0.5, #00000022 ), to( #00000000 ) );
+  height: 100%;
+  background-color: gradient( linear, 0% 0%, 0% 100%, from( #000000FF ), color-stop( 0.25, #000000ff ), color-stop( 0.5, #00000022 ), to( #00000000 ) );
+	flow-children: right;
 }
 
 #VictoryRow
@@ -34,7 +35,7 @@
 
 #EndScreenVictory
 {
-    font-size: 64px;
+    font-size: 52px;
     color: #cccccc;
 	vertical-align: center;
 
@@ -45,7 +46,7 @@
 .EndScreenWindow
 {
     margin-top: 100px;
-    margin-right: 200px;
+    margin-right: 100px;
     flow-children: down;
     horizontal-align: right;
 	flow-children: down;
@@ -182,8 +183,8 @@
 #TeamScorePanel
 {
 	margin-top: 1px;
-	margin-left: 306px;
-	width: 79px;
+	margin-left: 308px;
+	width: 129px;
 	height: 100%;
     background-color: BACKGROUND_COLOR;
 }
@@ -368,7 +369,7 @@
 .ScoreCol_TeamScore
 {
 	width: 80px;
-	text-align: center;
+	text-align: right;
 }
 
 .ScoreCol_Hero
@@ -394,10 +395,12 @@
 {
 	width: 258px;
 	text-align: center;
+	visibility: collapse;
 }
 
 .ScoreCol_Gold
 {
+	visibility: collapse;
 	width: 70px;
 	text-align: center;
 }

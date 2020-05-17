@@ -1,8 +1,8 @@
 "addon"
 {
-	"addon_game_name"								"BAREBONES"
-	"DOTA_GameMode_15"								"BAREBONES"
-	"addonname"										"BAREBONES"
+	"addon_game_name"								"Escape the Undying Dead 2"
+	"DOTA_GameMode_15"								"Escape the Undying Dead 2"
+	"addonname"									"Escape the Undying Dead 2"
 	
 	"Unassigned"      								"Unassigned Team"
 	"Spectator"       								"Spectator Team"
@@ -10,7 +10,7 @@
 	"NoTeam"          								"No Team"
 
 	"DOTA_GoodGuys"   								"Radiant"
-	"DOTA_BadGuys"    								"Dire"
+	"DOTA_BadGuys"    								"Zombies"
 	"DOTA_Custom1"    								"Pink Dragon"
 	"DOTA_Custom2"    								"Orange Dog"
 	"DOTA_Custom3"    								"Blue Rooster"

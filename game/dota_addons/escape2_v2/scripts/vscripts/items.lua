@@ -19,6 +19,9 @@ function MangoEaten( event )
         end
     end
     event.target:GiveMana(mana)
+
+    local partname = "particles/items3_fx/mango_active.vpcf"
+    local part = ParticleManager:CreateParticle(partname, PATTACH_ABSORIGIN, event.target)
 end
 
 function CheeseEaten(event)
@@ -28,7 +31,7 @@ function CheeseEaten(event)
     local msg = {
                   text = str,
                   duration = 2.0,
-                  style={color="red", ["font-size"]="80px"}
+                  style={color="lime", ["font-size"]="80px"}
                 }
     Notifications:TopToAll(msg)
     GameRules:SendCustomMessage(str, 0, 1)
@@ -40,7 +43,7 @@ function DropItemOnDeath(event)
     local itemid = event.ability:GetEntityIndex()
     local level = GameRules.CLevel
     if killedUnit:IsHero() or killedUnit:HasInventory() then
-        for itemSlot = 0, 5, 1 do 
+        for itemSlot = 0, 8, 1 do 
             if killedUnit ~= nil then --checks to make sure the killed unit is not nonexistent.
                 local item = killedUnit:GetItemInSlot( itemSlot ) -- uses a variable which gets the actual item in the slot specified starting at 0, 1st slot, and ending at 5,the 6th slot.
                 if item ~= nil and item:GetName() == itemName then -- makes sure that the item exists and making sure it is the correct item

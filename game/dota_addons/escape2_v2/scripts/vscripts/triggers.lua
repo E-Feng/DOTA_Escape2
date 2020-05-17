@@ -11,9 +11,10 @@ end
 
 function OnEndSafety(trigger)
 	local ent = trigger.activator
+	print(ent:GetName(), " has stepped off trigger")
 	if not ent then return end
 	if ent:IsRealHero() and ent:IsAlive() and ent:GetAbsOrigin().z < 135 then
-		print(ent:GetName(), " has stepped off trigger")
+		print(ent:GetName(), " will be killed")
 		ent.isSafe = false
 		ent:SetBaseMagicalResistanceValue(25)
 		return
@@ -41,17 +42,23 @@ function UpdateCheckpoint(trigger)
 			Notifications:TopToAll(msg)
 			GameRules:SendCustomMessage("Level " .. tostring(level) .. "!", 0, 1)
 		end
-		if level > 1  and level < 7 then
+		if level > 1 and level < 7 then
 			barebones:ReviveAll()
 			barebones:RemoveAllSkills()
 			barebones:CleanLevel(level-1)
 			barebones:SetUpLevel(level)
 			barebones:MoveCreeps(level, {})
+			WebApi:UpdateTimeSplit(level)
 		elseif level == 7 then
-			Timers:CreateTimer(1, function()
-				GameRules.Ongoing = false
-				GameRules:SetGameWinner(DOTA_TEAM_GOODGUYS)
-				GameRules:SetSafeToLeave(true)
+			GameRules.Ongoing = false
+			WebApi:UpdateTimeSplit(level)
+			Timers:CreateTimer(0.1, function()
+				WebApi:FinalizeGameScoreAndSend()
+				WebApi:SendDeleteRequest()
+				Timers:CreateTimer(2, function()
+					GameRules:SetGameWinner(DOTA_TEAM_GOODGUYS)
+					GameRules:SetSafeToLeave(true)
+				end)
 			end)
 		end
 		print("---------UpdateCheckpoint trigger finished--------")
@@ -106,7 +113,7 @@ function RemoveSkill(trigger)
 		local abil = hero:FindAbilityByName(abilName)
 		if abil then
 			print("Removing ability")
-			abil:StartCooldown(5)
+			abil:StartCooldown(2)
 			abil:SetLevel(0)
 			--Timers:CreateTimer(1, function()
 			--	hero:RemoveAbility(abilName)

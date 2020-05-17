@@ -23,6 +23,7 @@ function barebones:HeroKilled(hero, attacker, ability)
   -- Saves position of killed hero into table
   local playerIdx = hero:GetEntityIndex()
   -- If hero steps onto grass/lava origin is moved closer to path
+  hero:SetBaseMagicalResistanceValue(25)
   hero.deadHeroPos = hero:GetAbsOrigin()
   if ability then
     if ability:GetAbilityName() == "self_immolation" then
@@ -118,6 +119,7 @@ function barebones:CheckpointThinker()
       end
     end)
   elseif GameRules.Lives < 0 then
+    WebApi:SendDeleteRequest()
     Timers:CreateTimer(1, function()
       GameRules.Ongoing = false
       GameRules:SetGameWinner(DOTA_TEAM_ZOMBIES)

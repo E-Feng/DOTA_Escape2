@@ -1,0 +1,136 @@
+.LeaderboardWindow
+{
+  visibility: visible;
+  flow-children: down;
+  margin-top: 75px;
+  margin-left: 50px;
+  padding: 0px;
+}
+
+.LeaderboardText
+{
+  font-size: 64px;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+#LeaderboardContainer
+{
+  flow-children: down;
+  font-size: 20px;
+  color: #ffffff;
+
+  background-color: #000000;
+  opacity: 0.95;
+}
+
+#ScoreText
+{
+  margin-top: 50px;
+  color: #ffffff;
+  font-size: 24px;
+}
+
+.LeaderboardLegend
+{
+  flow-children: right;
+  height: 24px;
+}
+
+.LBLegendPanel
+{
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: right;
+  color: #ffffff;
+
+  margin-left: 0px;
+  padding: 0px;
+  margin-right: 0px;
+  padding-right: 5px;
+}
+
+.LeaderboardEntry
+{
+  flow-children: right;
+  height: 45px;
+  border-bottom: 1px solid #cccccc;
+
+  vertical-align: bottom;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+
+.LeaderboardEntry Panel {
+  vertical-align: bottom;
+  padding-left: 0px;
+  padding-right: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+.ScoreboardPanel Label
+{
+  horizontal-align: right;
+  vertical-align: bottom;
+	font-size: 26px;
+	text-shadow: 2px 2px 2px black;
+  margin-top: -2px;
+  
+  padding: 3px;
+  color: #cccccc;
+}
+
+.ScoreCol_Rank
+{
+  width: 50px;
+}
+
+.ScoreCol_Time
+{
+  width: 100px;
+}
+
+.ScoreCol_Players
+{
+  width: 75px;
+}
+
+.ScoreCol_Deaths
+{
+  width: 75px;
+}
+
+.ScoreCol_Lives
+{
+  width: 50px;
+}
+
+.ScoreCol_Level1,
+.ScoreCol_Level2,
+.ScoreCol_Level3,
+.ScoreCol_Level4,
+.ScoreCol_Level5,
+.ScoreCol_Level6
+{
+  width: 75px;
+}
+
+.ScoreCol_PlayerNames
+{
+  width: 400px;
+  text-align: left;
+  padding-left: 8px;
+}
+
+.ScoreCol_PlayerNames Label {
+  horizontal-align: left;
+  padding-left: 8px;
+  font-size: 16px;
+  padding-top: 0px;
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+}

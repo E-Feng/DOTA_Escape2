@@ -6,27 +6,51 @@
 .AddonLoadingRoot
 {
 	width: 100%;
-    height: 100%;
-    background-color: black;
-    background-image: url("file://{images}/custom_game/loading_screen/loading.png");
+	height: 100%;
+	background-image: url("file://{images}/custom_game/loading_screen/loading.png");
 	background-position: center center;
 	background-size: cover;
+}
+
+.Gradient {
+	width: 100%;
+	height: 100%;
+	background-color: gradient( linear, 0% 0%, 0% 100%, from( #000000FF ), color-stop( 0.25, #000000ff ), color-stop( 0.5, #00000022 ), to( #00000000 ) );
 }
 
 #TitlePanel
 {
 	horizontal-align: left;
 	vertical-align: bottom;
-	margin-bottom: 150px;
-	margin-left: 100px;
-	flow-children: right;
+	margin-bottom: 100px;
+	margin-left: 50px;
+	flow-children: down;
+}
+
+#SeqText
+{
+  margin-bottom: 25px;
+  vertical-align: center;
+  font-size: 36px;
+  color: #ffffff;
+  text-shadow: 3px 3px 3px #000000;
+}
+
+#Rules
+{
+  margin-bottom: -15px;
+  vertical-align: center;
+  font-size: 36px;
+  color: #ffffff;
+  text-shadow: 3px 3px 3px #000000;
 }
 
 #AddonTitle
 {
 	margin-bottom: -15px;
 	vertical-align: center;
-	font-size: 40px;
-	color: white;
-	text-shadow: 3px 3px 3px #000000;
+	text-transform: uppercase;
+	font-size: 80px;
+	color: #cccccc;
+	text-shadow: 2px 2px 2px #000000;
 }

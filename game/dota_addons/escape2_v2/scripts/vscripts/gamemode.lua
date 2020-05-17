@@ -77,28 +77,36 @@ end
 function barebones:OnGameInProgress()
 	DebugPrint("[BAREBONES] The game has officially begun.")
 
-	  -- Sets it to be nighttime, cycle disabled so 24/7 night
-		GameRules:SetTimeOfDay(4)
+	-- Sets it to be nighttime, cycle disabled so 24/7 night
+	GameRules:SetTimeOfDay(4)
 
-		-- Constant running thinker to revive players
-		Timers:CreateTimer(function()
-			barebones:ReviveThinker()
-			return 0.1
-		end)
-	
-			-- Starts the thinker to check if everyones dead and to revive
-		Timers:CreateTimer(4, function()
-			if GameRules.Ongoing then
-				barebones:CheckpointThinker()
-				return 2
-			end
-		end)   
+	-- Constant running thinker to revive players
+	Timers:CreateTimer(function()
+		barebones:ReviveThinker()
+		return 0.1
+	end)
+
+		-- Starts the thinker to check if everyones dead and to revive
+	Timers:CreateTimer(4, function()
+		if GameRules.Ongoing then
+			barebones:CheckpointThinker()
+			return 2
+		end
+	end)   
+
+	-- Setting up gamescore data collection
+	WebApi:InitGameScore()
 end
 
 -- This function initializes the game mode and is called before anyone loads into the game
 -- It can be used to pre-initialize any values/tables that will be needed later
 function barebones:InitGameMode()
 	DebugPrint("[BAREBONES] Starting to load Game Rules.")
+	-- Grabbing data from DB first thing
+	Timers:CreateTimer(0.1, function()
+		WebApi:GetLeaderboard()
+		--GameRules:BotPopulate()
+	end)
 
 	-- Setup rules
 	GameRules:SetSameHeroSelectionEnabled(ALLOW_SAME_HERO_SELECTION)
@@ -180,6 +188,7 @@ function barebones:InitGameMode()
 	ListenToGameEvent('tree_cut', Dynamic_Wrap(barebones, 'OnTreeCut'), self)
 
 	ListenToGameEvent('dota_player_used_ability', Dynamic_Wrap(barebones, 'OnAbilityUsed'), self)
+	ListenToGameEvent('dota_non_player_used_ability', Dynamic_Wrap(barebones, 'OnAbilityUsedDisconnect'), self)
 	ListenToGameEvent('game_rules_state_change', Dynamic_Wrap(barebones, 'OnGameRulesStateChange'), self)
 	ListenToGameEvent('npc_spawned', Dynamic_Wrap(barebones, 'OnNPCSpawned'), self)
 	ListenToGameEvent('dota_player_pick_hero', Dynamic_Wrap(barebones, 'OnPlayerPickHero'), self)
@@ -246,10 +255,13 @@ function barebones:InitGameMode()
   MultVector = {}
 	BoundsVector = {}
 	Linked = {}
+	Vote = {}
+	votesNeeded = 6
   GameRules.Lives = 5
   GameRules.CLevel = 0
 	GameRules.Checkpoint = Vector(0, 0, 0)
 	GameRules.Ongoing = true
+	GameRules.VoteOngoing = false
 
   DOTA_TEAM_ZOMBIES = DOTA_TEAM_BADGUYS
 
@@ -459,13 +471,14 @@ function barebones:InitGameMode()
 								{2, ENT_PATRL, 0, "p4_8a", "PatrolInitial", 39, 0.03, 325},
               },
 							{ -- Level 5
-								{2, ENT_GATES, 0, "gate5_1a", "GateThinker", "gate5_1b", false, Vector(0, 1, 0), 4},
+								{2, ENT_GATES, 0, "gate5_1a", "GateThinker", "gate5_1b", false, Vector(0, 1, 0), 2},
+								{2, ENT_GATES, 0, "gate5_2a", "GateThinker", "gate5_2b", false, Vector(0, 1, 0), 2},
 								{1, ENT_MANGO, 0, "mango5_1", nil, false, true},
                 {1, ENT_MANGO, 0, "mango5_2", nil, false, true},
                 {1, ENT_MANGO, 0, "mango5_3", nil, false, true},
                 {1, ENT_MANGO, 0, "mango5_4", nil, false, true},
-								{2, ENT_BIGPT, 0, "p5_1a", "PatrolInitialBig", 40, 0.03, 250},
-								{2, ENT_BIGPT, 0, "p5_1a", "PatrolInitialBig", 41, 0.12, 250},
+								{2, ENT_BIGPT, 0, "p5_1a", "PatrolInitialBig", 40, 0.03, 265},
+								{2, ENT_BIGPT, 0, "p5_1a", "PatrolInitialBig", 41, 0.12, 275},
 								{2, ENT_PATRL, 0, "p5_1_1a", "PatrolInitial", 42, 0.03, 500},
 								{2, ENT_PATRL, 0, "p5_1_2a", "PatrolInitial", 43, 0.03, 500},
 								{2, ENT_PATRL, 0, "p5_2_1a", "PatrolInitial", 44, 0.03, 450},
@@ -539,7 +552,7 @@ function barebones:InitGameMode()
 					}
 
   -- Loads the level
-  barebones:SetupMap()
+	barebones:SetupMap()
 end
 
 function barebones:SetupMap()
@@ -575,6 +588,7 @@ end
 
 -- This function is called as the first player loads and sets up the game mode parameters
 function barebones:CaptureGameMode()
+	print("CaptureGameMode starting")
 	local gamemode = GameRules:GetGameModeEntity()
 
 	-- Moving creeps for level 1

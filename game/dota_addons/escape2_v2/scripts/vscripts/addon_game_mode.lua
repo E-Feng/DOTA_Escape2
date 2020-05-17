@@ -8,6 +8,7 @@ else
 	DebugPrint("[BAREBONES] If this is not your first time, you probably used script_reload in console.")
 end
 
+require('webapi')
 require('util')
 require('libraries/timers')                      -- Core lua library
 require('libraries/player_resource')             -- Core lua library
@@ -32,6 +33,7 @@ function Precache(context)
   PrecacheResource("particle", "particles/econ/generic/generic_aoe_explosion_sphere_1/generic_aoe_explosion_sphere_1.vpcf", context)
   PrecacheResource("particle", "particles/econ/items/kunkka/divine_anchor/hero_kunkka_dafx_skills/kunkka_spell_x_spot_mark_fxset.vpcf", context)
   PrecacheResource("particle", "particles/units/heroes/hero_omniknight/omniknight_purification.vpcf", context)
+  PrecacheResource("particle", "particles/items3_fx/mango_active.vpcf", context)
   PrecacheResource("particle_folder", "particles/test_particle", context)
   PrecacheResource("particle_folder", "particles/misc", context)
   PrecacheResource("particle_folder", "particles/beacons", context)

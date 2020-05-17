@@ -59,12 +59,14 @@ function barebones:CreepPatrolLinked(unit, idx, turnDelay)
   unit.done = false
   unit.go = true
   unit.goal = newpos[1]
+  unit.pos = 1
   Timers:CreateTimer(function()
     if IsValidEntity(unit) then
       for i,waypoint in pairs(waypoints) do
         local posU = unit:GetAbsOrigin()
         if CalcDist2D(posU, waypoint) < 25 then
           unit.goal = newpos[i]
+          unit.pos = i
           if i == last then
             unit.done = true
             unit.go = false
@@ -72,7 +74,11 @@ function barebones:CreepPatrolLinked(unit, idx, turnDelay)
             unit:MoveToPosition(unit.goal)
           end
         else
-          unit:MoveToPosition(unit.goal)
+          if unit.pos ~= last then
+            unit:MoveToPosition(unit.goal)
+          elseif unit.go then
+            unit:MoveToPosition(unit.goal)
+          end
         end
       end
       return turnDelay
@@ -87,7 +93,11 @@ function barebones:LinkedThinker()
   Timers:CreateTimer(2, function()
     local ready = true
     if GameRules.CLevel == 5 then
+      --local unit1 = Linked[1]
+      --local unit2 = Linked[2]
+      --print(CalcDist2D(unit1:GetAbsOrigin(), unit2:GetAbsOrigin()))
       for i,unit in pairs(Linked) do
+        --print(unit.done)
         if unit.done == false then
           ready = false
         end
@@ -95,12 +105,29 @@ function barebones:LinkedThinker()
       if ready then
         for i,unit in pairs(Linked) do
           print("Restarting linked movement")
+          unit:MoveToPosition(unit.goal)
           unit.go = true
           unit.done = false
-          unit:MoveToPosition(unit.goal)
+          Timers:CreateTimer(1.5, function()
+            if not unit:IsMoving() then
+              unit:MoveToPosition(unit.goal)
+            end
+          end)
+          Timers:CreateTimer(2.0, function()
+            if not unit:IsMoving() then
+              unit:MoveToPosition(unit.goal)
+            end
+          end)
+          Timers:CreateTimer(2.5, function()
+            unit.go = true
+            unit.done = false
+            if not unit:IsMoving() then
+              unit:MoveToPosition(unit.goal)
+            end
+          end)
         end
       end
-      return 0.95
+      return 0.25
     else
       return
     end
@@ -177,20 +204,22 @@ function barebones:GateThinker(unit, entvals)
   local pos = Entities:FindByName(nil, entvals[ENT_SPAWN]):GetAbsOrigin()
   unit.moved = false
   unit:SetMana(15-entvals[GAT_NUMBR])
-  unit:SetHullRadius(100)
+  unit:SetHullRadius(80)
   unit:SetForwardVector(entvals[GAT_ORIEN])
   local abil = unit:FindAbilityByName("gate_unit_passive")
   Timers:CreateTimer(function()
     if IsValidEntity(unit) then
       -- print("Has mana?", abil:IsOwnersManaEnough(), unit:GetUnitName(), "(", unit:GetEntityIndex(), ")")
       if abil:IsOwnersManaEnough() then
+        unit:SetBaseMoveSpeed(100)
         unit:CastAbilityImmediately(abil, -1)
+        unit:SetHullRadius(5)
         unit.moved = true
       end
       if not unit.moved then
         unit:MoveToPosition(pos)
       end
-      return 1.0
+      return 0.05
     else
       return
     end
@@ -202,7 +231,7 @@ function barebones:TrainThinker()
   print("Train thinker has started")
   local entNames = {{"carty2_1a", "carty2_1b"}, {"carty2_2a", "carty2_2b"}, {"carty2_3a", "carty2_3b"}}
   local entLocs = {}
-  local xOffset = 125
+  local xOffset = 130
   local baseMoveSpeed = {250, 335, 145}
   local timeSpawn = {2, 1.5, 2.4}
   local carts = 3

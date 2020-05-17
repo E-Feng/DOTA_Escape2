@@ -1,18 +1,25 @@
-# DOTA Escape2
-Escape The Undying Dead 2 - Dota2 Custom Game
+# Escape The Undying Dead 2 - Dota 2 Custom Game
 
 <img src="https://i.imgur.com/dXvoMdb.png"/>
 
-## Preview 
-Steamcommunity Workshop: https://steamcommunity.com/sharedfiles/filedetails/?id=2070583974 \
-Youtube Preview: https://youtu.be/7ScA5KILNRs \
-Gyf Preview: https://gfycat.com/weesneakydogwoodtwigborer 
+A fun co-op maze/escape Dota 2 custom game mod recreated from popular Warcraft III arcade games.
 
-Sequel to the first Escape the Undying Dead game. A fun co-op maze/escape game popularized back in Warcraft III arcade games. Recreated in Dota2 custom game using inspiration from past games. 
+# Links
+## Escape The Undying Dead (Prequel)
 
-## Escape The Undying Dead (prequel) 
-Steamcommunity Workshop: https://steamcommunity.com/sharedfiles/filedetails/?id=630768961 \
-Github: https://github.com/E-Feng/DOTA_Escape1 
+Preview: https://www.youtube.com/watch?v=wW4XcTzHDgs \
+Workshop: https://steamcommunity.com/sharedfiles/filedetails/?id=630768961 \
+Github: https://github.com/E-Feng/DOTA_Escape1 \
+Gameplay: https://www.youtube.com/watch?v=WM5hluQtQ7M
 
-## Thanks
-Barebones code for creating a base custom game provided by https://github.com/DarkoniusXNG/barebones
+## Escape The Undying Dead 2: Vengeance
+
+Preview: https://www.youtube.com/watch?v=7ScA5KILNRs \
+Workshop: https://steamcommunity.com/sharedfiles/filedetails/?id=2070583974 \
+Github: https://github.com/E-Feng/DOTA_Escape2 \
+Gameplay: https://www.youtube.com/watch?v=OhmL5BI3Mgo
+
+# Thanks
+Barebones code for creating a base custom game provided by https://github.com/bmddota/barebones/ \
+Updated barebones by https://github.com/DarkoniusXNG/barebones \
+Moddota Discord channel

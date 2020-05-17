@@ -84,6 +84,7 @@
             break;
         }
     }
+		
     var timeBlock = hud.FindChildTraverse("TimeOfDay");
     timeBlock.style.horizontalAlign="left";
 

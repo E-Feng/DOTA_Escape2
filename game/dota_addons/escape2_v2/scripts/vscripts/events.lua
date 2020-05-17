@@ -220,11 +220,45 @@ end
 -- An ability was used by a player
 function barebones:OnAbilityUsed(keys)
 	--PrintTable(keys)
+	print("Ability used by player")
 
 	local playerID = keys.PlayerID
 	local ability_name = keys.abilityname
+	local caster = keys.caster_entindex
 
-	local hero = PlayerResource:GetPlayer(playerID):GetAssignedHero()
+	--local hero = PlayerResource:GetPlayer(playerID):GetAssignedHero()
+	local hero = EntIndexToHScript(caster)
+	if ability_name == "slark_pounce_custom" then
+		print("Pounce casted")
+		local delay = 0.78
+		hero.isSafe = false
+		if hero:GetAbsOrigin().z > 200 then
+			delay = 0.82
+		end
+		Timers:CreateTimer(delay, function()
+			if hero.isSafe then
+				print("Landed on safe")
+			else
+				print("Landed on lava")
+				hero:SetBaseMagicalResistanceValue(25)
+			end
+		end)
+	end
+
+	-- If you need to adjust abilities on their cast, use Order Filter or modifier events, not this
+end
+
+-- An ability was used by a disconnected player
+function barebones:OnAbilityUsedDisconnect(keys)
+	--PrintTable(keys)
+	print("Ability used by a disconnected player")
+
+	local playerID = keys.PlayerID
+	local ability_name = keys.abilityname
+	local caster = keys.caster_entindex
+
+	--local hero = PlayerResource:GetPlayer(playerID):GetAssignedHero()
+	local hero = EntIndexToHScript(caster)
 	if ability_name == "slark_pounce_custom" then
 		print("Pounce casted")
 		local delay = 0.78
@@ -657,4 +691,78 @@ function barebones:OnPlayerChat(keys)
 	local userID = keys.userid
 	local playerID = keys.playerid
 	local text = keys.text
+
+	local numPlayers
+
+	if text == "-votekill" then
+		if not GameRules.VoteOngoing then
+			print("Kill all vote started")
+			GameRules.VoteOngoing = true
+			Vote = {}
+			numPlayers = 0
+			for i,hero in pairs(Players) do
+				if PlayerResource:IsConnected(i) then
+					numPlayers = numPlayers + 1
+				end
+			end
+			votesNeeded = math.max(math.floor(numPlayers/2) + 1, 2) -- Min of 2 votes
+			print("Num players and num votes", numPlayers, votesNeeded)
+
+			local name = PlayerResource:GetPlayerName(playerID)
+			name = string.sub(name, 1, 15)
+			local init_msg = {
+				text = name .. " started kill all vote, need " .. tostring(votesNeeded) .. " to succeed. <br/>Type '-votekill' to vote.",
+				duration = 8.0,
+				style = {color="red", ["font-size"]="60px"}
+			}
+			Notifications:TopToAll(init_msg)
+			table.insert(Vote, playerID)
+			Timers:CreateTimer(30, function()
+				if GameRules.VoteOngoing == true then
+					print("Vote failed")
+					GameRules.VoteOngoing = false
+					Vote = {}
+					local fail_msg = {
+						text = "Vote has failed, type '-votekill' to try again.",
+						duration = 4.0,
+						style = {color="red", ["font-size"]="60px"}
+					}
+					Notifications:TopToAll(fail_msg)
+				end
+			end)
+		else
+			--playerID = RandomInt(0, 9)
+			if not TableContains(Vote, playerID) and #Vote > 0 then
+				print("Player ID ", playerID, " has voted")
+				table.insert(Vote, playerID)
+				local name = PlayerResource:GetPlayerName(playerID)
+				name = string.sub(name, 1, 15)
+				local numVotes = #Vote
+				local vote_msg = {
+					text = name .. " voted: " .. tostring(numVotes) .. "/" .. tostring(votesNeeded),
+					duration = 4.0,
+					style = {color="red", ["font-size"]="60px"}
+				}
+				Notifications:TopToAll(vote_msg)
+				if numVotes >= votesNeeded then
+					print("Vote passed, killing all")
+					Vote = {}	
+					local success_msg = {
+						text = "Vote successful, killing all",
+						duration = 4.0,
+						style = {color="red", ["font-size"]="60px"}
+					}
+					Notifications:TopToAll(success_msg)			
+					Timers:CreateTimer(4, function()	
+						GameRules.VoteOngoing = false
+						for i,hero in pairs(Players) do
+							if hero:IsAlive() then
+								hero:SetBaseMagicalResistanceValue(25)
+							end
+						end
+					end)
+				end
+			end
+		end
+	end
 end

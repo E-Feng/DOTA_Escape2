@@ -1,10 +1,87 @@
 <root> 
 	<styles>
 		<include src="file://{resources}/styles/custom_game/custom_loading_screen.css"/>
+		<include src="file://{resources}/styles/custom_game/leaderboard.css" />
 	</styles>
+
+	<scripts>
+		<include src="file://{resources}/scripts/custom_game/leaderboard.js" />
+	</scripts>
+
+	<snippets>
+		<snippet name="LeaderboardRow">
+			<Panel class="LeaderboardEntry">
+				<Panel id="RankContainer" class="ScoreCol_Rank ScoreboardPanel">
+					<Label id="Rank" text="999" />
+				</Panel>
+				<Panel id="TimeContainer" class="ScoreCol_Time ScoreboardPanel">
+					<Label id="Time" text="999" />
+				</Panel>
+				<Panel id="PlayersContainer" class="ScoreCol_Players ScoreboardPanel">
+					<Label id="Players" text="999" />
+				</Panel>
+				<Panel id="DeathsContainer" class="ScoreCol_Deaths ScoreboardPanel">
+					<Label id="DeathCount" text="999" />
+				</Panel>
+				<Panel id="LivesContainer" class="ScoreCol_Lives ScoreboardPanel">
+					<Label id="Lives" text="999" />
+				</Panel>
+				<Panel id="Level1Container" class="ScoreCol_Level1 ScoreboardPanel">
+					<Label id="Level1" text="999" />
+				</Panel>
+				<Panel id="Level2Container" class="ScoreCol_Level2 ScoreboardPanel">
+					<Label id="Level2" text="999" />
+				</Panel>
+				<Panel id="Level3Container" class="ScoreCol_Level3 ScoreboardPanel">
+					<Label id="Level3" text="999" />
+				</Panel>
+				<Panel id="Level4Container" class="ScoreCol_Level4 ScoreboardPanel">
+					<Label id="Level4" text="999" />
+				</Panel>
+				<Panel id="Level5Container" class="ScoreCol_Level5 ScoreboardPanel">
+					<Label id="Level5" text="999" />
+				</Panel>
+				<Panel id="Level6Container" class="ScoreCol_Level6 ScoreboardPanel">
+					<Label id="Level6" text="999" />
+				</Panel>
+				<Panel id="PlayerNamesContainer" class="ScoreCol_PlayerNames ScoreboardPanel">
+					<Label id="PlayerNames" text="999" />
+				</Panel>
+			</Panel>
+		</snippet>
+	</snippets>
+
 	<Panel class="AddonLoadingRoot">
-		<Panel id="TitlePanel"> 
-			<Label id="AddonTitle" text="Avoid zombies. \nStay on the path. \nDon't cut corners. \nFeed mangos to the Undying." style=""/>
+		<Panel class="Gradient">
+			<Panel class="LeaderboardWindow">
+				<Panel class="LeaderboardTextWindow">
+					<Label class="LeaderboardText" text="Leaderboard" />
+				</Panel>
+				<Panel class="LeaderboardLegend">
+					<Label class="LBLegendPanel ScoreCol_Rank" text="Rank" />
+					<Label class="LBLegendPanel ScoreCol_Time" text="Time" />
+					<Label class="LBLegendPanel ScoreCol_Players" text="Players" />
+					<Label class="LBLegendPanel ScoreCol_Deaths" text="Deaths" />
+					<Label class="LBLegendPanel ScoreCol_Lives" text="Lives" />
+					<Label class="LBLegendPanel ScoreCol_Level1" text="1" />
+					<Label class="LBLegendPanel ScoreCol_Level2" text="2" />
+					<Label class="LBLegendPanel ScoreCol_Level3" text="3" />
+					<Label class="LBLegendPanel ScoreCol_Level4" text="4" />
+					<Label class="LBLegendPanel ScoreCol_Level5" text="5" />
+					<Label class="LBLegendPanel ScoreCol_Level6" text="6" />
+					<Label class="LBLegendPanel ScoreCol_PlayerNames" text="Player Names" />
+				</Panel>
+				<Panel id="LeaderboardContainer" />
+			</Panel>
+
+			<Panel id="TitlePanel"> 
+				<Label id="Rules" text="Avoid zombies. 
+					\nStay on the path. 
+					\nDon't cut corners. 
+					\nFeed mangos to the Undying (check mana). 
+					\nCheese grants extra life.
+					\nType '-votekill' to kill everyone (for afk/stuck)." style="" />
+			</Panel>
 		</Panel>
 	</Panel>
 </root>

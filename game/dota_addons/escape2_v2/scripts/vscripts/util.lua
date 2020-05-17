@@ -65,6 +65,14 @@ function TableLength(t)
     return length
 end
 
+-- Return key of table from given value in subkey
+function GetTableKeyFromValue(tbl, subkey, val)
+  for k, v in pairs(tbl) do
+      if v[subkey] == val then return k end
+  end
+  return nil
+end
+
 function GetRandomTableElement(t)
     -- iterate over whole table to get all keys
     local keyset = {}
