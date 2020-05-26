@@ -152,8 +152,6 @@ function sortAndTrimArray(arr, len) {
 		var leaderboardContainer = $("#LeaderboardContainer");
 		var scoreContainer = $("#ScoreContainer");
 
-		leaderboardContainer.RemoveAndDeleteChildren();
-
 		// Getting gamescore from table
 		var rawData = CustomNetTables.GetAllTableValues("gamescore");
 		var data = rawData["0"]["value"];
@@ -176,6 +174,8 @@ function sortAndTrimArray(arr, len) {
 			arr.push(data);
 			arr = sortAndTrimArray(arr, count);
 
+			// Clear leaderboard and add in new record entry
+			leaderboardContainer.RemoveAndDeleteChildren();
 			updateLeaderboard(leaderboardContainer, arr, rank);
 		}
 
