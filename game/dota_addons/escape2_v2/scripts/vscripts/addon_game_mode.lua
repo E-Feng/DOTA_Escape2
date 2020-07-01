@@ -34,6 +34,7 @@ function Precache(context)
   PrecacheResource("particle", "particles/econ/items/kunkka/divine_anchor/hero_kunkka_dafx_skills/kunkka_spell_x_spot_mark_fxset.vpcf", context)
   PrecacheResource("particle", "particles/units/heroes/hero_omniknight/omniknight_purification.vpcf", context)
   PrecacheResource("particle", "particles/items3_fx/mango_active.vpcf", context)
+  PrecacheResource("particle", "particles/addons_gameplay/pit_lava_sparks.vpcf", context)
   PrecacheResource("particle_folder", "particles/test_particle", context)
   PrecacheResource("particle_folder", "particles/misc", context)
   PrecacheResource("particle_folder", "particles/beacons", context)
@@ -53,6 +54,9 @@ function Precache(context)
   PrecacheResource("soundfile", "soundevents/game_sounds_heroes/game_sounds_earthshaker.vsndevts", context)
   PrecacheResource("soundfile", "soundevents/game_sounds_heroes/game_sounds_shredder.vsndevts", context)
   PrecacheResource("soundfile", "soundevents/game_sounds_heroes/game_sounds_slark.vsndevts", context)
+  PrecacheResource("soundfile", "soundevents/game_sounds_heroes/game_sounds_ogre_magi.vsndevts", context)
+  PrecacheResource("soundfile", "soundevents/game_sounds_ui_imported.vsndevts", context)
+  PrecacheResource("soundfile", "soundevents/game_sounds_items.vsndevts", context)
 
 	-- Entire items can be precached by name
 	-- Abilities can also be precached in this way despite the name
@@ -64,6 +68,14 @@ function Precache(context)
   PrecacheItemByNameSync("shredder_timber_chain_custom", context)
   PrecacheItemByNameSync("slark_pounce_custom", context)
 
+  -- Patreon items
+  PrecacheItemByNameSync("item_patreon_chest", context)
+  PrecacheItemByNameSync("item_patreon_get_cheese1", context)
+  PrecacheItemByNameSync("item_patreon_get_cheese2", context)
+  PrecacheItemByNameSync("item_patreon_larger_x", context)
+  PrecacheItemByNameSync("item_patreon_wind_lace", context)
+  PrecacheItemByNameSync("item_patreon_phoenix_ash", context)
+  PrecacheItemByNameSync("item_patreon_phase", context)
 
 	-- Entire heroes (sound effects/voice/models/particles) can be precached with PrecacheUnitByNameSync
 	-- Custom units from npc_units_custom.txt can also have all of their abilities and precache{} blocks precached in this way

@@ -22,4 +22,5 @@ Gameplay: https://www.youtube.com/watch?v=OhmL5BI3Mgo
 # Thanks
 Barebones code for creating a base custom game provided by https://github.com/bmddota/barebones/ \
 Updated barebones by https://github.com/DarkoniusXNG/barebones \
-Moddota Discord channel
+Moddota Discord channel \
+Dota IMBA repository for code examples

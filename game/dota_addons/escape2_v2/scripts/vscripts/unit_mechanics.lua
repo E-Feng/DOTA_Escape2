@@ -202,9 +202,11 @@ end
 function barebones:GateThinker(unit, entvals)
   print("Thinker has started on unit", unit:GetUnitName(), "(", unit:GetEntityIndex(), ")")
   local pos = Entities:FindByName(nil, entvals[ENT_SPAWN]):GetAbsOrigin()
+  local hullRadius = 80
+
   unit.moved = false
   unit:SetMana(15-entvals[GAT_NUMBR])
-  unit:SetHullRadius(80)
+  unit:SetHullRadius(hullRadius)
   unit:SetForwardVector(entvals[GAT_ORIEN])
   local abil = unit:FindAbilityByName("gate_unit_passive")
   Timers:CreateTimer(function()
@@ -213,13 +215,36 @@ function barebones:GateThinker(unit, entvals)
       if abil:IsOwnersManaEnough() then
         unit:SetBaseMoveSpeed(100)
         unit:CastAbilityImmediately(abil, -1)
-        unit:SetHullRadius(5)
+        unit:SetHullRadius(25)
         unit.moved = true
       end
       if not unit.moved then
-        unit:MoveToPosition(pos)
+        if CalcDist2D(unit:GetAbsOrigin(), pos) > 100 and RandomFloat(0, 1) > 0.75 then
+          unit:MoveToPosition(pos)
+        end
+
+        -- Check for phase boots through
+        local foundUnits = FindUnitsInRadius(DOTA_TEAM_GOODGUYS,
+                                             unit:GetAbsOrigin(),
+                                             nil,
+                                             hullRadius,
+                                             DOTA_UNIT_TARGET_TEAM_FRIENDLY,
+                                             DOTA_UNIT_TARGET_HERO,
+                                             DOTA_UNIT_TARGET_FLAG_NONE,
+                                             FIND_ANY_ORDER,
+                                             false)
+        for _,foundUnit in pairs(foundUnits) do
+          --print("Found", foundUnit:GetName())
+          local posU = unit:GetAbsOrigin()
+          local posF = foundUnit:GetAbsOrigin()
+
+          local shift = -(hullRadius - CalcDist2D(posU, posF) + 25)
+          local forwardVec = foundUnit:GetForwardVector():Normalized()
+          local newOrigin = posF + forwardVec*shift
+          foundUnit:SetAbsOrigin(newOrigin)
+        end        
       end
-      return 0.05
+      return 0.03
     else
       return
     end

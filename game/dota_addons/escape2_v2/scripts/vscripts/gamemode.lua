@@ -108,6 +108,20 @@ function barebones:InitGameMode()
 		--GameRules:BotPopulate()
 	end)
 
+	local attempts = 0
+	local MAX_ATTEMPTS = 5
+
+	Timers:CreateTimer(0.2, function()
+		print("PATREONS: Running function initially")
+		if not WebApi.patreonsLoaded and attempts < MAX_ATTEMPTS then
+			WebApi:GetPatreons()
+		else
+			return
+		end
+		attempts = attempts + 1
+		return 20
+	end)	
+
 	-- Setup rules
 	GameRules:SetSameHeroSelectionEnabled(ALLOW_SAME_HERO_SELECTION)
 	GameRules:SetUseUniversalShopMode(UNIVERSAL_SHOP_MODE)
@@ -255,13 +269,18 @@ function barebones:InitGameMode()
   MultVector = {}
 	BoundsVector = {}
 	Linked = {}
+	_G.Cheeses = {}
+
 	Vote = {}
 	votesNeeded = 6
+	GameRules.Ongoing = true
+	GameRules.VoteOngoing = false
+
+	_G.patreonUsed = false
+
   GameRules.Lives = 5
   GameRules.CLevel = 0
 	GameRules.Checkpoint = Vector(0, 0, 0)
-	GameRules.Ongoing = true
-	GameRules.VoteOngoing = false
 
   DOTA_TEAM_ZOMBIES = DOTA_TEAM_BADGUYS
 
@@ -278,16 +297,16 @@ function barebones:InitGameMode()
   TeamColors[9] = {140, 42, 244} -- Purple
 
   BeaconPart = {}
-  BeaconPart[0] = "particles/beacons/kunkka_spell_x_spot_mark_fxset_teal.vpcf"
-  BeaconPart[1] = "particles/beacons/kunkka_spell_x_spot_mark_fxset_yellow.vpcf" 
-  BeaconPart[2] = "particles/beacons/kunkka_spell_x_spot_mark_fxset_pink.vpcf" 
-  BeaconPart[3] = "particles/beacons/kunkka_spell_x_spot_mark_fxset_orange.vpcf" 
-  BeaconPart[4] = "particles/beacons/kunkka_spell_x_spot_mark_fxset_blue.vpcf" 
-  BeaconPart[5] = "particles/beacons/kunkka_spell_x_spot_mark_fxset_green.vpcf" 
-  BeaconPart[6] = "particles/beacons/kunkka_spell_x_spot_mark_fxset_brown.vpcf" 
-  BeaconPart[7] = "particles/beacons/kunkka_spell_x_spot_mark_fxset_dred.vpcf" 
-  BeaconPart[8] = "particles/beacons/kunkka_spell_x_spot_mark_fxset_olive.vpcf" 
-  BeaconPart[9] = "particles/beacons/kunkka_spell_x_spot_mark_fxset_purple.vpcf" 
+  BeaconPart[0] = "particles/beacons/kunkka_x_marks_teal.vpcf"
+  BeaconPart[1] = "particles/beacons/kunkka_x_marks_yellow.vpcf" 
+  BeaconPart[2] = "particles/beacons/kunkka_x_marks_pink.vpcf" 
+  BeaconPart[3] = "particles/beacons/kunkka_x_marks_orange.vpcf" 
+  BeaconPart[4] = "particles/beacons/kunkka_x_marks_blue.vpcf" 
+  BeaconPart[5] = "particles/beacons/kunkka_x_marks_green.vpcf" 
+  BeaconPart[6] = "particles/beacons/kunkka_x_marks_brown.vpcf" 
+  BeaconPart[7] = "particles/beacons/kunkka_x_marks_dred.vpcf" 
+  BeaconPart[8] = "particles/beacons/kunkka_x_marks_olive.vpcf" 
+  BeaconPart[9] = "particles/beacons/kunkka_x_marks_purple.vpcf" 
 
   -- Table for multiple patrol creeps {"waypoint1", "waypoint2", "etc"}
   MultPatrol = {

@@ -73,6 +73,16 @@ function GetTableKeyFromValue(tbl, subkey, val)
   return nil
 end
 
+function GetRandomTableKey(t)
+  -- iterate over whole table to get all keys
+  local keyset = {}
+  for k in pairs(t) do
+      table.insert(keyset, k)
+  end
+  -- now you can reliably return a random key
+  return keyset[RandomInt(1, #keyset)]
+end
+
 function GetRandomTableElement(t)
     -- iterate over whole table to get all keys
     local keyset = {}

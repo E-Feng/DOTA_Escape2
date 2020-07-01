@@ -124,9 +124,23 @@ function barebones:OnHeroInGame(hero)
 		end
 	end
 
-	hero:AddAbility("slark_pounce_custom"):SetLevel(0)
 	hero:AddAbility("earthshaker_fissure_custom"):SetLevel(0)
+	hero:AddAbility("slark_pounce_custom"):SetLevel(0)
 	hero:AddAbility("shredder_timber_chain_custom"):SetLevel(0)
+
+
+	-- Initializing hero parameters
+	local modelRad = hero:GetModelRadius()
+	local reviveRad = math.max(modelRad, REVIVE_RAD_MIN)
+	local scaledRad = math.pow(reviveRad, 0.6) * 7 + (REVIVE_RAD_MIN - math.pow(REVIVE_RAD_MIN, 0.6) * 7)
+	--print("Radius for reviving", modelRad, scaledRad)
+
+	hero.patreonLevel = 0
+	hero.beaconSize = BEACON_NORMAL    -- Normal:84   Large:120 for patreon item
+	hero.reviveRadius = scaledRad
+	hero.largerXMod = false
+	hero.phaseMod = false
+
 
 	Timers:CreateTimer(0.5, function()
 		local playerID = hero:GetPlayerID()	-- never nil (-1 by default), needs delay 1 or more frames
@@ -137,6 +151,8 @@ function barebones:OnHeroInGame(hero)
 			-- Set starting gold for bots
 			hero:SetGold(NORMAL_START_GOLD, false)
 			hero:AddItemByName("item_boots")
+			hero:AddItemByName("item_patreon_get_cheese1")
+			hero:AddItemByName("item_patreon_chest")
 		else
 			DebugPrint("[BAREBONES] OnHeroInGame running for a non-bot player!")
 			if not PlayerResource.PlayerData[playerID] then
@@ -165,6 +181,8 @@ function barebones:OnHeroInGame(hero)
 				-- Create an item and add it to the player, effectively ensuring they start with the item
 				if ADD_ITEM_TO_HERO_ON_SPAWN then
 					hero:AddItemByName("item_boots")
+					hero:AddItemByName("item_patreon_get_cheese1")
+					hero:AddItemByName("item_patreon_chest")
 				end
 
 				-- Make sure that stuff above will not happen again for the player if some other hero spawns

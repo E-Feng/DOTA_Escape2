@@ -52,35 +52,92 @@
 	</snippets>
 
 	<Panel class="AddonLoadingRoot">
-		<Panel class="Gradient">
-			<Panel class="LeaderboardWindow">
-				<Panel class="LeaderboardTextWindow">
-					<Label class="LeaderboardText" text="Leaderboard" />
+		<Panel class="BodyWindow">
+			<Panel class="TopWindow">
+				<Panel class="LeaderboardWindow">
+					<Panel class="LeaderboardTextWindow">
+						<Label class="LeaderboardText" text="Leaderboard" />
+						<Label class="SeasonText" text="Season - July 2020. Winners receive increasing patreon tier bonuses." />
+					</Panel>
+
+					<Panel class="LeaderboardLegend">
+						<Label class="LBLegendPanel ScoreCol_Rank" text="Rank" />
+						<Label class="LBLegendPanel ScoreCol_Time" text="Time" />
+						<Label class="LBLegendPanel ScoreCol_Players" text="Players" />
+						<Label class="LBLegendPanel ScoreCol_Deaths" text="Deaths" />
+						<Label class="LBLegendPanel ScoreCol_Lives" text="Lives" />
+						<Label class="LBLegendPanel ScoreCol_Level1" text="1" />
+						<Label class="LBLegendPanel ScoreCol_Level2" text="2" />
+						<Label class="LBLegendPanel ScoreCol_Level3" text="3" />
+						<Label class="LBLegendPanel ScoreCol_Level4" text="4" />
+						<Label class="LBLegendPanel ScoreCol_Level5" text="5" />
+						<Label class="LBLegendPanel ScoreCol_Level6" text="6" />
+						<Label class="LBLegendPanel ScoreCol_PlayerNames" text="Player Names" />
+					</Panel>
+					<Panel id="LeaderboardContainer" />
 				</Panel>
-				<Panel class="LeaderboardLegend">
-					<Label class="LBLegendPanel ScoreCol_Rank" text="Rank" />
-					<Label class="LBLegendPanel ScoreCol_Time" text="Time" />
-					<Label class="LBLegendPanel ScoreCol_Players" text="Players" />
-					<Label class="LBLegendPanel ScoreCol_Deaths" text="Deaths" />
-					<Label class="LBLegendPanel ScoreCol_Lives" text="Lives" />
-					<Label class="LBLegendPanel ScoreCol_Level1" text="1" />
-					<Label class="LBLegendPanel ScoreCol_Level2" text="2" />
-					<Label class="LBLegendPanel ScoreCol_Level3" text="3" />
-					<Label class="LBLegendPanel ScoreCol_Level4" text="4" />
-					<Label class="LBLegendPanel ScoreCol_Level5" text="5" />
-					<Label class="LBLegendPanel ScoreCol_Level6" text="6" />
-					<Label class="LBLegendPanel ScoreCol_PlayerNames" text="Player Names" />
+
+				<Panel class="WinnersWindow">
+					<Label class="WinnersTitle" text="Winners" />
+					<Label class="WinnersPlaceholder" text="To be created..." />
 				</Panel>
-				<Panel id="LeaderboardContainer" />
 			</Panel>
 
-			<Panel id="TitlePanel"> 
-				<Label id="Rules" text="Avoid zombies. 
-					\nStay on the path. 
-					\nDon't cut corners. 
-					\nFeed mangos to the Undying (check mana). 
-					\nCheese grants extra life.
-					\nType '-votekill' to kill everyone (for afk/stuck)." style="" />
+
+			<Panel class="BottomWindow">
+				<Panel class="RulesWindow"> 
+					<Label class="RulesTitle" text="Rules" />
+					<Label class="Rules" text="Avoid zombies. 
+						\nStay on the path. 
+						\nDon't cut corners. 
+						\nFeed mangos to the Undying (check mana). 
+						\nCheese grants extra life.
+						\nType '-votekill' to kill everyone (for afk/stuck)." style="" />
+				</Panel>
+
+
+				<Panel class="PatreonWindow">
+					<Panel class="PatreonHeader">
+						<Label class="PatreonTitle" text="Patreon Perks" />
+						<Image 
+							class="PatreonButton" 
+							onactivate="ExternalBrowserGoToURL('http://www.patreon.com/join/escapetheundyingdead')" 
+							src="file://{resources}/images/custom_game/patreon/patreon_button.png" 
+						/>
+					</Panel>
+					<Panel class="PerksContainer">
+						<Panel class="Perk">
+							<Label class="PerkTier" text="Tier 1" />
+							<Image class="PerkImage" src="file://{resources}/images/custom_game/patreon/patreon_get_cheese50.png" />
+							<Label class="PerkName" text="Golden Cheese Courier" />
+							<Label class="PerkText" text="50% chance to summon a courier to retrieve the extra cheeses and follow you." />
+						</Panel>
+						<Panel class="Perk">
+							<Label class="PerkTier" text="Tier 2" />
+							<Image class="PerkImage" src="file://{resources}/images/custom_game/patreon/patreon_larger_x.png" />
+							<Label class="PerkName" text="Mass Grave" />
+							<Label class="PerkText" text="Larger death beacon for easier revives." />
+						</Panel>
+						<Panel class="Perk">
+							<Label class="PerkTier" text="Tier 3" />
+							<Image class="PerkImage" src="file://{resources}/images/custom_game/patreon/patreon_wind_lace.png" />
+							<Label class="PerkName" text="Wind Lace" />
+							<Label class="PerkText" text="Grants bonus movespeed and turn rate." />
+						</Panel>
+						<Panel class="Perk">
+							<Label class="PerkTier" text="Tier 4" />
+							<Image class="PerkImage" src="file://{resources}/images/custom_game/patreon/patreon_phoenix_ash.png" />
+							<Label class="PerkName" text="Phoenix Ash" />
+							<Label class="PerkText" text="Use to respawn at the checkpoint when dead." />
+						</Panel>
+						<Panel class="Perk">
+							<Label class="PerkTier" text="Tier 5" />
+							<Image class="PerkImage" src="file://{resources}/images/custom_game/patreon/patreon_phase.png" />
+							<Label class="PerkName" text="Phase Boots" />
+							<Label class="PerkText" text="Grants phase and movespeed on use and automatic phase on revives." />
+						</Panel>																								
+					</Panel>
+				</Panel>
 			</Panel>
 		</Panel>
 	</Panel>

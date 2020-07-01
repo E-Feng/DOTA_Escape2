@@ -2,9 +2,15 @@
 {
   visibility: visible;
   flow-children: down;
-  margin-top: 75px;
+  height: 620px;
+  margin-top: 45px;
   margin-left: 50px;
   padding: 0px;
+}
+
+.LeaderboardTextWindow
+{
+  flow-children: right;  
 }
 
 .LeaderboardText
@@ -12,6 +18,15 @@
   font-size: 64px;
   color: #ffffff;
   margin-bottom: 20px;
+}
+
+.SeasonText
+{
+  font-size: 24px;
+  color: #ffffff;
+  margin-bottom: 32px; 
+  margin-left: 15px;
+  vertical-align: bottom;
 }
 
 #LeaderboardContainer
@@ -133,4 +148,24 @@
   padding-top: 0px;
   margin-bottom: 0px;
   padding-bottom: 0px;
+}
+
+
+.WinnersWindow
+{
+  flow-children: down;
+  margin-top: 45px;
+  margin-left: 25px;
+}
+
+.WinnersTitle
+{
+  color: #ffffff;
+  font-size: 64px;
+}
+
+.WinnersPlaceholder
+{
+  color: #ffffff;
+  font-size: 24px;
 }

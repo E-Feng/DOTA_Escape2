@@ -9,8 +9,26 @@ function barebones:ReviveThinker()
       --end
       for _, deadhero in pairs(Players) do
         if deadhero.deadHeroPos then
-          if CalcDist2D(alivehero:GetAbsOrigin(), deadhero.deadHeroPos) < alivehero:GetModelRadius() then
+          local reviveRadius = alivehero.reviveRadius
+
+          -- Patreon larger x
+          if deadhero.largerXMod then
+            reviveRadius = math.min(reviveRadius * 1.5, REVIVE_RAD_MAX)
+          end
+
+          if CalcDist2D(alivehero:GetAbsOrigin(), deadhero.deadHeroPos) < reviveRadius then
+            --print("Radius ", alivehero:GetName(), reviveRadius)
             barebones:HeroRevived(deadhero, alivehero)
+
+            -- Patreon phase boots
+            Timers:CreateTimer(0, function()
+              if alivehero.phaseMod then
+                alivehero:AddNewModifier(alivehero, nil, "modifier_phased", {duration = 1})
+              end
+              if deadhero.phaseMod then
+                deadhero:AddNewModifier(deadhero, nil, "modifier_phased", {duration = 1})
+              end
+            end)
           end
         end
       end
@@ -48,8 +66,11 @@ function barebones:HeroKilled(hero, attacker, ability)
   dummy:FindAbilityByName("dummy_unit"):SetLevel(1)
   dummy:AddNewModifier(dummy, nil, "modifier_phased", {})
   dummy:AddNewModifier(dummy, nil, "modifier_spectre_spectral_dagger_path_phased", {})
+  
   local beacon = ParticleManager:CreateParticle(part, PATTACH_ABSORIGIN, dummy)
   ParticleManager:SetParticleControl(beacon, 0, hero.deadHeroPos)
+  ParticleManager:SetParticleControl(beacon, 1, Vector(hero.beaconSize, 0, 0))
+
   hero.particleNumber = beacon
   hero.dummyPartEntIndex = dummy:GetEntityIndex()
   --print("Particle Created: ", beacon, "under player ", playerIdx, "dummy index: ", PartDummy[playerIdx])
@@ -208,13 +229,16 @@ end
 function barebones:ExtraLifeSpawn()
   print("Spawning extra life cheeses")
   local pos = Entities:FindByName(nil, "cheese_spawn"):GetAbsOrigin()
-  local cheeseNum = 10
-  local r = 200
+  local cheeseNum = 6
+  local r = 175
   for i = 1,cheeseNum do
     local item = CreateItem("item_cheese_custom", nil, nil)
     local angle = math.rad((i-1)*(360/cheeseNum))
     local spawnPos = Vector(pos.x + r*math.cos(angle), pos.y + r*math.sin(angle), pos.z)
     CreateItemOnPositionSync(spawnPos, item)
+
+    -- For patreon courier
+    _G.Cheeses[item:GetEntityIndex()] = "spawned"
   end
 end
 

@@ -1,3 +1,10 @@
+-- Constants
+BEACON_NORMAL = 84
+BEACON_LARGE = 140
+
+REVIVE_RAD_MIN = 80
+REVIVE_RAD_MAX = 200
+
 -- In this file you can set up all the properties and settings for your game mode.
 USE_DEBUG = false                       -- Should we print statements on almost every function/event call? For debugging.
 

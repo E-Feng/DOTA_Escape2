@@ -32,6 +32,9 @@ function updateLeaderboard(container, arr, place) {
 	if (arr.length == 1) {
 		rank = "";
 	}
+	if (place == -2) {
+		rank = "alltime";
+	}
 
 	for (var entry of arr) {
 		var entryPanel = $.CreatePanel("Panel", container, rank.toString());
@@ -53,6 +56,16 @@ function updateLeaderboard(container, arr, place) {
 		}
 		playerString = playerString.substring(0, playerString.length - 2);
 		//$.Msg("Total ", playerString.length);
+
+		// Updating all time line
+		if (place == -2) {
+			rank = "ALL\nTIME";
+			_ScoreboardUpdater_SetStyleSafe( entryPanel, "Rank", "fontSize", "16px"); 
+			_ScoreboardUpdater_SetStyleSafe( entryPanel, "Rank", "textAlign", "center");
+			_ScoreboardUpdater_SetStyleSafe( entryPanel, "Rank", "textOverflow", "shrink");
+			entryPanel.style["borderBottom"] = "4px solid #cccccc";
+			entryPanel.style["marginBottom"] = "4px"; 
+		}
 
 		_ScoreboardUpdater_SetTextSafe( entryPanel, "Rank", rank); 
 		_ScoreboardUpdater_SetTextSafe( entryPanel, "Time", convertSecondsToNiceString(entry.totaltime));
@@ -105,6 +118,7 @@ function sortAndTrimArray(arr, len) {
 	return newArr;
 }
 
+// Function to run upon being called
 (function()
 {
 	$.Msg("Leaderboard.js function running");
@@ -115,35 +129,48 @@ function sortAndTrimArray(arr, len) {
 	var arr = [];
 	var count = 10;
 
-	function DataLoaded( table_name )
+	var leaderboardCleared = false
+
+	function DataLoaded( tableName, key, data)
 	{
-		//$.Msg(CustomNetTables.GetAllTableValues( table_name));
 		$.Msg("Data loaded, updating leaderboard now");
+		//$.Msg(tableName, key, data);
+		//$.Msg(data)
 		// Getting UI containers
 		var leaderboardContainer = $("#LeaderboardContainer");
-		leaderboardContainer.RemoveAndDeleteChildren();
+
+		if (!leaderboardCleared) {
+			leaderboardContainer.RemoveAndDeleteChildren();
+			leaderboardCleared = true
+		}
 
 		// Getting data from custom net table
-		var rawData = CustomNetTables.GetAllTableValues("leaderboard");
-		var data = rawData["0"]["value"];
+		//var rawData = CustomNetTables.GetAllTableValues("leaderboard");
+		//$.Msg(rawData)
+		//var data = rawData["0"]["value"];
 
-		if (Object.keys(data).length === 0) {
-			showConnectError(leaderboardContainer);
-		} else {
-			for (var entry in data) {
-				var entryData = data[entry];
-				arr.push(entryData);
+		if (key == "alltime") {
+			//$.Msg(data.length);
+			updateLeaderboard(leaderboardContainer, [data], -2);
+		} else if (key == "leaderboard") {
+			if (Object.keys(data).length === 0) {
+				showConnectError(leaderboardContainer);
+			} else {
+				for (var entry in data) {
+					var entryData = data[entry];
+					arr.push(entryData);
 
-				allTimes.push(entryData.totaltime);
+					allTimes.push(entryData.totaltime);
+				}
+
+				arr = sortAndTrimArray(arr, count);
+
+				allTimes.sort((a,b) => (a > b) ? 1 : -1);
+				allTimes = allTimes.slice(0, count);
+				//$.Msg(allTimes.slice(-1)[0]);
+
+				updateLeaderboard(leaderboardContainer, arr, -1);
 			}
-
-			arr = sortAndTrimArray(arr, count);
-
-			allTimes.sort((a,b) => (a > b) ? 1 : -1);
-			allTimes = allTimes.slice(0, count);
-			//$.Msg(allTimes.slice(-1)[0]);
-
-			updateLeaderboard(leaderboardContainer, arr, -1);
 		}
 	}
 
@@ -191,7 +218,12 @@ function sortAndTrimArray(arr, len) {
 
 	if (layoutfile.indexOf("end_screen") > 0) {
 		$.Msg("Loading endscreen leaderboard");
-		DataLoaded("leaderboard");
+		var allTimeData = CustomNetTables.GetTableValue("leaderboard", "alltime");
+		var leaderboardData = CustomNetTables.GetTableValue("leaderboard", "leaderboard");
+		//$.Msg(allTimeData);
+		//$.Msg(leaderboardData);
+		DataLoaded("leaderboard", "alltime", allTimeData);
+		DataLoaded("leaderboard", "leaderboard", leaderboardData);
 
 		var rawData = CustomNetTables.GetAllTableValues("gamescore");
 		if (rawData.hasOwnProperty("0")) {

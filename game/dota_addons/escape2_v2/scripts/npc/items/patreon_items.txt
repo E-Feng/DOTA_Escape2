@@ -1,0 +1,181 @@
+"DOTAAbilities"
+{
+  //========================================================================================================================
+  "item_patreon_chest"
+  {
+    "ID"                                  "2000"
+    "BaseClass"                           "item_lua"
+    "AbilityTextureName"                  "item_patreon_chest"
+    "AbilityBehavior"				              "DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+    "ScriptFile"                          "patreon_items/item_patreon_chest"
+
+		"AbilityCastPoint"				"0"
+
+		"ItemStackable"					"1"
+		"ItemStackableMax"				"3"
+		"ItemInitialCharges"			"1"
+
+    "ItemQuality"					"consumable"
+    "ItemPermanent"					"0"
+  }
+
+  //========================================================================================================================
+  "item_patreon_get_cheese1"
+  {
+    "ID"                                  "2001"
+    "BaseClass"                           "item_lua"
+    "AbilityTextureName"                  "item_patreon_get_cheese02"
+    "AbilityBehavior"				              "DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+    "ScriptFile"                          "patreon_items/item_patreon_get_cheese"
+
+		"AbilityCastPoint"				"0"
+
+		"ItemStackable"					"1"
+		"ItemStackableMax"				"10"
+		"ItemInitialCharges"			"1"
+
+    "ItemQuality"					"consumable"
+		"ItemPermanent"					"0"
+
+    "AbilitySpecial"
+    {
+      "01"
+      {
+				"var_type"				"FIELD_INTEGER"
+				"chance1"	         "2"        
+      }
+      "02"
+      {
+				"var_type"				"FIELD_INTEGER"
+				"chance2"	         "50"        
+      }      
+    }
+  }
+
+  //========================================================================================================================
+  "item_patreon_get_cheese2"
+  {
+    "ID"                                  "20011"
+    "BaseClass"                           "item_lua"
+    "AbilityTextureName"                  "item_patreon_get_cheese50"
+    "AbilityBehavior"				              "DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+    "ScriptFile"                          "patreon_items/item_patreon_get_cheese"
+
+		"AbilityCastPoint"				"0"
+
+		"ItemStackable"					"1"
+		"ItemStackableMax"				"10"
+		"ItemInitialCharges"			"1"
+
+    "ItemQuality"					"consumable"
+		"ItemPermanent"					"0"
+
+    "AbilitySpecial"
+    {
+      "01"
+      {
+				"var_type"				"FIELD_INTEGER"
+				"chance1"	         "2"        
+      }
+      "02"
+      {
+				"var_type"				"FIELD_INTEGER"
+				"chance2"	         "50"        
+      }      
+    }
+  }
+
+  //========================================================================================================================
+  "item_patreon_larger_x"
+  {
+    "ID"                                  "2002"
+    "BaseClass"                           "item_lua"
+    "AbilityTextureName"                  "item_patreon_larger_x"
+    "AbilityBehavior"				              "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+    "ScriptFile"                          "patreon_items/item_patreon_larger_x"
+
+    "ItemShareability"				             "ITEM_FULLY_SHAREABLE"
+  }
+
+  //========================================================================================================================
+  "item_patreon_wind_lace"
+  {
+    "ID"                                  "2003"
+    "BaseClass"                           "item_lua"
+    "AbilityTextureName"                  "item_patreon_wind_lace"
+    "AbilityBehavior"				              "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+    "ScriptFile"                          "patreon_items/item_patreon_wind_lace"
+
+    "ItemShareability"				             "ITEM_FULLY_SHAREABLE"
+
+
+    "AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"ms_bonus"	"5"
+			}
+      "02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"turn_rate_bonus"	    "300"
+			}
+		}   
+  }
+
+  //========================================================================================================================
+  "item_patreon_phoenix_ash"
+  {
+    "ID"                                  "2004"
+    "BaseClass"                           "item_lua"
+    "AbilityTextureName"                  "item_patreon_phoenix_ash"
+    "AbilityBehavior"				              "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_UNRESTRICTED"
+    "ScriptFile"                          "patreon_items/item_patreon_phoenix_ash"
+
+    "AbilityCooldown"               "300"
+    "AbilityManaCost"               "0"
+
+    "ItemIsNeutralDrop"				            "1"
+    "ItemShareability"				            "ITEM_FULLY_SHAREABLE"
+  }  
+
+  //========================================================================================================================
+  "item_patreon_phase"
+  {
+    "ID"                            "2005"
+    "BaseClass"                     "item_lua"
+    "AbilityTextureName"            "item_patreon_phase"
+    "AbilityBehavior"				        "DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL"
+    "ScriptFile"                    "patreon_items/item_patreon_phase"
+
+    "AbilityCooldown"               "8"
+    "AbilityManaCost"               "0"
+
+    "ItemShareability"				      "ITEM_FULLY_SHAREABLE"
+
+    "AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"phase_duration"	"3"
+			}
+      "02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"ms_bonus"	      "5"
+			}
+      "03"
+      {
+      	"var_type"				"FIELD_INTEGER"
+				"base_ms"	      "45"  
+      }
+      "04"
+      {
+      	"var_type"				"FIELD_INTEGER"
+				"phase_duration_auto"	      "1"          
+      }
+		}
+  }  
+}

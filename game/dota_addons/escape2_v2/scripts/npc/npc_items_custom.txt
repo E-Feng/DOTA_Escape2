@@ -1,3 +1,5 @@
+#base "items/patreon_items.txt"
+
 "DOTAAbilities"
 {
 	//Shield
