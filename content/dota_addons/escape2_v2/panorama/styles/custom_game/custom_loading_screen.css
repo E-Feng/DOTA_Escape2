@@ -1,3 +1,13 @@
+.LeaderboardWindow
+{
+  visibility: visible;
+  flow-children: down;
+  height: 650px;
+  margin-top: 45px;
+  margin-left: 50px;
+  padding: 0px;
+}
+
 .AddonLoadingRoot
 {
 	width: 100%;

@@ -19,6 +19,13 @@ Workshop: https://steamcommunity.com/sharedfiles/filedetails/?id=2070583974 \
 Github: https://github.com/E-Feng/DOTA_Escape2 \
 Gameplay: https://www.youtube.com/watch?v=OhmL5BI3Mgo
 
+## Escape The Undying Dead 3: Trials (sequel)
+
+Preview: https://www.youtube.com/watch?v=7Odne6Oyi0I \
+Workshop: https://steamcommunity.com/sharedfiles/filedetails/?id=2186512874 \
+Github: https://github.com/E-Feng/DOTA_Escape3 \
+Gameplay: https://www.youtube.com/watch?v=gFOcaVW8rFI
+
 # Thanks
 Barebones code for creating a base custom game provided by https://github.com/bmddota/barebones/ \
 Updated barebones by https://github.com/DarkoniusXNG/barebones \

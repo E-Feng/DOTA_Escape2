@@ -1,0 +1,23 @@
+.PatreonIngameContainer
+{
+  flow-children: down;
+  vertical-align: bottom;
+  margin-bottom: 278px;
+}
+
+.PatreonIconsContainer
+{
+  flow-children: right;
+}
+
+.PatreonIcon
+{
+  width: 49px;
+  height: 36px;
+}
+
+.PatreonButton
+{
+  width: 248px;   // Orig 217
+  height: 40px;   // Orig 35
+}

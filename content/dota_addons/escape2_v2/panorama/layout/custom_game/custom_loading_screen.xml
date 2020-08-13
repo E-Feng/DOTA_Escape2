@@ -6,6 +6,7 @@
 
 	<scripts>
 		<include src="file://{resources}/scripts/custom_game/leaderboard.js" />
+		<include src="file://{resources}/scripts/custom_game/leaderboard_header.js" />
 	</scripts>
 
 	<snippets>
@@ -57,7 +58,10 @@
 				<Panel class="LeaderboardWindow">
 					<Panel class="LeaderboardTextWindow">
 						<Label class="LeaderboardText" text="Leaderboard" />
-						<Label class="SeasonText" text="Season - July 2020. Winners receive increasing patreon tier bonuses." />
+						<Panel id="SeasonContainer">
+							<Label id="SeasonDate" text="" />
+							<Label id="SeasonText" text="Winners receive increasing patreon tier bonuses." />
+						</Panel>
 					</Panel>
 
 					<Panel class="LeaderboardLegend">

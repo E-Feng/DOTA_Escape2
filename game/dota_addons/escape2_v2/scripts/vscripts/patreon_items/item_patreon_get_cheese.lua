@@ -20,7 +20,7 @@ function item_patreon_get_cheese1:OnSpellStart()
   local chance = 100 - ability:GetSpecialValueFor("chance" .. type)
   if type == "2" then
     local level = caster.patreonLevel
-    if level == 6 then
+    if level >= 6 then
       chance = 0
     else
       chance = chance - math.max(0, level - 1) * 5

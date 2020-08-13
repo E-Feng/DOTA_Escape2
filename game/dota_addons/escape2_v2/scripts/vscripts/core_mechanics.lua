@@ -23,10 +23,10 @@ function barebones:ReviveThinker()
             -- Patreon phase boots
             Timers:CreateTimer(0, function()
               if alivehero.phaseMod then
-                alivehero:AddNewModifier(alivehero, nil, "modifier_phased", {duration = 1})
+                alivehero:AddNewModifier(alivehero, nil, "modifier_phased", {duration = 2})
               end
               if deadhero.phaseMod then
-                deadhero:AddNewModifier(deadhero, nil, "modifier_phased", {duration = 1})
+                deadhero:AddNewModifier(deadhero, nil, "modifier_phased", {duration = 2})
               end
             end)
           end

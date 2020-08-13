@@ -78,7 +78,7 @@ function WebApi:GetPatreons()
             if WebApi.patreons[k] == nil then
               WebApi.patreons[k] = tonumber(v.level)
             else
-              WebApi.patreons[k] = math.max(v.level, WebApi.patreons[k])
+              WebApi.patreons[k] = WebApi.patreons[k] + tonumber(v.level)
             end
           end
         end

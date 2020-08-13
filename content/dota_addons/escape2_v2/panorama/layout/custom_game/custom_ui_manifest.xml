@@ -5,6 +5,7 @@
 
 	<script>
 		function HidePickScreen() {
+			$.Msg("HidePickScreen function running");
 			var dotaHud = $.GetContextPanel().GetParent().GetParent();
 			if (Game.GameStateIsBefore(DOTA_GameState.DOTA_GAMERULES_STATE_HERO_SELECTION)) {
 				dotaHud.FindChild("PreGame").visible = false;
@@ -84,7 +85,8 @@
             break;
         }
     }
-		
+
+		// Moving the clock on the top HUD
     var timeBlock = hud.FindChildTraverse("TimeOfDay");
     timeBlock.style.horizontalAlign="left";
 
@@ -93,6 +95,10 @@
 
 		var timeBlockUntil = hud.FindChildTraverse("TimeUntil");
 		timeBlockUntil.style.visibility="collapse";
+
+		// Moving combat events up. combat_events or ToastLinesWrapper
+		var combatEvents = hud.FindChildTraverse("combat_events");
+		combatEvents.style.marginTop="325px";   // 395px default
 	</script>
 
 	<Panel>
@@ -102,10 +108,14 @@
     <CustomUIElement type="HudTopBar"  layoutfile="file://{resources}/layout/custom_game/multiteam_top_scoreboard.xml"/>
     <CustomUIElement type="FlyoutScoreboard"    layoutfile="file://{resources}/layout/custom_game/multiteam_flyout_scoreboard.xml"/>
     <CustomUIElement type="EndScreen"           layoutfile="file://{resources}/layout/custom_game/multiteam_end_screen.xml"/>
-		
+	
+		<CustomUIElement type="Hud" layoutfile="file://{resources}/layout/custom_game/patreon_ingame.xml"/>
+
 		<!-- From Overthrow:
+        <CustomUIElement type="HudTopBar"           layoutfile="file://{resources}/layout/custom_game/multiteam_top_scoreboard.xml"/>
         <CustomUIElement type="Hud"                 layoutfile="file://{resources}/layout/custom_game/overthrow_item_notification.xml"/>
         <CustomUIElement type="GameSetup"           layoutfile="file://{resources}/layout/custom_game/team_select.xml"/>
+        <CustomUIElement type="FlyoutScoreboard"    layoutfile="file://{resources}/layout/custom_game/multiteam_flyout_scoreboard.xml"/>
         <CustomUIElement type="EndScreen"           layoutfile="file://{resources}/layout/custom_game/multiteam_end_screen.xml"/>
         <CustomUIElement type="GameInfo"            layoutfile="file://{resources}/layout/custom_game/overthrow_game_info.xml"/>
 		-->

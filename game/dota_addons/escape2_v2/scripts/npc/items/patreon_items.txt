@@ -42,7 +42,7 @@
       "01"
       {
 				"var_type"				"FIELD_INTEGER"
-				"chance1"	         "2"        
+				"chance1"	         "1"        
       }
       "02"
       {
@@ -75,7 +75,7 @@
       "01"
       {
 				"var_type"				"FIELD_INTEGER"
-				"chance1"	         "2"        
+				"chance1"	         "1"        
       }
       "02"
       {
@@ -133,7 +133,7 @@
     "AbilityBehavior"				              "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_UNRESTRICTED"
     "ScriptFile"                          "patreon_items/item_patreon_phoenix_ash"
 
-    "AbilityCooldown"               "300"
+    "AbilityCooldown"               "120"
     "AbilityManaCost"               "0"
 
     "ItemIsNeutralDrop"				            "1"
@@ -174,7 +174,7 @@
       "04"
       {
       	"var_type"				"FIELD_INTEGER"
-				"phase_duration_auto"	      "1"          
+				"phase_duration_auto"	      "2"          
       }
 		}
   }  

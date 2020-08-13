@@ -1,0 +1,24 @@
+<root>
+	<styles>
+		<include src="s2r://panorama/styles/dotastyles.css"/>
+		<include src="file://{resources}/styles/custom_game/patreon_ingame.css"/>
+	</styles>
+	<scripts>
+		<include src="file://{resources}/scripts/custom_game/patreon_ingame.js"/>
+	</scripts>
+
+	<Panel class="PatreonIngameContainer">
+		<Panel class="PatreonIconsContainer">
+			<DOTAItemImage class="PatreonIcon" itemname="item_patreon_get_cheese2" />
+			<DOTAItemImage class="PatreonIcon" itemname="item_patreon_larger_x" />
+			<DOTAItemImage class="PatreonIcon" itemname="item_patreon_wind_lace" />
+			<DOTAItemImage class="PatreonIcon" itemname="item_patreon_phoenix_ash" />
+			<DOTAItemImage class="PatreonIcon" itemname="item_patreon_phase" />
+		</Panel>
+		<Image 
+			class="PatreonButton"
+			onactivate="ExternalBrowserGoToURL('http://www.patreon.com/join/escapetheundyingdead')" 
+			src="file://{resources}/images/custom_game/patreon/patreon_button_slim.png" 
+		/>
+	</Panel>
+</root>

@@ -58,7 +58,6 @@
 		<Panel hittest="false" class="LeaderboardWindow">
 			<Panel class="LeaderboardTextWindow">
 				<Label class="LeaderboardText" text="Leaderboard" />
-						<Label class="SeasonText" text="Season - July 2020. Winners receive increasing patreon tier bonuses." />
 			</Panel>
 			<Panel class="LeaderboardLegend">
 				<Label class="LBLegendPanel ScoreCol_Rank" text="Rank" />

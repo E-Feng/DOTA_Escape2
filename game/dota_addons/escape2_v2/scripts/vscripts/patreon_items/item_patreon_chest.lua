@@ -7,9 +7,6 @@ function item_patreon_chest:OnSpellStart()
   local sound_cast = "ui.treasure_01"
   local particle_cast = ""
 
-  -- Chest used, leaderboard DQ
-  _G.patreonUsed = true
-
   -- Checking for patreon status
   local playerID = caster:GetPlayerID()
   local steamID = tostring(PlayerResource:GetSteamID(playerID))
@@ -25,9 +22,15 @@ function item_patreon_chest:OnSpellStart()
 
       -- Adjusting for non level 6 item
       patreonLevel = math.min(patreonLevel, 5)
+
+      if patreonLevel > 0 then
+      -- Chest used, leaderboard DQ
+      _G.patreonUsed = true
+      end
     end
 
     local itemList = {}
+    itemList[0] = "item_patreon_get_cheese1"
     itemList[1] = "item_patreon_get_cheese2"
     itemList[2] = "item_patreon_larger_x"
     itemList[3] = "item_patreon_wind_lace"
@@ -36,7 +39,7 @@ function item_patreon_chest:OnSpellStart()
 
     -- Remove charge and give items
     ability:SpendCharge()
-    while patreonLevel > 0 do
+    while patreonLevel >= 0 do
       print("Giving item ", itemList[patreonLevel])
       caster:AddItemByName(itemList[patreonLevel])
       patreonLevel = patreonLevel - 1

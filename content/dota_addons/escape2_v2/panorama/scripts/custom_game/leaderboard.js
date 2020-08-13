@@ -37,6 +37,7 @@ function updateLeaderboard(container, arr, place) {
 	}
 
 	for (var entry of arr) {
+		$.Msg(entry);
 		var entryPanel = $.CreatePanel("Panel", container, rank.toString());
 		entryPanel.BLoadLayoutSnippet("LeaderboardRow");
 
@@ -175,7 +176,7 @@ function sortAndTrimArray(arr, len) {
 	}
 
 	function FinishedGame( table_name ) {
-		$.Msg("Game has finished, updaing gamescore now...")
+		$.Msg("Game has finished, updating gamescore now...")
 		var leaderboardContainer = $("#LeaderboardContainer");
 		var scoreContainer = $("#ScoreContainer");
 
@@ -208,11 +209,13 @@ function sortAndTrimArray(arr, len) {
 
 		// Adding bottom scorecard
 		//$.Msg(scoreContainer, leaderboardContainer);
+		$.Msg('Printing score data');
+		//$.Msg(data);
 		updateLeaderboard(scoreContainer, [data], -1);
 	}
 
 	CustomNetTables.SubscribeNetTableListener( "leaderboard", DataLoaded );
-	CustomNetTables.SubscribeNetTableListener( "gamescore", FinishedGame );
+	//CustomNetTables.SubscribeNetTableListener( "gamescore", FinishedGame );
 
 	$.Msg(layoutfile);
 

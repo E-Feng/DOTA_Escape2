@@ -1,5 +1,15 @@
 @define BACKGROUND_COLOR: #000000;
 
+.LeaderboardWindow
+{
+  visibility: visible;
+  flow-children: down;
+  height: 700px;
+  margin-top: 45px;
+  margin-left: 50px;
+  padding: 0px;
+}
+
 .EndScreenRoot
 {
 	width: 100%;
@@ -403,4 +413,15 @@
 	visibility: collapse;
 	width: 70px;
 	text-align: center;
+}
+
+#ScoreText
+{
+  color: #ffffff;
+  font-size: 24px;
+}
+
+#ScoreContainer
+{
+  flow-children: down;
 }
