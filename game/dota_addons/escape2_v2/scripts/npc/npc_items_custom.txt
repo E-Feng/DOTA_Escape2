@@ -270,7 +270,7 @@
     "BaseClass"                 "item_datadriven"
     "AbilityBehavior"        "DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET"
     "AbilityTextureName"         "item_cheese"
-    "Model"                      "models/props_gameplay/cheese.mdl"
+    "Model"                      "models/props_gameplay/cheese.vmdl"
 
     "MaxUpgradeLevel"       "1"
     "ItemBaseLevel"         "1"
