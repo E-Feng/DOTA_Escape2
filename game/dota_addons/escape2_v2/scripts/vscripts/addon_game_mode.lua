@@ -39,6 +39,15 @@ function Precache(context)
   PrecacheResource("particle_folder", "particles/misc", context)
   PrecacheResource("particle_folder", "particles/beacons", context)
 
+  PrecacheResource("particle", "particles/units/heroes/hero_shredder/shredder_timberchain.vpcf", context)
+  PrecacheResource("particle", "particles/units/heroes/hero_shredder/shredder_timber_chain_trail.vpcf", context)
+  PrecacheResource("particle", "particles/units/heroes/hero_shredder/shredder_timber_chain_tree.vpcf", context)
+  PrecacheResource("particle", "particles/units/heroes/hero_slark/slark_pounce_trail.vpcf", context)
+  PrecacheResource("particle", "particles/units/heroes/hero_slark/slark_pounce_start.vpcf", context)
+  PrecacheResource("particle", "particles/units/heroes/hero_earthshaker/earthshaker_fissure.vpcf", context)
+  PrecacheResource("particle", "particles/units/heroes/hero_zuus/zuus_arc_lightning.vpcf", context)
+
+
 	-- Models can also be precached by folder or individually
 	-- PrecacheModel should generally used over PrecacheResource for individual models
   --PrecacheResource("model_folder", "particles/heroes/antimage", context)
@@ -64,6 +73,7 @@ function Precache(context)
   PrecacheItemByNameSync("item_example_item", context)
   PrecacheItemByNameSync("item_mango_custom", context)
   PrecacheItemByNameSync("item_cheese_custom", context)
+  PrecacheItemByNameSync("item_blink_custom", context)
   PrecacheItemByNameSync("earthshaker_fissure_custom", context)
   PrecacheItemByNameSync("shredder_timber_chain_custom", context)
   PrecacheItemByNameSync("slark_pounce_custom", context)
@@ -76,7 +86,7 @@ function Precache(context)
   PrecacheItemByNameSync("item_patreon_wind_lace", context)
   PrecacheItemByNameSync("item_patreon_phoenix_ash", context)
   PrecacheItemByNameSync("item_patreon_phase", context)
-
+  
 	-- Entire heroes (sound effects/voice/models/particles) can be precached with PrecacheUnitByNameSync
 	-- Custom units from npc_units_custom.txt can also have all of their abilities and precache{} blocks precached in this way
   PrecacheUnitByNameSync("npc_dummy_unit", context)

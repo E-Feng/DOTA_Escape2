@@ -144,7 +144,7 @@ DISABLE_STICKY_ITEM = false             -- Should we disable the sticky item but
 ENABLE_PAUSING = true                   -- Should we allow players to pause the game?
 DEFAULT_DOTA_COURIER = false             -- Enable courier for each player with default dota properties
 --DISABLE_ITEM_STEALING_FROM_COURIER = false    -- Should we allow players to take items they don't own from the courier?
-FORCE_MINIMAP_ON_THE_LEFT = false       -- Should we disable hud flip aka force the default dota hud positions? 
+FORCE_MINIMAP_ON_THE_LEFT = true       -- Should we disable hud flip aka force the default dota hud positions? 
 -- Note: Some players have minimap on the right and gold/shop on the left.
 
 USE_DEFAULT_RUNE_SYSTEM = true          -- Should we use the default dota rune spawn timings and the same runes as dota have?

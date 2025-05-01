@@ -119,120 +119,165 @@ function sortAndTrimArray(arr, len) {
 	return newArr;
 }
 
-// Function to run upon being called
-(function()
-{
-	$.Msg("Leaderboard.js function running");
-	//$.Msg($.GetContextPanel().layoutfile);
+function DataLoaded(tableName, key, data) {
+	$.Msg("Data loaded, updating leaderboard now for: ", key);
+	//$.Msg(tableName, key, data);
+	var data = CustomNetTables.GetTableValue("leaderboard", key);
 
-	var layoutfile = $.GetContextPanel().layoutfile;
-	var allTimes = [];
-	var arr = [];
-	var count = 10;
+	if (data === undefined) {
+		$.Msg("No data loaded into net tables yet, returning")
+		return
+	}
 
-	var leaderboardCleared = false
+	// Getting UI containers
+	var leaderboardContainer = $("#LeaderboardContainer");
+	leaderboardContainer.RemoveAndDeleteChildren();
 
-	function DataLoaded( tableName, key, data)
-	{
-		$.Msg("Data loaded, updating leaderboard now");
-		//$.Msg(tableName, key, data);
-		//$.Msg(data)
-		// Getting UI containers
-		var leaderboardContainer = $("#LeaderboardContainer");
+	if (Object.keys(data).length === 0) {
+		showConnectError(leaderboardContainer);
+		return
+	}
 
-		if (!leaderboardCleared) {
-			leaderboardContainer.RemoveAndDeleteChildren();
-			leaderboardCleared = true
+	// Processing data
+	if (arr.length == 0) {
+		for (var key in data) {
+			var entry = data[key]
+			arr.push(entry)
 		}
 
-		// Getting data from custom net table
-		//var rawData = CustomNetTables.GetAllTableValues("leaderboard");
-		//$.Msg(rawData)
-		//var data = rawData["0"]["value"];
-
-		if (key == "alltime") {
-			//$.Msg(data.length);
-			updateLeaderboard(leaderboardContainer, [data], -2);
-		} else if (key == "leaderboard") {
-			if (Object.keys(data).length === 0) {
-				showConnectError(leaderboardContainer);
-			} else {
-				for (var entry in data) {
-					var entryData = data[entry];
-					arr.push(entryData);
-
-					allTimes.push(entryData.totaltime);
-				}
-
-				arr = sortAndTrimArray(arr, count);
-
-				allTimes.sort((a,b) => (a > b) ? 1 : -1);
-				allTimes = allTimes.slice(0, count);
-				//$.Msg(allTimes.slice(-1)[0]);
-
-				updateLeaderboard(leaderboardContainer, arr, -1);
-			}
+		if (allTimes.length == 0) {
+			allTimes.push(entry.totaltime);
 		}
 	}
 
-	function FinishedGame( table_name ) {
-		$.Msg("Game has finished, updating gamescore now...")
-		var leaderboardContainer = $("#LeaderboardContainer");
-		var scoreContainer = $("#ScoreContainer");
 
-		// Getting gamescore from table
-		var rawData = CustomNetTables.GetAllTableValues("gamescore");
-		var data = rawData["0"]["value"];
+	arr = sortAndTrimArray(arr, count);
 
-		//$.Msg(allTimes);
-		//$.Msg("Time ", data.totaltime);
+	allTimes.sort((a,b) => (a > b) ? 1 : -1);
+	allTimes = allTimes.slice(0, count);
 
-		var rank = 0;
-		var c = 1;
-		for (var time of allTimes) {
-			//$.Msg("Time1 ", data.totaltime, " Time2 ", time);
-			if (data.totaltime < time && rank == 0) {
-				rank = c
-			}
-			c = c + 1;
+	// Updating leaderboard
+	updateLeaderboard(leaderboardContainer, [arr[0]], -2);
+	updateLeaderboard(leaderboardContainer, arr.slice(1), -1)
+
+	$.Msg("Finished loading leaderboard...")
+}
+
+function FinishedGame( table_name ) {
+	$.Msg("Game has finished, updating gamescore now...")
+	var leaderboardContainer = $("#LeaderboardContainer");
+	var scoreContainer = $("#ScoreContainer");
+
+	// Getting gamescore from table
+	var rawData = CustomNetTables.GetAllTableValues("gamescore");
+	var data = rawData["0"]["value"];
+
+	//$.Msg(allTimes);
+	//$.Msg("Time ", data.totaltime);
+
+	var rank = 0;
+	var c = 1;
+	for (var time of allTimes) {
+		//$.Msg("Time1 ", data.totaltime, " Time2 ", time);
+		if (data.totaltime < time && rank == 0) {
+			rank = c
 		}
-		//$.Msg("New rank ", rank);
+		c = c + 1;
+	}
+	//$.Msg("New rank ", rank);
 
-		if (rank > 0) {
-			arr.push(data);
-			arr = sortAndTrimArray(arr, count);
+	if (rank > 0) {
+		arr.push(data);
+		arr = sortAndTrimArray(arr, count);
 
-			// Clear leaderboard and add in new record entry
-			leaderboardContainer.RemoveAndDeleteChildren();
-			updateLeaderboard(leaderboardContainer, arr, rank);
-		}
-
-		// Adding bottom scorecard
-		//$.Msg(scoreContainer, leaderboardContainer);
-		$.Msg('Printing score data');
-		//$.Msg(data);
-		updateLeaderboard(scoreContainer, [data], -1);
+		// Clear leaderboard and add in new record entry
+		leaderboardContainer.RemoveAndDeleteChildren();
+		updateLeaderboard(leaderboardContainer, arr, rank);
 	}
 
-	CustomNetTables.SubscribeNetTableListener( "leaderboard", DataLoaded );
-	//CustomNetTables.SubscribeNetTableListener( "gamescore", FinishedGame );
+	// Adding bottom scorecard
+	//$.Msg(scoreContainer, leaderboardContainer);
+	$.Msg('Printing score data');
+	//$.Msg(data);
+	updateLeaderboard(scoreContainer, [data], -1);
+}
 
-	$.Msg(layoutfile);
+function UpdateWinners() {
+	$.Msg("Updating winners table");
+	var data = CustomNetTables.GetTableValue("winners", "winners");
 
-	if (layoutfile.indexOf("end_screen") > 0) {
-		$.Msg("Loading endscreen leaderboard");
-		var allTimeData = CustomNetTables.GetTableValue("leaderboard", "alltime");
-		var leaderboardData = CustomNetTables.GetTableValue("leaderboard", "leaderboard");
-		//$.Msg(allTimeData);
-		//$.Msg(leaderboardData);
-		DataLoaded("leaderboard", "alltime", allTimeData);
-		DataLoaded("leaderboard", "leaderboard", leaderboardData);
-
-		var rawData = CustomNetTables.GetAllTableValues("gamescore");
-		if (rawData.hasOwnProperty("0")) {
-			FinishedGame("gamescore");
-		}
-	} else {
-		//DataLoaded("leaderboard");
+	if (data === undefined) {
+		$.Msg("No data loaded into net tables yet, returning")
+		return
 	}
-})();
+
+	var container = $("#WinnersContainer");
+	container.RemoveAndDeleteChildren();
+
+	var winners = [];
+	var len = 11;
+
+	for (var key in data) {
+		var entryData = data[key];
+		winners.push(entryData);
+	}
+
+	winners.sort((a, b) => (parseInt(a.level) < parseInt(b.level)) ? 1 : -1);
+	winners = winners.slice(0, len)
+	$.Msg(winners);
+
+	winners.forEach((winner, i) => {
+		var entryPanel = $.CreatePanel("Panel", container, "winner" + i);
+		entryPanel.BLoadLayoutSnippet("WinnerRow");
+
+		_ScoreboardUpdater_SetTextSafe( entryPanel, "Name", winner.name); 
+		_ScoreboardUpdater_SetTextSafe( entryPanel, "Level", winner.level); 
+	})
+}
+
+$.Msg("Leaderboard.js function running");
+//$.Msg($.GetContextPanel().layoutfile);
+CustomNetTables.SubscribeNetTableListener( "leaderboard", DataLoaded );
+CustomNetTables.SubscribeNetTableListener( "winners", UpdateWinners );
+
+var layoutfile = $.GetContextPanel().layoutfile;
+var arr = [];
+var allTimes = [];
+var count = 11;
+
+/*
+var leaderboardCleared = false
+
+// Possible fix to leaderboard not rendering
+var leaderboardInitialized = false
+var winnersInitialized = false
+
+if (!leaderboardInitialized) {
+	$.Msg("Runninig initial leaderboard functions")
+	DataLoaded(null, "alltime")
+	DataLoaded(null, "leaderboard")
+}
+if (!winnersInitialized) {
+	$.Msg("Runninig initial winners functions")
+	UpdateWinners()
+}
+*/
+
+//CustomNetTables.SubscribeNetTableListener( "gamescore", FinishedGame );
+
+$.Msg(layoutfile);
+
+if (layoutfile.indexOf("end_screen") > 0) {
+	$.Msg("Loading endscreen leaderboard");
+	var allTimeData = CustomNetTables.GetTableValue("leaderboard", "alltime");
+	var leaderboardData = CustomNetTables.GetTableValue("leaderboard", "leaderboard");
+	//$.Msg(allTimeData);
+	//$.Msg(leaderboardData);
+	DataLoaded("leaderboard", "alltime", allTimeData);
+	DataLoaded("leaderboard", "leaderboard", leaderboardData);
+
+	var rawData = CustomNetTables.GetAllTableValues("gamescore");
+	if (rawData.hasOwnProperty("0")) {
+		FinishedGame("gamescore");
+	}
+}

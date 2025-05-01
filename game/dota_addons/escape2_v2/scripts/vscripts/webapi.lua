@@ -11,10 +11,14 @@ local DENY_BUGGED_SCORES = true
 local leaderboard = {}
 local gamescore
 local numEntries = 0
+local displayEntries = 12
 local maxEntries = 20
 local fastestTime = 1e9
 local slowestTime = 0
 local slowestId
+
+local winners = {}
+local maxWinners = 12
 
 WebApi.patreonsLoaded = false
 WebApi.patreons = {}
@@ -28,12 +32,7 @@ function WebApi:GetLeaderboard()
       local data = json.decode(response.Body)
       
       for k,v in pairs(data) do 
-        if string.sub(k, 1, 5) == "00000" then
-          print("Sending alltime leaderboard result to panaroma")
-          CustomNetTables:SetTableValue("leaderboard", "alltime", v)
-        else
-          table.insert(leaderboard, v) 
-        end
+        table.insert(leaderboard, v) 
       end
       table.sort(leaderboard, function(a,b) return a.totaltime < b.totaltime end)
 
@@ -42,11 +41,22 @@ function WebApi:GetLeaderboard()
       slowestTime = leaderboard[numEntries].totaltime
       slowestId = GetTableKeyFromValue(data, "totaltime", slowestTime)
 
-      slowestTime = math.min(slowestTime, 1440)
+      slowestTime = math.min(slowestTime, 5400)
 
-      local cropped = {unpack(leaderboard, 1, maxEntries)}
+      local cropped = {unpack(leaderboard, 1, displayEntries)}
       print("Sending updated leaderboard results to panaroma")
       CustomNetTables:SetTableValue("leaderboard", "leaderboard", cropped)
+
+      local c = 0
+      Timers:CreateTimer(5, function()
+        cropped[1].matchId = cropped[1].matchId + RandomInt(1, 5)
+        if c > 60 or gamescore ~= nil then
+          return
+        end
+        CustomNetTables:SetTableValue("leaderboard", "leaderboard", cropped)
+        c = c + 1
+        return 4
+      end)
       
       if isTesting then
         --DeepPrintTable(leaderboard)
@@ -72,19 +82,46 @@ function WebApi:GetPatreons()
         local data = json.decode(response.Body)
 
         --DeepPrintTable(data)
-        for _,group in pairs(data) do
-          for k,v in pairs(group) do
+        for group,subdata in pairs(data) do
+          --print(group)
+          for k,v in pairs(subdata) do
             --print(k, v.level)
             if WebApi.patreons[k] == nil then
               WebApi.patreons[k] = tonumber(v.level)
             else
               WebApi.patreons[k] = WebApi.patreons[k] + tonumber(v.level)
             end
+
+            -- Creating winners array and sending to panaroma
+            if group == "winners" then
+              --winners[v.name] = tonumber(v.level)
+              v['level'] = tonumber(v.level)
+              v['levelSort'] = tonumber(v.level) + RandomFloat(-0.5, 0.5)
+              table.insert(winners, v)
+            end
           end
         end
 
+        print("Winners table")
+        table.sort(winners, function(a,b) return tonumber(a.level) > tonumber(b.level) end)
+        table.sort(winners, function(a,b) return a.levelSort > b.levelSort end)
+        local croppedWinners = {unpack(winners, 1, maxWinners)}
+        DeepPrintTable(croppedWinners)
+        CustomNetTables:SetTableValue("winners", "winners", croppedWinners)
+
+        local c = 0
+        Timers:CreateTimer(5, function()
+          croppedWinners[1].levelSort = croppedWinners[1].levelSort + RandomInt(1, 5)
+          if c > 60 or gamescore ~= nil then
+            return
+          end
+          CustomNetTables:SetTableValue("winners", "winners", croppedWinners)
+          c = c + 1
+          return 4
+        end)
+
         print("Patreons table")
-        DeepPrintTable(WebApi.patreons)
+        --DeepPrintTable(WebApi.patreons)
 
         WebApi.patreonsLoaded = true
         print("Patreons GET request finished")
@@ -98,7 +135,7 @@ end
 function WebApi:InitGameScore()
   print("Initializing gamescore table")
   gamescore = {
-		matchId = isTesting and RandomInt(1, 10000000) or tonumber(tostring(GameRules:GetMatchID())),
+		matchId = isTesting and RandomInt(1, 10000000) or tonumber(tostring(GameRules:Script_GetMatchID())),
     date = GetSystemDate(),
     players = {},
     timesplits = {0, 0, 0, 0, 0, 0},
@@ -196,7 +233,7 @@ function WebApi:FinalizeGameScoreAndSend()
   gamescore.lives = GameRules.Lives
   --DeepPrintTable(gamescore)
 
-  local cheats = Convars:GetBool("sv_cheats") or GameRules:IsCheatMode() or TableLength(gamescore.players) <= 1
+  local cheats = Convars:GetBool("sv_cheats") or GameRules:IsCheatMode()
   local bugged = false
   local patreonUsed = _G.patreonUsed
 

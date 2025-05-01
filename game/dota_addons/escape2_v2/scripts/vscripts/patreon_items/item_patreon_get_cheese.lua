@@ -140,7 +140,7 @@ function item_patreon_get_cheese1:OnSpellStart()
   --print("Emitting sound")
   EmitSoundOn(sound_cast, caster)
 
-  ability:SpendCharge()
+  ability:SpendCharge(0.01)
 end
 
 item_patreon_get_cheese2 = item_patreon_get_cheese1 or class({})

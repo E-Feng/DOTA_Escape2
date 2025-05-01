@@ -2,7 +2,9 @@
 {
   flow-children: down;
   vertical-align: bottom;
-  margin-bottom: 278px;
+  //horizontal-align: right;
+  margin-bottom: 260px;
+  margin-left: 0px;
 }
 
 .PatreonIconsContainer
@@ -20,4 +22,10 @@
 {
   width: 248px;   // Orig 217
   height: 40px;   // Orig 35
+}
+
+.BuyMeACoffeeButton
+{
+  width: 248px;
+  height: 54px;
 }

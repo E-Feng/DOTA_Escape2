@@ -15,7 +15,6 @@
 	background-image: url("file://{images}/custom_game/loading_screen/loading.png");
 	background-position: center center;
 	background-size: cover;
-	flow-children: down;
 }
 
 .BodyWindow
@@ -40,14 +39,76 @@
 	margin-top: 0px;
 }
 
+#WinnersContainer
+{
+	flow-children: down;
+
+	background-color: black;
+	opacity: 0.95;
+}
+
+.WinnersTitle
+{
+	margin-bottom: 20px;
+}
+
+.WinnersLegend
+{
+	flow-children: right;
+	margin-bottom: 5px;
+}
+
+.WinsLegend
+{
+	width: 50px;
+	font-size: 16px;
+	text-transform: uppercase;
+	color: white;
+}
+
+.NameLegend
+{
+	width: 100px;
+	font-size: 16px;
+	text-transform: uppercase;
+	color: white;
+}
+
+.WinnerEntry
+{
+	flow-children: right;
+	height: 45px;
+
+	border-bottom: 1px solid white;
+}
+
+.WinnerEntry Panel
+{
+	vertical-align: bottom;
+}
+
+#LevelContainer Label
+{
+	font-size: 26px;
+	width: 50px;
+	text-align: center;
+}
+
+#NameContainer Label
+{
+	font-size: 26px;
+	width: 270px;
+	text-align: left;
+}
+
 .RulesWindow
 {
 	horizontal-align: left;
 	vertical-align: bottom;
 	vertical-align: top;
-	width: 690px;
+	width: 710px;
 	margin-top: 10px;
-	margin-left: 50px;
+	margin-left: 40px;
 	flow-children: down;
 }
 
@@ -62,9 +123,32 @@
 .Rules
 {
   vertical-align: center;
-  font-size: 32px;
+  font-size: 34px;
   color: #ffffff;
   text-shadow: 3px 3px 3px #000000;
+}
+
+.BuyMeACoffeeWindow
+{	
+	position: 350px 700px 0px;
+
+	flow-children: down;
+	background-color: black;
+	opacity: 0.95;
+	padding: 5px;
+}
+
+.SupportMeTitle
+{
+	font-size: 28px;
+	font-weight: bold;
+	color: white;
+}
+
+.BuyMeACoffeeButton
+{
+	height: 103px;
+	width: 375px;
 }
 
 .PatreonWindow

@@ -50,9 +50,29 @@
 				</Panel>
 			</Panel>
 		</snippet>
+
+		<snippet name="WinnerRow">
+			<Panel class="WinnerEntry">
+				<Panel id="LevelContainer" class="ScoreboardPanel">
+					<Label id="Level" text="999" />
+				</Panel>
+				<Panel id="NameContainer" class="ScoreboardPanel">
+					<Label id="Name" text="CakeCake" />
+				</Panel>				
+			</Panel>
+		</snippet>
 	</snippets>
 
 	<Panel class="AddonLoadingRoot">
+		<Panel class="BuyMeACoffeeWindow">
+			<Label class="SupportMeTitle" text="Support me in making maps!" />
+			<Image
+				class="BuyMeACoffeeButton"
+				onactivate="ExternalBrowserGoToURL('https://www.buymeacoffee.com/escapeundying')"
+				src="file://{resources}/images/custom_game/patreon/bmc_button.png" 
+			/>
+		</Panel>
+
 		<Panel class="BodyWindow">
 			<Panel class="TopWindow">
 				<Panel class="LeaderboardWindow">
@@ -83,10 +103,13 @@
 
 				<Panel class="WinnersWindow">
 					<Label class="WinnersTitle" text="Winners" />
-					<Label class="WinnersPlaceholder" text="To be created..." />
+					<Panel class="WinnersLegend">
+						<Label class="WinsLegend" text="Wins" />
+						<Label class="NameLegend" text="Name" />
+					</Panel>
+					<Panel id="WinnersContainer" />
 				</Panel>
 			</Panel>
-
 
 			<Panel class="BottomWindow">
 				<Panel class="RulesWindow"> 
@@ -98,7 +121,6 @@
 						\nCheese grants extra life.
 						\nType '-votekill' to kill everyone (for afk/stuck)." style="" />
 				</Panel>
-
 
 				<Panel class="PatreonWindow">
 					<Panel class="PatreonHeader">

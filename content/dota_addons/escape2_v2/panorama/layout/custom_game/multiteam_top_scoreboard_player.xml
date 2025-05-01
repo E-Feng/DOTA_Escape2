@@ -1,16 +1,12 @@
 <root>
 	<styles>
-		<include src="file://{resources}/styles/dotastyles.css" />
+		<include src="s2r://panorama/styles/dotastyles.css" />
 		<include src="file://{resources}/styles/custom_game/multiteam_top_scoreboard.css" />
 		<include src="file://{resources}/styles/custom_game/shared_scoreboard_styles.css" />
 	</styles>
-	<script>
-	function PortraitClicked()
-	{
-		// TODO: ctrl and alt click support
-		Players.PlayerPortraitClicked( $.GetContextPanel().GetAttributeInt( "player_id", -1 ), false, false );
-	}
-	</script>
+	<scripts>
+    <include src="file://{resources}/scripts/custom_game/multiteam_top_scoreboard_player.js" />
+	</scripts>
 	<Panel hittest="false" class="ScoreboardPlayerWrapper">
 		<Panel hittest="false" id="RespawnIndicator">
 		</Panel>

@@ -96,6 +96,25 @@ function barebones:OnGameInProgress()
 
 	-- Setting up gamescore data collection
 	WebApi:InitGameScore()
+
+	-- Setting up bot spawn for solo players
+	local nPlayers = PlayerResource:GetPlayerCount()
+	if nPlayers == 1 then
+		_G.isSoloMode = true
+		votesNeeded = 0
+
+		local playerId
+    for _,hero in pairs(Players) do
+      playerId = hero:GetPlayerID()
+    end
+		local randomHero = GetRandomHeroName()
+		local spawn = Entities:FindByName(nil, "checkpoint1"):GetAbsOrigin()
+
+		local bot = GameRules:AddBotPlayerWithEntityScript(randomHero, "Buddy", DOTA_TEAM_GOODGUYS, nil, false)
+		bot:SetControllableByPlayer(playerId, true)
+		FindClearSpaceForUnit(bot, spawn, true)
+		bot.safe = true
+	end
 end
 
 -- This function initializes the game mode and is called before anyone loads into the game
@@ -270,6 +289,7 @@ function barebones:InitGameMode()
 	BoundsVector = {}
 	Linked = {}
 	_G.Cheeses = {}
+	_G.isSoloMode = false
 
 	Vote = {}
 	votesNeeded = 6
@@ -466,15 +486,15 @@ function barebones:InitGameMode()
                 {2, ENT_PATRL, 0, "p3_1a", "PatrolInitial", 22, 0.03, 400},
                 {2, ENT_GATES, 0, "gate3_1a", "GateThinker", "gate3_1b", false, Vector(0, -1, 0), 15},
 								{1, ENT_CHEES, 0, "cheese3_1", nil},    
-								{2, ENT_PATRL, 0, "p3_1_1a", "PatrolInitial", 23, 0.03, 550},
-								{2, ENT_PATRL, 0, "p3_1_2a", "PatrolInitial", 24, 0.03, 550}, 
-								{2, ENT_PATRL, 0, "p3_1_3a", "PatrolInitial", 25, 0.03, 550},
-								{2, ENT_PATRL, 0, "p3_1_4a", "PatrolInitial", 26, 0.03, 550},
-								{2, ENT_PATRL, 0, "p3_1_5a", "PatrolInitial", 27, 0.03, 550}, 
-								{2, ENT_PATRL, 0, "p3_1_6a", "PatrolInitial", 28, 0.03, 550},  
-								{2, ENT_PATRL, 0, "p3_2_1a", "PatrolInitial", 29, 0.03, 500},
-								{2, ENT_PATRL, 0, "p3_2_2a", "PatrolInitial", 30, 0.03, 500}, 
-								{2, ENT_PATRL, 0, "p3_2_3a", "PatrolInitial", 31, 0.03, 500},        
+								{2, ENT_PATRL, 0, "p3_1_1a", "PatrolInitial", 23, 0.06, 530},
+								{2, ENT_PATRL, 0, "p3_1_2a", "PatrolInitial", 24, 0.06, 530}, 
+								{2, ENT_PATRL, 0, "p3_1_3a", "PatrolInitial", 25, 0.06, 530},
+								{2, ENT_PATRL, 0, "p3_1_4a", "PatrolInitial", 26, 0.06, 530},
+								{2, ENT_PATRL, 0, "p3_1_5a", "PatrolInitial", 27, 0.06, 530}, 
+								{2, ENT_PATRL, 0, "p3_1_6a", "PatrolInitial", 28, 0.06, 530},  
+								{2, ENT_PATRL, 0, "p3_2_1a", "PatrolInitial", 29, 0.09, 480},
+								{2, ENT_PATRL, 0, "p3_2_2a", "PatrolInitial", 30, 0.09, 480}, 
+								{2, ENT_PATRL, 0, "p3_2_3a", "PatrolInitial", 31, 0.09, 480},        
               },
 							{ -- Level 4 
 								{1, ENT_CHEES, 0, "cheese4_1", nil},

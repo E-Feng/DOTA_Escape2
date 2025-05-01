@@ -37,19 +37,11 @@
     "ItemQuality"					"consumable"
 		"ItemPermanent"					"0"
 
-    "AbilitySpecial"
+    "AbilityValues"
     {
-      "01"
-      {
-				"var_type"				"FIELD_INTEGER"
-				"chance1"	         "1"        
-      }
-      "02"
-      {
-				"var_type"				"FIELD_INTEGER"
-				"chance2"	         "50"        
-      }      
-    }
+      "chance1"                   "1"
+      "chance2"                   "50"
+    }  
   }
 
   //========================================================================================================================
@@ -70,19 +62,11 @@
     "ItemQuality"					"consumable"
 		"ItemPermanent"					"0"
 
-    "AbilitySpecial"
+    "AbilityValues"
     {
-      "01"
-      {
-				"var_type"				"FIELD_INTEGER"
-				"chance1"	         "1"        
-      }
-      "02"
-      {
-				"var_type"				"FIELD_INTEGER"
-				"chance2"	         "50"        
-      }      
-    }
+      "chance1"                   "1"
+      "chance2"                   "50"
+    }  
   }
 
   //========================================================================================================================
@@ -108,20 +92,11 @@
 
     "ItemShareability"				             "ITEM_FULLY_SHAREABLE"
 
-
-    "AbilitySpecial"
-		{
-			"01"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"ms_bonus"	"5"
-			}
-      "02"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"turn_rate_bonus"	    "300"
-			}
-		}   
+    "AbilityValues"
+    {
+      "ms_bonus"                   "5"
+      "turn_rate_bonus"                   "300"
+    }  
   }
 
   //========================================================================================================================
@@ -154,28 +129,12 @@
 
     "ItemShareability"				      "ITEM_FULLY_SHAREABLE"
 
-    "AbilitySpecial"
-		{
-			"01"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"phase_duration"	"3"
-			}
-      "02"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"ms_bonus"	      "5"
-			}
-      "03"
-      {
-      	"var_type"				"FIELD_INTEGER"
-				"base_ms"	      "45"  
-      }
-      "04"
-      {
-      	"var_type"				"FIELD_INTEGER"
-				"phase_duration_auto"	      "2"          
-      }
-		}
-  }  
+    "AbilityValues"
+    {
+      "phase_duration"                   "3"
+      "ms_bonus"                   "5"
+      "base_ms"                   "45"
+      "phase_duration_auto"                   "2"    
+    }  
+  }
 }

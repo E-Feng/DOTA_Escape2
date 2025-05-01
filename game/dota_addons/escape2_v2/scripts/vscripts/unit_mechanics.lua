@@ -36,7 +36,7 @@ function barebones:CreepPatrol(unit, idx, turnDelay)
     if IsValidEntity(unit) then
       for i,waypoint in pairs(waypoints) do
         local posU = unit:GetAbsOrigin()
-        if CalcDist(posU, waypoint) < 5 then
+        if CalcDist2D(posU, waypoint) < 5 then
           unit:MoveToPosition(newpos[i])
           unit.goal = newpos[i]
         end
@@ -361,9 +361,9 @@ function barebones:CrossThinker()
         unit:MoveToPosition(pos2)
         Timers:CreateTimer(.03, function()
           if IsValidEntity(unit) and GameRules.CLevel == 3 then
-            if CalcDist(unit:GetAbsOrigin(), pos2) < 5 then
+            if CalcDist2D(unit:GetAbsOrigin(), pos2) < 15 then
               unit:MoveToPosition(pos1)
-            elseif CalcDist(unit:GetAbsOrigin(), pos1) < 5 then
+            elseif CalcDist2D(unit:GetAbsOrigin(), pos1) < 15 then
               unit:MoveToPosition(pos2)
             end
             return 0.25
@@ -464,18 +464,26 @@ function barebones:SpawnRandomly(pos, direc, length, dist, rate)
       local pos2 = Vector(xGoal, y2, 128)
       local unit = CreateUnitByName("npc_creep_patrol_torso", pos1, true, nil, nil, DOTA_TEAM_ZOMBIES)
       Timers:CreateTimer(0.5, function()
-        unit:MoveToPosition(pos2)
         if IsValidEntity(unit) then
+          unit:MoveToPosition(pos2)
           if CalcDist(unit:GetAbsOrigin(), pos2) < 5 then
             unit:ForceKill(true)
             return
           end
           return 0.1
         else
-          unit:RemoveSelf()
+          -- unit:RemoveSelf()
           return
         end          
       end)
+
+      -- Killing to prevent lag
+      Timers:CreateTimer(8, function()
+        if IsValidEntity(unit) then
+          unit:ForceKill(true)
+        end
+      end)
+
       return rate
     else
       return
@@ -539,24 +547,3 @@ function barebones:RoundaboutThinker()
     end
   end
 end
-
---[[ This function is for the clockwork thinker
-function barebones:ClockThinker()
-  local pos = Entities:FindByName(nil, "clock_loc"):GetAbsOrigin()
-  local unit = CreateUnitByName("npc_clockwerk", pos, true, nil, nil, DOTA_TEAM_GOODGUYS)
-  unit.castX = -4500
-  unit.castY = -2000
-  local abil1 = unit:FindAbilityByName("rattletrap_rocket_flare_custom")
-  local abil2 = unit:FindAbilityByName("zuus_lightning_bolt_custom")
-  Timers:CreateTimer(1, function()
-    if IsValidEntity(unit) then
-      local castPos = Vector(unit.castX, unit.castY, 128)
-      unit:CastAbilityOnPosition(castPos, abil1, -1)
-      unit:CastAbilityOnPosition(castPos, abil2, -1)
-      return 5
-    else
-      return
-    end
-  end)
-end
-]]

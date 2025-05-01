@@ -42,43 +42,15 @@
     "AbilityCooldown"       "1"
     "AbilityManaCost"       "0"
 
-    "AbilitySpecial"
+    "AbilityValues"
     {
-      "01"
-      {
-        "var_type"        "FIELD_INTEGER"
-        "pounce_distance"   "700"
-      }
-      "02"
-      {
-        "var_type"        "FIELD_FLOAT"
-        "pounce_speed"      "933.33"
-      }
-      "03"
-      {
-        "var_type"        "FIELD_FLOAT"
-        "pounce_acceleration" "7000.0"
-      }
-      "04"
-      {
-        "var_type"        "FIELD_INTEGER"
-        "pounce_radius"     "95"
-      }
-      "05"
-      {
-        "var_type"        "FIELD_INTEGER"
-        "pounce_damage"     "0"
-      }
-      "06"
-      {
-        "var_type"        "FIELD_FLOAT"
-        "leash_duration"    "3.5"
-      }
-      "07"
-      {
-        "var_type"        "FIELD_INTEGER"
-        "leash_radius"      "325"
-      }
+      "pounce_distance"                    "700"
+      "pounce_speed"                   "933"
+      "pounce_acceleration"                   "7000"
+      "pounce_radius"                   "95"
+      "pounce_damage"                   "0"
+      "leash_duration"                   "3.5"
+      "leash_radius"                   "325"
     }
   }
 
@@ -108,37 +80,15 @@
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityManaCost"				"0"
 		
-		// Special
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilitySpecial"
-		{
-			"01"
-			{
-				"var_type"			"FIELD_INTEGER"
-				"chain_radius"		"90 90 90 90"
-			}
-			"02"
-			{
-				"var_type"			"FIELD_INTEGER"
-				"range"				"1200 1200 1200 1200"
-				"LinkedSpecialBonus"	"special_bonus_unique_timbersaw_3"
-			}
-			"03"
-			{
-				"var_type"			"FIELD_INTEGER"
-				"radius"		"225 225 225 225"
-			}
-			"04"
-			{	
-				"var_type"			"FIELD_INTEGER"
-				"speed"				"1600"
-			}
-			"05"
-			{	
-				"var_type"			"FIELD_INTEGER"
-				"damage"			"0"
-			}
-		}
+    "AbilityValues"
+    {
+      "chain_radius"                    "90"
+      "range"                   "1200"
+      "radius"                   "225"
+      "speed"                   "1600"
+      "damage"                   "0"
+    }
+
 		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_2"
 	}
 
@@ -157,30 +107,14 @@
     "AbilityCastRange"				"950"
     "AbilityCastPoint"				"0.5"
 
-		"AbilitySpecial"
-		{
-			"01"
-			{
-				"var_type"					"FIELD_INTEGER"
-				"fissure_range"				"950"
-				"LinkedSpecialBonus"		"special_bonus_unique_earthshaker_3"
-			}
-			"02"
-			{
-				"var_type"					"FIELD_FLOAT"
-				"fissure_duration"			"5.0"
-			}
-			"03"
-			{
-				"var_type"					"FIELD_INTEGER"
-				"fissure_radius"				"225"
-			}
-			"04"
-			{
-				"var_type"					"FIELD_FLOAT"
-				"stun_duration"				"1.0 1.25 1.5 1.75"
-			}
-		}
+    "AbilityValues"
+    {
+      "fissure_range"                    "950"
+      "fissure_duration"                   "5"
+      "fissure_radius"                   "225"
+      "stun_duration"                   "1.0 1.25 1.5 1.75"
+    }
+
     "AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_1"
   }	
 }

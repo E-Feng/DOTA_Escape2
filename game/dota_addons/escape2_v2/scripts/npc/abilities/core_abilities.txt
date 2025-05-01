@@ -64,19 +64,11 @@
     "AbilityUnitTargetType"      "DOTA_UNIT_TARGET_ALL"
     "AbilityTextureName"        "ember_spirit_flame_guard"
 
-    // Special
-    "AbilitySpecial"
+    // Values
+    "AbilityValues"
     {
-      "01"
-      {
-        "var_type"           "FIELD_INTEGER"
-        "range"             "50 150 1000"
-      }
-      "02"
-      {
-        "var_type"            "FIELD_INTEGER"
-        "damage"              "1"
-      }
+      "range"                    "45 150 1000"
+      "damage"                   "1"
     }
 
     // Modifiers
@@ -92,7 +84,7 @@
         "Aura_Teams"      "DOTA_UNIT_TARGET_TEAM_ENEMY"
         "Aura_Types"      "DOTA_UNIT_TARGET_ALL"
 
-        "ThinkInterval"  "1"
+        "ThinkInterval"  "0.2"
         "OnIntervalThink"
         {
           "ApplyModifier"
@@ -131,18 +123,10 @@
     "AbilityUnitTargetType"      "DOTA_UNIT_TARGET_ALL"
     "AbilityUnitDamageType"      "DAMAGE_TYPE_MAGICAL"
 
-    "AbilitySpecial"
+    "AbilityValues"
     {
-      "01"
-      {
-        "var_type"      "FIELD_INTEGER"
-        "radius"      "0"
-      }
-      "02"
-      {
-        "var_type"       "FIELD_INTEGER"
-        "damage"        "2"
-      }
+      "radius"                    "0"
+      "damage"                   "2"
     }
 
     "Modifiers"
@@ -166,7 +150,7 @@
         "IsDebuff"         "1"
         "IsHidden"         "1"
 
-        "ThinkInterval"  "0.03"
+        "ThinkInterval"  "0.06"
         "OnIntervalThink"
         {
           "Damage"

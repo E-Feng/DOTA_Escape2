@@ -20,5 +20,10 @@
 			onactivate="ExternalBrowserGoToURL('http://www.patreon.com/join/escapetheundyingdead')" 
 			src="file://{resources}/images/custom_game/patreon/patreon_button_slim.png" 
 		/>
+		<Image
+			class="BuyMeACoffeeButton"
+			onactivate="ExternalBrowserGoToURL('https://www.buymeacoffee.com/escapeundying')"
+			src="file://{resources}/images/custom_game/patreon/bmc_button_slim.png" 
+		/>
 	</Panel>
 </root>

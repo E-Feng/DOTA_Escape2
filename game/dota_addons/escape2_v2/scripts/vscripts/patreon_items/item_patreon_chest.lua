@@ -38,7 +38,7 @@ function item_patreon_chest:OnSpellStart()
     itemList[5] = "item_patreon_phase"
 
     -- Remove charge and give items
-    ability:SpendCharge()
+    ability:SpendCharge(0.01)
     while patreonLevel >= 0 do
       print("Giving item ", itemList[patreonLevel])
       caster:AddItemByName(itemList[patreonLevel])
@@ -49,7 +49,7 @@ function item_patreon_chest:OnSpellStart()
     --ParticleManager:CreateParticle(particle_cast, PATTACH_ABSORIGIN_FOLLOW, caster)
   else
     print("Patreon list has failed to load")
-    ability:SpendCharge()
+    ability:SpendCharge(0.01)
 
     local str = '<font color="red">Failed to connect to Patreon database, please try again next game.</font>'
     GameRules:SendCustomMessage(str, 0, 1)

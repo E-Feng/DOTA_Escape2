@@ -41,7 +41,7 @@ function barebones:HeroKilled(hero, attacker, ability)
   -- Saves position of killed hero into table
   local playerIdx = hero:GetEntityIndex()
   -- If hero steps onto grass/lava origin is moved closer to path
-  hero:SetBaseMagicalResistanceValue(25)
+  -- hero:SetBaseMagicalResistanceValue(25)
   hero.deadHeroPos = hero:GetAbsOrigin()
   if ability then
     if ability:GetAbilityName() == "self_immolation" then
@@ -155,9 +155,9 @@ function barebones:ReviveAll()
   local respawnLoc = GameRules.Checkpoint
   local caster
   for i,hero in pairs(Players) do
-    if hero:IsAlive() then
-      hero:SetBaseMagicalResistanceValue(25)
-    end
+    hero:SetBaseMagicalResistanceValue(100)
+    hero.isSafe = true
+
     hero:SetRespawnPosition(respawnLoc)
     --print("Respawn location set to", respawnLoc)
     hero:RespawnHero(false, false)

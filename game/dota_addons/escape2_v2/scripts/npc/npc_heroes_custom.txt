@@ -14,6 +14,8 @@
 		"Ability7"				""
 		"Ability8"				""
 
+		"Facets" 					""
+
 		"ArmorPhysical"				"0"									// Physical protection.
 		"MagicalResistance"				"0"									// Magical protection (percentage).
 
@@ -43,7 +45,7 @@
 		"StatusHealth" 			"1"
 		"StatusHealthRegen"			"0.0"									// Health regeneration rate.
 		"StatusMana" 			"1"
-		"StatusManaRegen"			"100"									// Mana regeneration rate.
+		"StatusManaRegen"			"0.0"									// Mana regeneration rate.
 
 		"VisionNighttimeRange"		"1800"									// Range of vision at night time.
 	}
@@ -62,6 +64,8 @@
 		"Ability7"				""
 		"Ability8"				""
 
+		"Facets" 					""
+
 		"ArmorPhysical"				"0"									// Physical protection.
 		"MagicalResistance"				"0"									// Magical protection (percentage).
 
@@ -91,7 +95,7 @@
 		"StatusHealth" 			"1"
 		"StatusHealthRegen"			"0.0"									// Health regeneration rate.
 		"StatusMana" 			"1"
-		"StatusManaRegen"			"100"									// Mana regeneration rate.
+		"StatusManaRegen"			"0.0"									// Mana regeneration rate.
 
 		"VisionNighttimeRange"		"1800"									// Range of vision at night time.
 	}
@@ -110,6 +114,8 @@
 		"Ability7"				""
 		"Ability8"				""
 
+		"Facets" 					""
+
 		"ArmorPhysical"				"0"									// Physical protection.
 		"MagicalResistance"				"0"									// Magical protection (percentage).
 
@@ -139,7 +145,7 @@
 		"StatusHealth" 			"1"
 		"StatusHealthRegen"			"0.0"									// Health regeneration rate.
 		"StatusMana" 			"1"
-		"StatusManaRegen"			"100"									// Mana regeneration rate.
+		"StatusManaRegen"			"0.0"									// Mana regeneration rate.
 
 		"VisionNighttimeRange"		"1800"									// Range of vision at night time.
 	}
@@ -158,6 +164,8 @@
 		"Ability7"				""
 		"Ability8"				""
 
+		"Facets" 					""
+
 		"ArmorPhysical"				"0"									// Physical protection.
 		"MagicalResistance"				"0"									// Magical protection (percentage).
 
@@ -187,7 +195,7 @@
 		"StatusHealth" 			"1"
 		"StatusHealthRegen"			"0.0"									// Health regeneration rate.
 		"StatusMana" 			"1"
-		"StatusManaRegen"			"100"									// Mana regeneration rate.
+		"StatusManaRegen"			"0.0"									// Mana regeneration rate.
 
 		"VisionNighttimeRange"		"1800"									// Range of vision at night time.
 	}
@@ -206,6 +214,8 @@
 		"Ability7"				""
 		"Ability8"				""
 
+		"Facets" 					""
+
 		"ArmorPhysical"				"0"									// Physical protection.
 		"MagicalResistance"				"0"									// Magical protection (percentage).
 
@@ -235,7 +245,7 @@
 		"StatusHealth" 			"1"
 		"StatusHealthRegen"			"0.0"									// Health regeneration rate.
 		"StatusMana" 			"1"
-		"StatusManaRegen"			"100"									// Mana regeneration rate.
+		"StatusManaRegen"			"0.0"									// Mana regeneration rate.
 
 		"VisionNighttimeRange"		"1800"									// Range of vision at night time.
 	}
@@ -254,6 +264,8 @@
 		"Ability7"				""
 		"Ability8"				""
 
+		"Facets" 					""
+
 		"ArmorPhysical"				"0"									// Physical protection.
 		"MagicalResistance"				"0"									// Magical protection (percentage).
 
@@ -283,7 +295,7 @@
 		"StatusHealth" 			"1"
 		"StatusHealthRegen"			"0.0"									// Health regeneration rate.
 		"StatusMana" 			"1"
-		"StatusManaRegen"			"100"									// Mana regeneration rate.
+		"StatusManaRegen"			"0.0"									// Mana regeneration rate.
 
 		"VisionNighttimeRange"		"1800"									// Range of vision at night time.
 	}
@@ -302,6 +314,8 @@
 		"Ability7"				""
 		"Ability8"				""
 
+		"Facets" 					""
+
 		"ArmorPhysical"				"0"									// Physical protection.
 		"MagicalResistance"				"0"									// Magical protection (percentage).
 
@@ -331,7 +345,7 @@
 		"StatusHealth" 			"1"
 		"StatusHealthRegen"			"0.0"									// Health regeneration rate.
 		"StatusMana" 			"1"
-		"StatusManaRegen"			"100"									// Mana regeneration rate.
+		"StatusManaRegen"			"0.0"									// Mana regeneration rate.
 
 		"VisionNighttimeRange"		"1800"									// Range of vision at night time.
 	}
@@ -350,6 +364,8 @@
 		"Ability7"				""
 		"Ability8"				""
 
+		"Facets" 					""
+
 		"ArmorPhysical"				"0"									// Physical protection.
 		"MagicalResistance"				"0"									// Magical protection (percentage).
 
@@ -379,7 +395,7 @@
 		"StatusHealth" 			"1"
 		"StatusHealthRegen"			"0.0"									// Health regeneration rate.
 		"StatusMana" 			"1"
-		"StatusManaRegen"			"100"									// Mana regeneration rate.
+		"StatusManaRegen"			"0.0"									// Mana regeneration rate.
 
 		"VisionNighttimeRange"		"1800"									// Range of vision at night time.
 	}
@@ -398,6 +414,8 @@
 		"Ability7"				""
 		"Ability8"				""
 
+		"Facets" 					""
+
 		"ArmorPhysical"				"0"									// Physical protection.
 		"MagicalResistance"				"0"									// Magical protection (percentage).
 
@@ -427,7 +445,7 @@
 		"StatusHealth" 			"1"
 		"StatusHealthRegen"			"0.0"									// Health regeneration rate.
 		"StatusMana" 			"1"
-		"StatusManaRegen"			"100"									// Mana regeneration rate.
+		"StatusManaRegen"			"0.0"									// Mana regeneration rate.
 
 		"VisionNighttimeRange"		"1800"									// Range of vision at night time.
 	}
@@ -446,6 +464,8 @@
 		"Ability7"				""
 		"Ability8"				""
 
+		"Facets" 					""
+
 		"ArmorPhysical"				"0"									// Physical protection.
 		"MagicalResistance"				"0"									// Magical protection (percentage).
 
@@ -475,7 +495,7 @@
 		"StatusHealth" 			"1"
 		"StatusHealthRegen"			"0.0"									// Health regeneration rate.
 		"StatusMana" 			"1"
-		"StatusManaRegen"			"100"									// Mana regeneration rate.
+		"StatusManaRegen"			"0.0"									// Mana regeneration rate.
 
 		"VisionNighttimeRange"		"1800"									// Range of vision at night time.
 	}
@@ -494,6 +514,8 @@
 		"Ability7"				""
 		"Ability8"				""
 
+		"Facets" 					""
+
 		"ArmorPhysical"				"0"									// Physical protection.
 		"MagicalResistance"				"0"									// Magical protection (percentage).
 
@@ -523,7 +545,7 @@
 		"StatusHealth" 			"1"
 		"StatusHealthRegen"			"0.0"									// Health regeneration rate.
 		"StatusMana" 			"1"
-		"StatusManaRegen"			"100"									// Mana regeneration rate.
+		"StatusManaRegen"			"0.0"									// Mana regeneration rate.
 
 		"VisionNighttimeRange"		"1800"									// Range of vision at night time.
 	}
@@ -542,6 +564,8 @@
 		"Ability7"				""
 		"Ability8"				""
 
+		"Facets" 					""
+
 		"ArmorPhysical"				"0"									// Physical protection.
 		"MagicalResistance"				"0"									// Magical protection (percentage).
 
@@ -571,7 +595,7 @@
 		"StatusHealth" 			"1"
 		"StatusHealthRegen"			"0.0"									// Health regeneration rate.
 		"StatusMana" 			"1"
-		"StatusManaRegen"			"100"									// Mana regeneration rate.
+		"StatusManaRegen"			"0.0"									// Mana regeneration rate.
 
 		"VisionNighttimeRange"		"1800"									// Range of vision at night time.
 	}
@@ -590,6 +614,8 @@
 		"Ability7"				""
 		"Ability8"				""
 
+		"Facets" 					""
+
 		"ArmorPhysical"				"0"									// Physical protection.
 		"MagicalResistance"				"0"									// Magical protection (percentage).
 
@@ -619,7 +645,7 @@
 		"StatusHealth" 			"1"
 		"StatusHealthRegen"			"0.0"									// Health regeneration rate.
 		"StatusMana" 			"1"
-		"StatusManaRegen"			"100"									// Mana regeneration rate.
+		"StatusManaRegen"			"0.0"									// Mana regeneration rate.
 
 		"VisionNighttimeRange"		"1800"									// Range of vision at night time.
 	}
@@ -638,6 +664,8 @@
 		"Ability7"				""
 		"Ability8"				""
 
+		"Facets" 					""
+
 		"ArmorPhysical"				"0"									// Physical protection.
 		"MagicalResistance"				"0"									// Magical protection (percentage).
 
@@ -667,7 +695,7 @@
 		"StatusHealth" 			"1"
 		"StatusHealthRegen"			"0.0"									// Health regeneration rate.
 		"StatusMana" 			"1"
-		"StatusManaRegen"			"100"									// Mana regeneration rate.
+		"StatusManaRegen"			"0.0"									// Mana regeneration rate.
 
 		"VisionNighttimeRange"		"1800"									// Range of vision at night time.
 	}
@@ -686,6 +714,8 @@
 		"Ability7"				""
 		"Ability8"				""
 
+		"Facets" 					""
+
 		"ArmorPhysical"				"0"									// Physical protection.
 		"MagicalResistance"				"0"									// Magical protection (percentage).
 
@@ -715,7 +745,7 @@
 		"StatusHealth" 			"1"
 		"StatusHealthRegen"			"0.0"									// Health regeneration rate.
 		"StatusMana" 			"1"
-		"StatusManaRegen"			"100"									// Mana regeneration rate.
+		"StatusManaRegen"			"0.0"									// Mana regeneration rate.
 
 		"VisionNighttimeRange"		"1800"									// Range of vision at night time.
 	}
@@ -734,6 +764,8 @@
 		"Ability7"				""
 		"Ability8"				""
 
+		"Facets" 					""
+
 		"ArmorPhysical"				"0"									// Physical protection.
 		"MagicalResistance"				"0"									// Magical protection (percentage).
 
@@ -763,7 +795,7 @@
 		"StatusHealth" 			"1"
 		"StatusHealthRegen"			"0.0"									// Health regeneration rate.
 		"StatusMana" 			"1"
-		"StatusManaRegen"			"100"									// Mana regeneration rate.
+		"StatusManaRegen"			"0.0"									// Mana regeneration rate.
 
 		"VisionNighttimeRange"		"1800"									// Range of vision at night time.
 	}
@@ -782,6 +814,8 @@
 		"Ability7"				""
 		"Ability8"				""
 
+		"Facets" 					""
+
 		"ArmorPhysical"				"0"									// Physical protection.
 		"MagicalResistance"				"0"									// Magical protection (percentage).
 
@@ -811,7 +845,7 @@
 		"StatusHealth" 			"1"
 		"StatusHealthRegen"			"0.0"									// Health regeneration rate.
 		"StatusMana" 			"1"
-		"StatusManaRegen"			"100"									// Mana regeneration rate.
+		"StatusManaRegen"			"0.0"									// Mana regeneration rate.
 
 		"VisionNighttimeRange"		"1800"									// Range of vision at night time.
 	}
@@ -830,6 +864,8 @@
 		"Ability7"				""
 		"Ability8"				""
 
+		"Facets" 					""
+
 		"ArmorPhysical"				"0"									// Physical protection.
 		"MagicalResistance"				"0"									// Magical protection (percentage).
 
@@ -859,7 +895,7 @@
 		"StatusHealth" 			"1"
 		"StatusHealthRegen"			"0.0"									// Health regeneration rate.
 		"StatusMana" 			"1"
-		"StatusManaRegen"			"100"									// Mana regeneration rate.
+		"StatusManaRegen"			"0.0"									// Mana regeneration rate.
 
 		"VisionNighttimeRange"		"1800"									// Range of vision at night time.
 	}
@@ -878,6 +914,8 @@
 		"Ability7"				""
 		"Ability8"				""
 
+		"Facets" 					""
+
 		"ArmorPhysical"				"0"									// Physical protection.
 		"MagicalResistance"				"0"									// Magical protection (percentage).
 
@@ -907,7 +945,7 @@
 		"StatusHealth" 			"1"
 		"StatusHealthRegen"			"0.0"									// Health regeneration rate.
 		"StatusMana" 			"1"
-		"StatusManaRegen"			"100"									// Mana regeneration rate.
+		"StatusManaRegen"			"0.0"									// Mana regeneration rate.
 
 		"VisionNighttimeRange"		"1800"									// Range of vision at night time.
 	}
@@ -926,6 +964,8 @@
 		"Ability7"				""
 		"Ability8"				""
 
+		"Facets" 					""
+
 		"ArmorPhysical"				"0"									// Physical protection.
 		"MagicalResistance"				"0"									// Magical protection (percentage).
 
@@ -955,7 +995,7 @@
 		"StatusHealth" 			"1"
 		"StatusHealthRegen"			"0.0"									// Health regeneration rate.
 		"StatusMana" 			"1"
-		"StatusManaRegen"			"100"									// Mana regeneration rate.
+		"StatusManaRegen"			"0.0"									// Mana regeneration rate.
 
 		"VisionNighttimeRange"		"1800"									// Range of vision at night time.
 	}
@@ -974,6 +1014,8 @@
 		"Ability7"				""
 		"Ability8"				""
 
+		"Facets" 					""
+
 		"ArmorPhysical"				"0"									// Physical protection.
 		"MagicalResistance"				"0"									// Magical protection (percentage).
 
@@ -1003,7 +1045,7 @@
 		"StatusHealth" 			"1"
 		"StatusHealthRegen"			"0.0"									// Health regeneration rate.
 		"StatusMana" 			"1"
-		"StatusManaRegen"			"100"									// Mana regeneration rate.
+		"StatusManaRegen"			"0.0"									// Mana regeneration rate.
 
 		"VisionNighttimeRange"		"1800"									// Range of vision at night time.
 	}
@@ -1022,6 +1064,8 @@
 		"Ability7"				""
 		"Ability8"				""
 
+		"Facets" 					""
+
 		"ArmorPhysical"				"0"									// Physical protection.
 		"MagicalResistance"				"0"									// Magical protection (percentage).
 
@@ -1051,7 +1095,7 @@
 		"StatusHealth" 			"1"
 		"StatusHealthRegen"			"0.0"									// Health regeneration rate.
 		"StatusMana" 			"1"
-		"StatusManaRegen"			"100"									// Mana regeneration rate.
+		"StatusManaRegen"			"0.0"									// Mana regeneration rate.
 
 		"VisionNighttimeRange"		"1800"									// Range of vision at night time.
 	}
@@ -1070,6 +1114,8 @@
 		"Ability7"				""
 		"Ability8"				""
 
+		"Facets" 					""
+
 		"ArmorPhysical"				"0"									// Physical protection.
 		"MagicalResistance"				"0"									// Magical protection (percentage).
 
@@ -1099,7 +1145,7 @@
 		"StatusHealth" 			"1"
 		"StatusHealthRegen"			"0.0"									// Health regeneration rate.
 		"StatusMana" 			"1"
-		"StatusManaRegen"			"100"									// Mana regeneration rate.
+		"StatusManaRegen"			"0.0"									// Mana regeneration rate.
 
 		"VisionNighttimeRange"		"1800"									// Range of vision at night time.
 	}
@@ -1118,6 +1164,8 @@
 		"Ability7"				""
 		"Ability8"				""
 
+		"Facets" 					""
+
 		"ArmorPhysical"				"0"									// Physical protection.
 		"MagicalResistance"				"0"									// Magical protection (percentage).
 
@@ -1147,7 +1195,7 @@
 		"StatusHealth" 			"1"
 		"StatusHealthRegen"			"0.0"									// Health regeneration rate.
 		"StatusMana" 			"1"
-		"StatusManaRegen"			"100"									// Mana regeneration rate.
+		"StatusManaRegen"			"0.0"									// Mana regeneration rate.
 
 		"VisionNighttimeRange"		"1800"									// Range of vision at night time.
 	}
@@ -1166,6 +1214,8 @@
 		"Ability7"				""
 		"Ability8"				""
 
+		"Facets" 					""
+
 		"ArmorPhysical"				"0"									// Physical protection.
 		"MagicalResistance"				"0"									// Magical protection (percentage).
 
@@ -1195,7 +1245,7 @@
 		"StatusHealth" 			"1"
 		"StatusHealthRegen"			"0.0"									// Health regeneration rate.
 		"StatusMana" 			"1"
-		"StatusManaRegen"			"100"									// Mana regeneration rate.
+		"StatusManaRegen"			"0.0"									// Mana regeneration rate.
 
 		"VisionNighttimeRange"		"1800"									// Range of vision at night time.
 	}
@@ -1214,6 +1264,8 @@
 		"Ability7"				""
 		"Ability8"				""
 
+		"Facets" 					""
+
 		"ArmorPhysical"				"0"									// Physical protection.
 		"MagicalResistance"				"0"									// Magical protection (percentage).
 
@@ -1243,7 +1295,7 @@
 		"StatusHealth" 			"1"
 		"StatusHealthRegen"			"0.0"									// Health regeneration rate.
 		"StatusMana" 			"1"
-		"StatusManaRegen"			"100"									// Mana regeneration rate.
+		"StatusManaRegen"			"0.0"									// Mana regeneration rate.
 
 		"VisionNighttimeRange"		"1800"									// Range of vision at night time.
 	}
@@ -1262,6 +1314,8 @@
 		"Ability7"				""
 		"Ability8"				""
 
+		"Facets" 					""
+
 		"ArmorPhysical"				"0"									// Physical protection.
 		"MagicalResistance"				"0"									// Magical protection (percentage).
 
@@ -1291,7 +1345,7 @@
 		"StatusHealth" 			"1"
 		"StatusHealthRegen"			"0.0"									// Health regeneration rate.
 		"StatusMana" 			"1"
-		"StatusManaRegen"			"100"									// Mana regeneration rate.
+		"StatusManaRegen"			"0.0"									// Mana regeneration rate.
 
 		"VisionNighttimeRange"		"1800"									// Range of vision at night time.
 	}
@@ -1310,6 +1364,8 @@
 		"Ability7"				""
 		"Ability8"				""
 
+		"Facets" 					""
+
 		"ArmorPhysical"				"0"									// Physical protection.
 		"MagicalResistance"				"0"									// Magical protection (percentage).
 
@@ -1339,7 +1395,7 @@
 		"StatusHealth" 			"1"
 		"StatusHealthRegen"			"0.0"									// Health regeneration rate.
 		"StatusMana" 			"1"
-		"StatusManaRegen"			"100"									// Mana regeneration rate.
+		"StatusManaRegen"			"0.0"									// Mana regeneration rate.
 
 		"VisionNighttimeRange"		"1800"									// Range of vision at night time.
 	}
@@ -1358,6 +1414,8 @@
 		"Ability7"				""
 		"Ability8"				""
 
+		"Facets" 					""
+
 		"ArmorPhysical"				"0"									// Physical protection.
 		"MagicalResistance"				"0"									// Magical protection (percentage).
 
@@ -1387,7 +1445,7 @@
 		"StatusHealth" 			"1"
 		"StatusHealthRegen"			"0.0"									// Health regeneration rate.
 		"StatusMana" 			"1"
-		"StatusManaRegen"			"100"									// Mana regeneration rate.
+		"StatusManaRegen"			"0.0"									// Mana regeneration rate.
 
 		"VisionNighttimeRange"		"1800"									// Range of vision at night time.
 	}
@@ -1406,6 +1464,8 @@
 		"Ability7"				""
 		"Ability8"				""
 
+		"Facets" 					""
+
 		"ArmorPhysical"				"0"									// Physical protection.
 		"MagicalResistance"				"0"									// Magical protection (percentage).
 
@@ -1435,7 +1495,7 @@
 		"StatusHealth" 			"1"
 		"StatusHealthRegen"			"0.0"									// Health regeneration rate.
 		"StatusMana" 			"1"
-		"StatusManaRegen"			"100"									// Mana regeneration rate.
+		"StatusManaRegen"			"0.0"									// Mana regeneration rate.
 
     "VisionDaytimeRange"		"1800"									// Range of vision at daytime.
 		"VisionNighttimeRange"		"1800"									// Range of vision at night time.
@@ -1455,6 +1515,8 @@
 		"Ability7"				""
 		"Ability8"				""
 
+		"Facets" 					""
+
 		"ArmorPhysical"				"0"									// Physical protection.
 		"MagicalResistance"				"0"									// Magical protection (percentage).
 
@@ -1484,7 +1546,7 @@
 		"StatusHealth" 			"1"
 		"StatusHealthRegen"			"0.0"									// Health regeneration rate.
 		"StatusMana" 			"1"
-		"StatusManaRegen"			"100"									// Mana regeneration rate.
+		"StatusManaRegen"			"0.0"									// Mana regeneration rate.
 
 		"VisionNighttimeRange"		"1800"									// Range of vision at night time.
 	}
@@ -1503,6 +1565,8 @@
 		"Ability7"				""
 		"Ability8"				""
 
+		"Facets" 					""
+
 		"ArmorPhysical"				"0"									// Physical protection.
 		"MagicalResistance"				"0"									// Magical protection (percentage).
 
@@ -1532,7 +1596,7 @@
 		"StatusHealth" 			"1"
 		"StatusHealthRegen"			"0.0"									// Health regeneration rate.
 		"StatusMana" 			"1"
-		"StatusManaRegen"			"100"									// Mana regeneration rate.
+		"StatusManaRegen"			"0.0"									// Mana regeneration rate.
 
 		"VisionNighttimeRange"		"1800"									// Range of vision at night time.
 	}
@@ -1551,6 +1615,8 @@
 		"Ability7"				""
 		"Ability8"				""
 
+		"Facets" 					""
+
 		"ArmorPhysical"				"0"									// Physical protection.
 		"MagicalResistance"				"0"									// Magical protection (percentage).
 
@@ -1580,7 +1646,7 @@
 		"StatusHealth" 			"1"
 		"StatusHealthRegen"			"0.0"									// Health regeneration rate.
 		"StatusMana" 			"1"
-		"StatusManaRegen"			"100"									// Mana regeneration rate.
+		"StatusManaRegen"			"0.0"									// Mana regeneration rate.
 
 		"VisionNighttimeRange"		"1800"									// Range of vision at night time.
 	}
@@ -1599,6 +1665,8 @@
 		"Ability7"				""
 		"Ability8"				""
 
+		"Facets" 					""
+
 		"ArmorPhysical"				"0"									// Physical protection.
 		"MagicalResistance"				"0"									// Magical protection (percentage).
 
@@ -1628,7 +1696,7 @@
 		"StatusHealth" 			"1"
 		"StatusHealthRegen"			"0.0"									// Health regeneration rate.
 		"StatusMana" 			"1"
-		"StatusManaRegen"			"100"									// Mana regeneration rate.
+		"StatusManaRegen"			"0.0"									// Mana regeneration rate.
 
 		"VisionNighttimeRange"		"1800"									// Range of vision at night time.
 	}
@@ -1647,6 +1715,8 @@
 		"Ability7"				""
 		"Ability8"				""
 
+		"Facets" 					""
+
 		"ArmorPhysical"				"0"									// Physical protection.
 		"MagicalResistance"				"0"									// Magical protection (percentage).
 
@@ -1676,7 +1746,7 @@
 		"StatusHealth" 			"1"
 		"StatusHealthRegen"			"0.0"									// Health regeneration rate.
 		"StatusMana" 			"1"
-		"StatusManaRegen"			"100"									// Mana regeneration rate.
+		"StatusManaRegen"			"0.0"									// Mana regeneration rate.
 
 		"VisionNighttimeRange"		"1800"									// Range of vision at night time.
 	}
@@ -1695,6 +1765,8 @@
 		"Ability7"				""
 		"Ability8"				""
 
+		"Facets" 					""
+
 		"ArmorPhysical"				"0"									// Physical protection.
 		"MagicalResistance"				"0"									// Magical protection (percentage).
 
@@ -1724,7 +1796,7 @@
 		"StatusHealth" 			"1"
 		"StatusHealthRegen"			"0.0"									// Health regeneration rate.
 		"StatusMana" 			"1"
-		"StatusManaRegen"			"100"									// Mana regeneration rate.
+		"StatusManaRegen"			"0.0"									// Mana regeneration rate.
 
 		"VisionNighttimeRange"		"1800"									// Range of vision at night time.
 	}
@@ -1743,6 +1815,8 @@
 		"Ability7"				""
 		"Ability8"				""
 
+		"Facets" 					""
+
 		"ArmorPhysical"				"0"									// Physical protection.
 		"MagicalResistance"				"0"									// Magical protection (percentage).
 
@@ -1772,7 +1846,7 @@
 		"StatusHealth" 			"1"
 		"StatusHealthRegen"			"0.0"									// Health regeneration rate.
 		"StatusMana" 			"1"
-		"StatusManaRegen"			"100"									// Mana regeneration rate.
+		"StatusManaRegen"			"0.0"									// Mana regeneration rate.
 
 		"VisionNighttimeRange"		"1800"									// Range of vision at night time.
 	}
@@ -1791,6 +1865,8 @@
 		"Ability7"				""
 		"Ability8"				""
 
+		"Facets" 					""
+
 		"ArmorPhysical"				"0"									// Physical protection.
 		"MagicalResistance"				"0"									// Magical protection (percentage).
 
@@ -1820,7 +1896,7 @@
 		"StatusHealth" 			"1"
 		"StatusHealthRegen"			"0.0"									// Health regeneration rate.
 		"StatusMana" 			"1"
-		"StatusManaRegen"			"100"									// Mana regeneration rate.
+		"StatusManaRegen"			"0.0"									// Mana regeneration rate.
 
 		"VisionNighttimeRange"		"1800"									// Range of vision at night time.
 	}
@@ -1839,6 +1915,8 @@
 		"Ability7"				""
 		"Ability8"				""
 
+		"Facets" 					""
+
 		"ArmorPhysical"				"0"									// Physical protection.
 		"MagicalResistance"				"0"									// Magical protection (percentage).
 
@@ -1868,7 +1946,7 @@
 		"StatusHealth" 			"1"
 		"StatusHealthRegen"			"0.0"									// Health regeneration rate.
 		"StatusMana" 			"1"
-		"StatusManaRegen"			"100"									// Mana regeneration rate.
+		"StatusManaRegen"			"0.0"									// Mana regeneration rate.
 
 		"VisionNighttimeRange"		"1800"									// Range of vision at night time.
 	}
@@ -1887,6 +1965,8 @@
 		"Ability7"				""
 		"Ability8"				""
 
+		"Facets" 					""
+
 		"ArmorPhysical"				"0"									// Physical protection.
 		"MagicalResistance"				"0"									// Magical protection (percentage).
 
@@ -1916,7 +1996,7 @@
 		"StatusHealth" 			"1"
 		"StatusHealthRegen"			"0.0"									// Health regeneration rate.
 		"StatusMana" 			"1"
-		"StatusManaRegen"			"100"									// Mana regeneration rate.
+		"StatusManaRegen"			"0.0"									// Mana regeneration rate.
 
 		"VisionNighttimeRange"		"1800"									// Range of vision at night time.
 	}
@@ -1935,6 +2015,8 @@
 		"Ability7"				""
 		"Ability8"				""
 
+		"Facets" 					""
+
 		"ArmorPhysical"				"0"									// Physical protection.
 		"MagicalResistance"				"0"									// Magical protection (percentage).
 
@@ -1964,7 +2046,7 @@
 		"StatusHealth" 			"1"
 		"StatusHealthRegen"			"0.0"									// Health regeneration rate.
 		"StatusMana" 			"1"
-		"StatusManaRegen"			"100"									// Mana regeneration rate.
+		"StatusManaRegen"			"0.0"									// Mana regeneration rate.
 
 		"VisionNighttimeRange"		"1800"									// Range of vision at night time.
 	}
@@ -1983,6 +2065,8 @@
 		"Ability7"				""
 		"Ability8"				""
 
+		"Facets" 					""
+
 		"ArmorPhysical"				"0"									// Physical protection.
 		"MagicalResistance"				"0"									// Magical protection (percentage).
 
@@ -2012,7 +2096,7 @@
 		"StatusHealth" 			"1"
 		"StatusHealthRegen"			"0.0"									// Health regeneration rate.
 		"StatusMana" 			"1"
-		"StatusManaRegen"			"100"									// Mana regeneration rate.
+		"StatusManaRegen"			"0.0"									// Mana regeneration rate.
 
 		"VisionNighttimeRange"		"1800"									// Range of vision at night time.
 	}
@@ -2031,6 +2115,8 @@
 		"Ability7"				""
 		"Ability8"				""
 
+		"Facets" 					""
+
 		"ArmorPhysical"				"0"									// Physical protection.
 		"MagicalResistance"				"0"									// Magical protection (percentage).
 
@@ -2060,7 +2146,7 @@
 		"StatusHealth" 			"1"
 		"StatusHealthRegen"			"0.0"									// Health regeneration rate.
 		"StatusMana" 			"1"
-		"StatusManaRegen"			"100"									// Mana regeneration rate.
+		"StatusManaRegen"			"0.0"									// Mana regeneration rate.
 
 		"VisionNighttimeRange"		"1800"									// Range of vision at night time.
 	}
@@ -2079,6 +2165,8 @@
 		"Ability7"				""
 		"Ability8"				""
 
+		"Facets" 					""
+
 		"ArmorPhysical"				"0"									// Physical protection.
 		"MagicalResistance"				"0"									// Magical protection (percentage).
 
@@ -2108,7 +2196,7 @@
 		"StatusHealth" 			"1"
 		"StatusHealthRegen"			"0.0"									// Health regeneration rate.
 		"StatusMana" 			"1"
-		"StatusManaRegen"			"100"									// Mana regeneration rate.
+		"StatusManaRegen"			"0.0"									// Mana regeneration rate.
 
 		"VisionNighttimeRange"		"1800"									// Range of vision at night time.
 	}
@@ -2127,6 +2215,8 @@
 		"Ability7"				""
 		"Ability8"				""
 
+		"Facets" 					""
+
 		"ArmorPhysical"				"0"									// Physical protection.
 		"MagicalResistance"				"0"									// Magical protection (percentage).
 
@@ -2156,7 +2246,7 @@
 		"StatusHealth" 			"1"
 		"StatusHealthRegen"			"0.0"									// Health regeneration rate.
 		"StatusMana" 			"1"
-		"StatusManaRegen"			"100"									// Mana regeneration rate.
+		"StatusManaRegen"			"0.0"									// Mana regeneration rate.
 
 		"VisionNighttimeRange"		"1800"									// Range of vision at night time.
 	}
@@ -2175,6 +2265,8 @@
 		"Ability7"				""
 		"Ability8"				""
 
+		"Facets" 					""
+
 		"ArmorPhysical"				"0"									// Physical protection.
 		"MagicalResistance"				"0"									// Magical protection (percentage).
 
@@ -2204,7 +2296,7 @@
 		"StatusHealth" 			"1"
 		"StatusHealthRegen"			"0.0"									// Health regeneration rate.
 		"StatusMana" 			"1"
-		"StatusManaRegen"			"100"									// Mana regeneration rate.
+		"StatusManaRegen"			"0.0"									// Mana regeneration rate.
 
 		"VisionNighttimeRange"		"1800"									// Range of vision at night time.
 	}
@@ -2223,6 +2315,8 @@
 		"Ability7"				""
 		"Ability8"				""
 
+		"Facets" 					""
+
 		"ArmorPhysical"				"0"									// Physical protection.
 		"MagicalResistance"				"0"									// Magical protection (percentage).
 
@@ -2252,7 +2346,7 @@
 		"StatusHealth" 			"1"
 		"StatusHealthRegen"			"0.0"									// Health regeneration rate.
 		"StatusMana" 			"1"
-		"StatusManaRegen"			"100"									// Mana regeneration rate.
+		"StatusManaRegen"			"0.0"									// Mana regeneration rate.
 
 		"VisionNighttimeRange"		"1800"									// Range of vision at night time.
 	}
@@ -2271,6 +2365,8 @@
 		"Ability7"				""
 		"Ability8"				""
 
+		"Facets" 					""
+
 		"ArmorPhysical"				"0"									// Physical protection.
 		"MagicalResistance"				"0"									// Magical protection (percentage).
 
@@ -2300,7 +2396,7 @@
 		"StatusHealth" 			"1"
 		"StatusHealthRegen"			"0.0"									// Health regeneration rate.
 		"StatusMana" 			"1"
-		"StatusManaRegen"			"100"									// Mana regeneration rate.
+		"StatusManaRegen"			"0.0"									// Mana regeneration rate.
 
 		"VisionNighttimeRange"		"1800"									// Range of vision at night time.
 	}
@@ -2319,6 +2415,8 @@
 		"Ability7"				""
 		"Ability8"				""
 
+		"Facets" 					""
+
 		"ArmorPhysical"				"0"									// Physical protection.
 		"MagicalResistance"				"0"									// Magical protection (percentage).
 
@@ -2348,7 +2446,7 @@
 		"StatusHealth" 			"1"
 		"StatusHealthRegen"			"0.0"									// Health regeneration rate.
 		"StatusMana" 			"1"
-		"StatusManaRegen"			"100"									// Mana regeneration rate.
+		"StatusManaRegen"			"0.0"									// Mana regeneration rate.
 
 		"VisionNighttimeRange"		"1800"									// Range of vision at night time.
 	}
@@ -2367,6 +2465,8 @@
 		"Ability7"				""
 		"Ability8"				""
 
+		"Facets" 					""
+
 		"ArmorPhysical"				"0"									// Physical protection.
 		"MagicalResistance"				"0"									// Magical protection (percentage).
 
@@ -2396,7 +2496,7 @@
 		"StatusHealth" 			"1"
 		"StatusHealthRegen"			"0.0"									// Health regeneration rate.
 		"StatusMana" 			"1"
-		"StatusManaRegen"			"100"									// Mana regeneration rate.
+		"StatusManaRegen"			"0.0"									// Mana regeneration rate.
 
 		"VisionNighttimeRange"		"1800"									// Range of vision at night time.
 	}
@@ -2415,6 +2515,8 @@
 		"Ability7"				""
 		"Ability8"				""
 
+		"Facets" 					""
+
 		"ArmorPhysical"				"0"									// Physical protection.
 		"MagicalResistance"				"0"									// Magical protection (percentage).
 
@@ -2444,7 +2546,7 @@
 		"StatusHealth" 			"1"
 		"StatusHealthRegen"			"0.0"									// Health regeneration rate.
 		"StatusMana" 			"1"
-		"StatusManaRegen"			"100"									// Mana regeneration rate.
+		"StatusManaRegen"			"0.0"									// Mana regeneration rate.
 
 		"VisionNighttimeRange"		"1800"									// Range of vision at night time.
 	}
@@ -2463,6 +2565,8 @@
 		"Ability7"				""
 		"Ability8"				""
 
+		"Facets" 					""
+
 		"ArmorPhysical"				"0"									// Physical protection.
 		"MagicalResistance"				"0"									// Magical protection (percentage).
 
@@ -2492,7 +2596,7 @@
 		"StatusHealth" 			"1"
 		"StatusHealthRegen"			"0.0"									// Health regeneration rate.
 		"StatusMana" 			"1"
-		"StatusManaRegen"			"100"									// Mana regeneration rate.
+		"StatusManaRegen"			"0.0"									// Mana regeneration rate.
 
 		"VisionNighttimeRange"		"1800"									// Range of vision at night time.
 	}
@@ -2511,6 +2615,8 @@
 		"Ability7"				""
 		"Ability8"				""
 
+		"Facets" 					""
+
 		"ArmorPhysical"				"0"									// Physical protection.
 		"MagicalResistance"				"0"									// Magical protection (percentage).
 
@@ -2540,7 +2646,7 @@
 		"StatusHealth" 			"1"
 		"StatusHealthRegen"			"0.0"									// Health regeneration rate.
 		"StatusMana" 			"1"
-		"StatusManaRegen"			"100"									// Mana regeneration rate.
+		"StatusManaRegen"			"0.0"									// Mana regeneration rate.
 
 		"VisionNighttimeRange"		"1800"									// Range of vision at night time.
 	}
@@ -2559,6 +2665,8 @@
 		"Ability7"				""
 		"Ability8"				""
 
+		"Facets" 					""
+
 		"ArmorPhysical"				"0"									// Physical protection.
 		"MagicalResistance"				"0"									// Magical protection (percentage).
 
@@ -2588,7 +2696,7 @@
 		"StatusHealth" 			"1"
 		"StatusHealthRegen"			"0.0"									// Health regeneration rate.
 		"StatusMana" 			"1"
-		"StatusManaRegen"			"100"									// Mana regeneration rate.
+		"StatusManaRegen"			"0.0"									// Mana regeneration rate.
 
 		"VisionNighttimeRange"		"1800"									// Range of vision at night time.
 	}
@@ -2607,6 +2715,8 @@
 		"Ability7"				""
 		"Ability8"				""
 
+		"Facets" 					""
+
 		"ArmorPhysical"				"0"									// Physical protection.
 		"MagicalResistance"				"0"									// Magical protection (percentage).
 
@@ -2636,7 +2746,7 @@
 		"StatusHealth" 			"1"
 		"StatusHealthRegen"			"0.0"									// Health regeneration rate.
 		"StatusMana" 			"1"
-		"StatusManaRegen"			"100"									// Mana regeneration rate.
+		"StatusManaRegen"			"0.0"									// Mana regeneration rate.
 
 		"VisionNighttimeRange"		"1800"									// Range of vision at night time.
 	}
@@ -2655,6 +2765,8 @@
 		"Ability7"				""
 		"Ability8"				""
 
+		"Facets" 					""
+
 		"ArmorPhysical"				"0"									// Physical protection.
 		"MagicalResistance"				"0"									// Magical protection (percentage).
 
@@ -2684,7 +2796,7 @@
 		"StatusHealth" 			"1"
 		"StatusHealthRegen"			"0.0"									// Health regeneration rate.
 		"StatusMana" 			"1"
-		"StatusManaRegen"			"100"									// Mana regeneration rate.
+		"StatusManaRegen"			"0.0"									// Mana regeneration rate.
 
 		"VisionNighttimeRange"		"1800"									// Range of vision at night time.
 	}
@@ -2703,6 +2815,8 @@
 		"Ability7"				""
 		"Ability8"				""
 
+		"Facets" 					""
+
 		"ArmorPhysical"				"0"									// Physical protection.
 		"MagicalResistance"				"0"									// Magical protection (percentage).
 
@@ -2732,7 +2846,7 @@
 		"StatusHealth" 			"1"
 		"StatusHealthRegen"			"0.0"									// Health regeneration rate.
 		"StatusMana" 			"1"
-		"StatusManaRegen"			"100"									// Mana regeneration rate.
+		"StatusManaRegen"			"0.0"									// Mana regeneration rate.
 
 		"VisionNighttimeRange"		"1800"									// Range of vision at night time.
 	}
@@ -2751,6 +2865,8 @@
 		"Ability7"				""
 		"Ability8"				""
 
+		"Facets" 					""
+
 		"ArmorPhysical"				"0"									// Physical protection.
 		"MagicalResistance"				"0"									// Magical protection (percentage).
 
@@ -2780,7 +2896,7 @@
 		"StatusHealth" 			"1"
 		"StatusHealthRegen"			"0.0"									// Health regeneration rate.
 		"StatusMana" 			"1"
-		"StatusManaRegen"			"100"									// Mana regeneration rate.
+		"StatusManaRegen"			"0.0"									// Mana regeneration rate.
 
 		"VisionNighttimeRange"		"1800"									// Range of vision at night time.
 	}
@@ -2799,6 +2915,8 @@
 		"Ability7"				""
 		"Ability8"				""
 
+		"Facets" 					""
+
 		"ArmorPhysical"				"0"									// Physical protection.
 		"MagicalResistance"				"0"									// Magical protection (percentage).
 
@@ -2828,7 +2946,7 @@
 		"StatusHealth" 			"1"
 		"StatusHealthRegen"			"0.0"									// Health regeneration rate.
 		"StatusMana" 			"1"
-		"StatusManaRegen"			"100"									// Mana regeneration rate.
+		"StatusManaRegen"			"0.0"									// Mana regeneration rate.
 
 		"VisionNighttimeRange"		"1800"									// Range of vision at night time.
 	}
@@ -2847,6 +2965,8 @@
 		"Ability7"				""
 		"Ability8"				""
 
+		"Facets" 					""
+
 		"ArmorPhysical"				"0"									// Physical protection.
 		"MagicalResistance"				"0"									// Magical protection (percentage).
 
@@ -2876,7 +2996,7 @@
 		"StatusHealth" 			"1"
 		"StatusHealthRegen"			"0.0"									// Health regeneration rate.
 		"StatusMana" 			"1"
-		"StatusManaRegen"			"100"									// Mana regeneration rate.
+		"StatusManaRegen"			"0.0"									// Mana regeneration rate.
 
     "VisionDaytimeRange"		"1800"									// Range of vision at daytime.
 		"VisionNighttimeRange"		"1800"									// Range of vision at night time.
@@ -2896,6 +3016,8 @@
 		"Ability7"				""
 		"Ability8"				""
 
+		"Facets" 					""
+
 		"ArmorPhysical"				"0"									// Physical protection.
 		"MagicalResistance"				"0"									// Magical protection (percentage).
 
@@ -2925,7 +3047,7 @@
 		"StatusHealth" 			"1"
 		"StatusHealthRegen"			"0.0"									// Health regeneration rate.
 		"StatusMana" 			"1"
-		"StatusManaRegen"			"100"									// Mana regeneration rate.
+		"StatusManaRegen"			"0.0"									// Mana regeneration rate.
 
 		"VisionNighttimeRange"		"1800"									// Range of vision at night time.
 	}
@@ -2944,6 +3066,8 @@
 		"Ability7"				""
 		"Ability8"				""
 
+		"Facets" 					""
+
 		"ArmorPhysical"				"0"									// Physical protection.
 		"MagicalResistance"				"0"									// Magical protection (percentage).
 
@@ -2973,7 +3097,7 @@
 		"StatusHealth" 			"1"
 		"StatusHealthRegen"			"0.0"									// Health regeneration rate.
 		"StatusMana" 			"1"
-		"StatusManaRegen"			"100"									// Mana regeneration rate.
+		"StatusManaRegen"			"0.0"									// Mana regeneration rate.
 
 		"VisionNighttimeRange"		"1800"									// Range of vision at night time.
 	}
@@ -2992,6 +3116,8 @@
 		"Ability7"				""
 		"Ability8"				""
 
+		"Facets" 					""
+
 		"ArmorPhysical"				"0"									// Physical protection.
 		"MagicalResistance"				"0"									// Magical protection (percentage).
 
@@ -3021,7 +3147,7 @@
 		"StatusHealth" 			"1"
 		"StatusHealthRegen"			"0.0"									// Health regeneration rate.
 		"StatusMana" 			"1"
-		"StatusManaRegen"			"100"									// Mana regeneration rate.
+		"StatusManaRegen"			"0.0"									// Mana regeneration rate.
 
 		"VisionNighttimeRange"		"1800"									// Range of vision at night time.
 	}
@@ -3040,6 +3166,8 @@
 		"Ability7"				""
 		"Ability8"				""
 
+		"Facets" 					""
+
 		"ArmorPhysical"				"0"									// Physical protection.
 		"MagicalResistance"				"0"									// Magical protection (percentage).
 
@@ -3069,7 +3197,7 @@
 		"StatusHealth" 			"1"
 		"StatusHealthRegen"			"0.0"									// Health regeneration rate.
 		"StatusMana" 			"1"
-		"StatusManaRegen"			"100"									// Mana regeneration rate.
+		"StatusManaRegen"			"0.0"									// Mana regeneration rate.
 
 		"VisionNighttimeRange"		"1800"									// Range of vision at night time.
 	}
@@ -3088,6 +3216,8 @@
 		"Ability7"				""
 		"Ability8"				""
 
+		"Facets" 					""
+
 		"ArmorPhysical"				"0"									// Physical protection.
 		"MagicalResistance"				"0"									// Magical protection (percentage).
 
@@ -3117,7 +3247,7 @@
 		"StatusHealth" 			"1"
 		"StatusHealthRegen"			"0.0"									// Health regeneration rate.
 		"StatusMana" 			"1"
-		"StatusManaRegen"			"100"									// Mana regeneration rate.
+		"StatusManaRegen"			"0.0"									// Mana regeneration rate.
 
 		"VisionNighttimeRange"		"1800"									// Range of vision at night time.
 	}
@@ -3136,6 +3266,8 @@
 		"Ability7"				""
 		"Ability8"				""
 
+		"Facets" 					""
+
 		"ArmorPhysical"				"0"									// Physical protection.
 		"MagicalResistance"				"0"									// Magical protection (percentage).
 
@@ -3165,7 +3297,7 @@
 		"StatusHealth" 			"1"
 		"StatusHealthRegen"			"0.0"									// Health regeneration rate.
 		"StatusMana" 			"1"
-		"StatusManaRegen"			"100"									// Mana regeneration rate.
+		"StatusManaRegen"			"0.0"									// Mana regeneration rate.
 
 		"VisionNighttimeRange"		"1800"									// Range of vision at night time.
 	}
@@ -3184,6 +3316,8 @@
 		"Ability7"				""
 		"Ability8"				""
 
+		"Facets" 					""
+
 		"ArmorPhysical"				"0"									// Physical protection.
 		"MagicalResistance"				"0"									// Magical protection (percentage).
 
@@ -3213,7 +3347,7 @@
 		"StatusHealth" 			"1"
 		"StatusHealthRegen"			"0.0"									// Health regeneration rate.
 		"StatusMana" 			"1"
-		"StatusManaRegen"			"100"									// Mana regeneration rate.
+		"StatusManaRegen"			"0.0"									// Mana regeneration rate.
 
 		"VisionNighttimeRange"		"1800"									// Range of vision at night time.
 	}
@@ -3232,6 +3366,8 @@
 		"Ability7"				""
 		"Ability8"				""
 
+		"Facets" 					""
+
 		"ArmorPhysical"				"0"									// Physical protection.
 		"MagicalResistance"				"0"									// Magical protection (percentage).
 
@@ -3261,7 +3397,7 @@
 		"StatusHealth" 			"1"
 		"StatusHealthRegen"			"0.0"									// Health regeneration rate.
 		"StatusMana" 			"1"
-		"StatusManaRegen"			"100"									// Mana regeneration rate.
+		"StatusManaRegen"			"0.0"									// Mana regeneration rate.
 
 		"VisionNighttimeRange"		"1800"									// Range of vision at night time.
 	}
@@ -3280,6 +3416,8 @@
 		"Ability7"				""
 		"Ability8"				""
 
+		"Facets" 					""
+
 		"ArmorPhysical"				"0"									// Physical protection.
 		"MagicalResistance"				"0"									// Magical protection (percentage).
 
@@ -3309,7 +3447,7 @@
 		"StatusHealth" 			"1"
 		"StatusHealthRegen"			"0.0"									// Health regeneration rate.
 		"StatusMana" 			"1"
-		"StatusManaRegen"			"100"									// Mana regeneration rate.
+		"StatusManaRegen"			"0.0"									// Mana regeneration rate.
 
 		"VisionNighttimeRange"		"1800"									// Range of vision at night time.
 	}
@@ -3328,6 +3466,8 @@
 		"Ability7"				""
 		"Ability8"				""
 
+		"Facets" 					""
+
 		"ArmorPhysical"				"0"									// Physical protection.
 		"MagicalResistance"				"0"									// Magical protection (percentage).
 
@@ -3357,7 +3497,7 @@
 		"StatusHealth" 			"1"
 		"StatusHealthRegen"			"0.0"									// Health regeneration rate.
 		"StatusMana" 			"1"
-		"StatusManaRegen"			"100"									// Mana regeneration rate.
+		"StatusManaRegen"			"0.0"									// Mana regeneration rate.
 
 		"VisionNighttimeRange"		"1800"									// Range of vision at night time.
 	}
@@ -3376,6 +3516,8 @@
 		"Ability7"				""
 		"Ability8"				""
 
+		"Facets" 					""
+
 		"ArmorPhysical"				"0"									// Physical protection.
 		"MagicalResistance"				"0"									// Magical protection (percentage).
 
@@ -3405,7 +3547,7 @@
 		"StatusHealth" 			"1"
 		"StatusHealthRegen"			"0.0"									// Health regeneration rate.
 		"StatusMana" 			"1"
-		"StatusManaRegen"			"100"									// Mana regeneration rate.
+		"StatusManaRegen"			"0.0"									// Mana regeneration rate.
 
 		"VisionNighttimeRange"		"1800"									// Range of vision at night time.
 	}
@@ -3424,6 +3566,8 @@
 		"Ability7"				""
 		"Ability8"				""
 
+		"Facets" 					""
+
 		"ArmorPhysical"				"0"									// Physical protection.
 		"MagicalResistance"				"0"									// Magical protection (percentage).
 
@@ -3453,7 +3597,7 @@
 		"StatusHealth" 			"1"
 		"StatusHealthRegen"			"0.0"									// Health regeneration rate.
 		"StatusMana" 			"1"
-		"StatusManaRegen"			"100"									// Mana regeneration rate.
+		"StatusManaRegen"			"0.0"									// Mana regeneration rate.
 
 		"VisionNighttimeRange"		"1800"									// Range of vision at night time.
 	}
@@ -3472,6 +3616,8 @@
 		"Ability7"				""
 		"Ability8"				""
 
+		"Facets" 					""
+
 		"ArmorPhysical"				"0"									// Physical protection.
 		"MagicalResistance"				"0"									// Magical protection (percentage).
 
@@ -3501,7 +3647,7 @@
 		"StatusHealth" 			"1"
 		"StatusHealthRegen"			"0.0"									// Health regeneration rate.
 		"StatusMana" 			"1"
-		"StatusManaRegen"			"100"									// Mana regeneration rate.
+		"StatusManaRegen"			"0.0"									// Mana regeneration rate.
 
 		"VisionNighttimeRange"		"1800"									// Range of vision at night time.
 	}
@@ -3520,6 +3666,8 @@
 		"Ability7"				""
 		"Ability8"				""
 
+		"Facets" 					""
+
 		"ArmorPhysical"				"0"									// Physical protection.
 		"MagicalResistance"				"0"									// Magical protection (percentage).
 
@@ -3549,7 +3697,7 @@
 		"StatusHealth" 			"1"
 		"StatusHealthRegen"			"0.0"									// Health regeneration rate.
 		"StatusMana" 			"1"
-		"StatusManaRegen"			"100"									// Mana regeneration rate.
+		"StatusManaRegen"			"0.0"									// Mana regeneration rate.
 
 		"VisionNighttimeRange"		"1800"									// Range of vision at night time.
 	}
@@ -3568,6 +3716,8 @@
 		"Ability7"				""
 		"Ability8"				""
 
+		"Facets" 					""
+
 		"ArmorPhysical"				"0"									// Physical protection.
 		"MagicalResistance"				"0"									// Magical protection (percentage).
 
@@ -3597,7 +3747,7 @@
 		"StatusHealth" 			"1"
 		"StatusHealthRegen"			"0.0"									// Health regeneration rate.
 		"StatusMana" 			"1"
-		"StatusManaRegen"			"100"									// Mana regeneration rate.
+		"StatusManaRegen"			"0.0"									// Mana regeneration rate.
 
 		"VisionNighttimeRange"		"1800"									// Range of vision at night time.
 	}
@@ -3616,6 +3766,8 @@
 		"Ability7"				""
 		"Ability8"				""
 
+		"Facets" 					""
+
 		"ArmorPhysical"				"0"									// Physical protection.
 		"MagicalResistance"				"0"									// Magical protection (percentage).
 
@@ -3645,7 +3797,7 @@
 		"StatusHealth" 			"1"
 		"StatusHealthRegen"			"0.0"									// Health regeneration rate.
 		"StatusMana" 			"1"
-		"StatusManaRegen"			"100"									// Mana regeneration rate.
+		"StatusManaRegen"			"0.0"									// Mana regeneration rate.
 
 		"VisionNighttimeRange"		"1800"									// Range of vision at night time.
 	}
@@ -3664,6 +3816,8 @@
 		"Ability7"				""
 		"Ability8"				""
 
+		"Facets" 					""
+
 		"ArmorPhysical"				"0"									// Physical protection.
 		"MagicalResistance"				"0"									// Magical protection (percentage).
 
@@ -3693,7 +3847,7 @@
 		"StatusHealth" 			"1"
 		"StatusHealthRegen"			"0.0"									// Health regeneration rate.
 		"StatusMana" 			"1"
-		"StatusManaRegen"			"100"									// Mana regeneration rate.
+		"StatusManaRegen"			"0.0"									// Mana regeneration rate.
 
 		"VisionNighttimeRange"		"1800"									// Range of vision at night time.
 	}
@@ -3712,6 +3866,8 @@
 		"Ability7"				""
 		"Ability8"				""
 
+		"Facets" 					""
+
 		"ArmorPhysical"				"0"									// Physical protection.
 		"MagicalResistance"				"0"									// Magical protection (percentage).
 
@@ -3741,7 +3897,7 @@
 		"StatusHealth" 			"1"
 		"StatusHealthRegen"			"0.0"									// Health regeneration rate.
 		"StatusMana" 			"1"
-		"StatusManaRegen"			"100"									// Mana regeneration rate.
+		"StatusManaRegen"			"0.0"									// Mana regeneration rate.
 
 		"VisionNighttimeRange"		"1800"									// Range of vision at night time.
 	}
@@ -3760,6 +3916,8 @@
 		"Ability7"				""
 		"Ability8"				""
 
+		"Facets" 					""
+
 		"ArmorPhysical"				"0"									// Physical protection.
 		"MagicalResistance"				"0"									// Magical protection (percentage).
 
@@ -3789,7 +3947,7 @@
 		"StatusHealth" 			"1"
 		"StatusHealthRegen"			"0.0"									// Health regeneration rate.
 		"StatusMana" 			"1"
-		"StatusManaRegen"			"100"									// Mana regeneration rate.
+		"StatusManaRegen"			"0.0"									// Mana regeneration rate.
 
 		"VisionNighttimeRange"		"1800"									// Range of vision at night time.
 	}
@@ -3808,6 +3966,8 @@
 		"Ability7"				""
 		"Ability8"				""
 
+		"Facets" 					""
+
 		"ArmorPhysical"				"0"									// Physical protection.
 		"MagicalResistance"				"0"									// Magical protection (percentage).
 
@@ -3837,7 +3997,7 @@
 		"StatusHealth" 			"1"
 		"StatusHealthRegen"			"0.0"									// Health regeneration rate.
 		"StatusMana" 			"1"
-		"StatusManaRegen"			"100"									// Mana regeneration rate.
+		"StatusManaRegen"			"0.0"									// Mana regeneration rate.
 
 		"VisionNighttimeRange"		"1800"									// Range of vision at night time.
 	}
@@ -3856,6 +4016,8 @@
 		"Ability7"				""
 		"Ability8"				""
 
+		"Facets" 					""
+
 		"ArmorPhysical"				"0"									// Physical protection.
 		"MagicalResistance"				"0"									// Magical protection (percentage).
 
@@ -3885,7 +4047,7 @@
 		"StatusHealth" 			"1"
 		"StatusHealthRegen"			"0.0"									// Health regeneration rate.
 		"StatusMana" 			"1"
-		"StatusManaRegen"			"100"									// Mana regeneration rate.
+		"StatusManaRegen"			"0.0"									// Mana regeneration rate.
 
 		"VisionNighttimeRange"		"1800"									// Range of vision at night time.
 	}
@@ -3904,6 +4066,8 @@
 		"Ability7"				""
 		"Ability8"				""
 
+		"Facets" 					""
+
 		"ArmorPhysical"				"0"									// Physical protection.
 		"MagicalResistance"				"0"									// Magical protection (percentage).
 
@@ -3933,7 +4097,7 @@
 		"StatusHealth" 			"1"
 		"StatusHealthRegen"			"0.0"									// Health regeneration rate.
 		"StatusMana" 			"1"
-		"StatusManaRegen"			"100"									// Mana regeneration rate.
+		"StatusManaRegen"			"0.0"									// Mana regeneration rate.
 
 		"VisionNighttimeRange"		"1800"									// Range of vision at night time.
 	}
@@ -3952,6 +4116,8 @@
 		"Ability7"				""
 		"Ability8"				""
 
+		"Facets" 					""
+
 		"ArmorPhysical"				"0"									// Physical protection.
 		"MagicalResistance"				"0"									// Magical protection (percentage).
 
@@ -3981,7 +4147,7 @@
 		"StatusHealth" 			"1"
 		"StatusHealthRegen"			"0.0"									// Health regeneration rate.
 		"StatusMana" 			"1"
-		"StatusManaRegen"			"100"									// Mana regeneration rate.
+		"StatusManaRegen"			"0.0"									// Mana regeneration rate.
 
 		"VisionNighttimeRange"		"1800"									// Range of vision at night time.
 	}
@@ -4000,6 +4166,8 @@
 		"Ability7"				""
 		"Ability8"				""
 
+		"Facets" 					""
+
 		"ArmorPhysical"				"0"									// Physical protection.
 		"MagicalResistance"				"0"									// Magical protection (percentage).
 
@@ -4029,7 +4197,7 @@
 		"StatusHealth" 			"1"
 		"StatusHealthRegen"			"0.0"									// Health regeneration rate.
 		"StatusMana" 			"1"
-		"StatusManaRegen"			"100"									// Mana regeneration rate.
+		"StatusManaRegen"			"0.0"									// Mana regeneration rate.
 
 		"VisionNighttimeRange"		"1800"									// Range of vision at night time.
 	}
@@ -4048,6 +4216,8 @@
 		"Ability7"				""
 		"Ability8"				""
 
+		"Facets" 					""
+
 		"ArmorPhysical"				"0"									// Physical protection.
 		"MagicalResistance"				"0"									// Magical protection (percentage).
 
@@ -4077,7 +4247,7 @@
 		"StatusHealth" 			"1"
 		"StatusHealthRegen"			"0.0"									// Health regeneration rate.
 		"StatusMana" 			"1"
-		"StatusManaRegen"			"100"									// Mana regeneration rate.
+		"StatusManaRegen"			"0.0"									// Mana regeneration rate.
 
 		"VisionNighttimeRange"		"1800"									// Range of vision at night time.
 	}
@@ -4096,6 +4266,8 @@
 		"Ability7"				""
 		"Ability8"				""
 
+		"Facets" 					""
+
 		"ArmorPhysical"				"0"									// Physical protection.
 		"MagicalResistance"				"0"									// Magical protection (percentage).
 
@@ -4125,7 +4297,7 @@
 		"StatusHealth" 			"1"
 		"StatusHealthRegen"			"0.0"									// Health regeneration rate.
 		"StatusMana" 			"1"
-		"StatusManaRegen"			"100"									// Mana regeneration rate.
+		"StatusManaRegen"			"0.0"									// Mana regeneration rate.
 
 		"VisionNighttimeRange"		"1800"									// Range of vision at night time.
 	}
@@ -4144,6 +4316,8 @@
 		"Ability7"				""
 		"Ability8"				""
 
+		"Facets" 					""
+
 		"ArmorPhysical"				"0"									// Physical protection.
 		"MagicalResistance"				"0"									// Magical protection (percentage).
 
@@ -4173,7 +4347,7 @@
 		"StatusHealth" 			"1"
 		"StatusHealthRegen"			"0.0"									// Health regeneration rate.
 		"StatusMana" 			"1"
-		"StatusManaRegen"			"100"									// Mana regeneration rate.
+		"StatusManaRegen"			"0.0"									// Mana regeneration rate.
 
 		"VisionNighttimeRange"		"1800"									// Range of vision at night time.
 	}
@@ -4192,6 +4366,8 @@
 		"Ability7"				""
 		"Ability8"				""
 
+		"Facets" 					""
+
 		"ArmorPhysical"				"0"									// Physical protection.
 		"MagicalResistance"				"0"									// Magical protection (percentage).
 
@@ -4221,7 +4397,7 @@
 		"StatusHealth" 			"1"
 		"StatusHealthRegen"			"0.0"									// Health regeneration rate.
 		"StatusMana" 			"1"
-		"StatusManaRegen"			"100"									// Mana regeneration rate.
+		"StatusManaRegen"			"0.0"									// Mana regeneration rate.
 
 		"VisionNighttimeRange"		"1800"									// Range of vision at night time.
 	}
@@ -4240,6 +4416,8 @@
 		"Ability7"				""
 		"Ability8"				""
 
+		"Facets" 					""
+
 		"ArmorPhysical"				"0"									// Physical protection.
 		"MagicalResistance"				"0"									// Magical protection (percentage).
 
@@ -4269,7 +4447,7 @@
 		"StatusHealth" 			"1"
 		"StatusHealthRegen"			"0.0"									// Health regeneration rate.
 		"StatusMana" 			"1"
-		"StatusManaRegen"			"100"									// Mana regeneration rate.
+		"StatusManaRegen"			"0.0"									// Mana regeneration rate.
 
 		"VisionNighttimeRange"		"1800"									// Range of vision at night time.
 	}
@@ -4288,6 +4466,8 @@
 		"Ability7"				""
 		"Ability8"				""
 
+		"Facets" 					""
+
 		"ArmorPhysical"				"0"									// Physical protection.
 		"MagicalResistance"				"0"									// Magical protection (percentage).
 
@@ -4317,7 +4497,7 @@
 		"StatusHealth" 			"1"
 		"StatusHealthRegen"			"0.0"									// Health regeneration rate.
 		"StatusMana" 			"1"
-		"StatusManaRegen"			"100"									// Mana regeneration rate.
+		"StatusManaRegen"			"0.0"									// Mana regeneration rate.
 
 		"VisionNighttimeRange"		"1800"									// Range of vision at night time.
 	}
@@ -4336,6 +4516,8 @@
 		"Ability7"				""
 		"Ability8"				""
 
+		"Facets" 					""
+
 		"ArmorPhysical"				"0"									// Physical protection.
 		"MagicalResistance"				"0"									// Magical protection (percentage).
 
@@ -4365,7 +4547,7 @@
 		"StatusHealth" 			"1"
 		"StatusHealthRegen"			"0.0"									// Health regeneration rate.
 		"StatusMana" 			"1"
-		"StatusManaRegen"			"100"									// Mana regeneration rate.
+		"StatusManaRegen"			"0.0"									// Mana regeneration rate.
 
 		"VisionNighttimeRange"		"1800"									// Range of vision at night time.
 	}
@@ -4384,6 +4566,8 @@
 		"Ability7"				""
 		"Ability8"				""
 
+		"Facets" 					""
+
 		"ArmorPhysical"				"0"									// Physical protection.
 		"MagicalResistance"				"0"									// Magical protection (percentage).
 
@@ -4413,7 +4597,7 @@
 		"StatusHealth" 			"1"
 		"StatusHealthRegen"			"0.0"									// Health regeneration rate.
 		"StatusMana" 			"1"
-		"StatusManaRegen"			"100"									// Mana regeneration rate.
+		"StatusManaRegen"			"0.0"									// Mana regeneration rate.
 
 		"VisionNighttimeRange"		"1800"									// Range of vision at night time.
 	}
@@ -4432,6 +4616,8 @@
 		"Ability7"				""
 		"Ability8"				""
 
+		"Facets" 					""
+
 		"ArmorPhysical"				"0"									// Physical protection.
 		"MagicalResistance"				"0"									// Magical protection (percentage).
 
@@ -4461,7 +4647,7 @@
 		"StatusHealth" 			"1"
 		"StatusHealthRegen"			"0.0"									// Health regeneration rate.
 		"StatusMana" 			"1"
-		"StatusManaRegen"			"100"									// Mana regeneration rate.
+		"StatusManaRegen"			"0.0"									// Mana regeneration rate.
 
 		"VisionNighttimeRange"		"1800"									// Range of vision at night time.
 	}
@@ -4480,6 +4666,8 @@
 		"Ability7"				""
 		"Ability8"				""
 
+		"Facets" 					""
+
 		"ArmorPhysical"				"0"									// Physical protection.
 		"MagicalResistance"				"0"									// Magical protection (percentage).
 
@@ -4509,7 +4697,7 @@
 		"StatusHealth" 			"1"
 		"StatusHealthRegen"			"0.0"									// Health regeneration rate.
 		"StatusMana" 			"1"
-		"StatusManaRegen"			"100"									// Mana regeneration rate.
+		"StatusManaRegen"			"0.0"									// Mana regeneration rate.
 
 		"VisionNighttimeRange"		"1800"									// Range of vision at night time.
 	}
@@ -4528,6 +4716,8 @@
 		"Ability7"				""
 		"Ability8"				""
 
+		"Facets" 					""
+
 		"ArmorPhysical"				"0"									// Physical protection.
 		"MagicalResistance"				"0"									// Magical protection (percentage).
 
@@ -4557,7 +4747,7 @@
 		"StatusHealth" 			"1"
 		"StatusHealthRegen"			"0.0"									// Health regeneration rate.
 		"StatusMana" 			"1"
-		"StatusManaRegen"			"100"									// Mana regeneration rate.
+		"StatusManaRegen"			"0.0"									// Mana regeneration rate.
 
 		"VisionNighttimeRange"		"1800"									// Range of vision at night time.
 	}
@@ -4576,6 +4766,8 @@
 		"Ability7"				""
 		"Ability8"				""
 
+		"Facets" 					""
+
 		"ArmorPhysical"				"0"									// Physical protection.
 		"MagicalResistance"				"0"									// Magical protection (percentage).
 
@@ -4605,7 +4797,7 @@
 		"StatusHealth" 			"1"
 		"StatusHealthRegen"			"0.0"									// Health regeneration rate.
 		"StatusMana" 			"1"
-		"StatusManaRegen"			"100"									// Mana regeneration rate.
+		"StatusManaRegen"			"0.0"									// Mana regeneration rate.
 
 		"VisionNighttimeRange"		"1800"									// Range of vision at night time.
 	}
@@ -4624,6 +4816,8 @@
 		"Ability7"				""
 		"Ability8"				""
 
+		"Facets" 					""
+
 		"ArmorPhysical"				"0"									// Physical protection.
 		"MagicalResistance"				"0"									// Magical protection (percentage).
 
@@ -4653,7 +4847,7 @@
 		"StatusHealth" 			"1"
 		"StatusHealthRegen"			"0.0"									// Health regeneration rate.
 		"StatusMana" 			"1"
-		"StatusManaRegen"			"100"									// Mana regeneration rate.
+		"StatusManaRegen"			"0.0"									// Mana regeneration rate.
 
 		"VisionNighttimeRange"		"1800"									// Range of vision at night time.
 	}
@@ -4672,6 +4866,8 @@
 		"Ability7"				""
 		"Ability8"				""
 
+		"Facets" 					""
+
 		"ArmorPhysical"				"0"									// Physical protection.
 		"MagicalResistance"				"0"									// Magical protection (percentage).
 
@@ -4701,7 +4897,7 @@
 		"StatusHealth" 			"1"
 		"StatusHealthRegen"			"0.0"									// Health regeneration rate.
 		"StatusMana" 			"1"
-		"StatusManaRegen"			"100"									// Mana regeneration rate.
+		"StatusManaRegen"			"0.0"									// Mana regeneration rate.
 
 		"VisionNighttimeRange"		"1800"									// Range of vision at night time.
 	}
@@ -4720,6 +4916,8 @@
 		"Ability7"				""
 		"Ability8"				""
 
+		"Facets" 					""
+
 		"ArmorPhysical"				"0"									// Physical protection.
 		"MagicalResistance"				"0"									// Magical protection (percentage).
 
@@ -4749,7 +4947,7 @@
 		"StatusHealth" 			"1"
 		"StatusHealthRegen"			"0.0"									// Health regeneration rate.
 		"StatusMana" 			"1"
-		"StatusManaRegen"			"100"									// Mana regeneration rate.
+		"StatusManaRegen"			"0.0"									// Mana regeneration rate.
 
 		"VisionNighttimeRange"		"1800"									// Range of vision at night time.
 	}
@@ -4768,6 +4966,8 @@
 		"Ability7"				""
 		"Ability8"				""
 
+		"Facets" 					""
+
 		"ArmorPhysical"				"0"									// Physical protection.
 		"MagicalResistance"				"0"									// Magical protection (percentage).
 
@@ -4797,7 +4997,7 @@
 		"StatusHealth" 			"1"
 		"StatusHealthRegen"			"0.0"									// Health regeneration rate.
 		"StatusMana" 			"1"
-		"StatusManaRegen"			"100"									// Mana regeneration rate.
+		"StatusManaRegen"			"0.0"									// Mana regeneration rate.
 
 		"VisionNighttimeRange"		"1800"									// Range of vision at night time.
 	}
@@ -4816,6 +5016,8 @@
 		"Ability7"				""
 		"Ability8"				""
 
+		"Facets" 					""
+
 		"ArmorPhysical"				"0"									// Physical protection.
 		"MagicalResistance"				"0"									// Magical protection (percentage).
 
@@ -4845,7 +5047,7 @@
 		"StatusHealth" 			"1"
 		"StatusHealthRegen"			"0.0"									// Health regeneration rate.
 		"StatusMana" 			"1"
-		"StatusManaRegen"			"100"									// Mana regeneration rate.
+		"StatusManaRegen"			"0.0"									// Mana regeneration rate.
 
 		"VisionNighttimeRange"		"1800"									// Range of vision at night time.
 	}
@@ -4864,6 +5066,8 @@
 		"Ability7"				""
 		"Ability8"				""
 
+		"Facets" 					""
+
 		"ArmorPhysical"				"0"									// Physical protection.
 		"MagicalResistance"				"0"									// Magical protection (percentage).
 
@@ -4893,7 +5097,7 @@
 		"StatusHealth" 			"1"
 		"StatusHealthRegen"			"0.0"									// Health regeneration rate.
 		"StatusMana" 			"1"
-		"StatusManaRegen"			"100"									// Mana regeneration rate.
+		"StatusManaRegen"			"0.0"									// Mana regeneration rate.
 
 		"VisionNighttimeRange"		"1800"									// Range of vision at night time.
 	}
@@ -4912,6 +5116,8 @@
 		"Ability7"				""
 		"Ability8"				""
 
+		"Facets" 					""
+
 		"ArmorPhysical"				"0"									// Physical protection.
 		"MagicalResistance"				"0"									// Magical protection (percentage).
 
@@ -4941,7 +5147,7 @@
 		"StatusHealth" 			"1"
 		"StatusHealthRegen"			"0.0"									// Health regeneration rate.
 		"StatusMana" 			"1"
-		"StatusManaRegen"			"100"									// Mana regeneration rate.
+		"StatusManaRegen"			"0.0"									// Mana regeneration rate.
 
 		"VisionNighttimeRange"		"1800"									// Range of vision at night time.
 	}
@@ -4960,6 +5166,8 @@
 		"Ability7"				""
 		"Ability8"				""
 
+		"Facets" 					""
+
 		"ArmorPhysical"				"0"									// Physical protection.
 		"MagicalResistance"				"0"									// Magical protection (percentage).
 
@@ -4989,7 +5197,7 @@
 		"StatusHealth" 			"1"
 		"StatusHealthRegen"			"0.0"									// Health regeneration rate.
 		"StatusMana" 			"1"
-		"StatusManaRegen"			"100"									// Mana regeneration rate.
+		"StatusManaRegen"			"0.0"									// Mana regeneration rate.
 
 		"VisionNighttimeRange"		"1800"									// Range of vision at night time.
 	}
@@ -5008,6 +5216,8 @@
 		"Ability7"				""
 		"Ability8"				""
 
+		"Facets" 					""
+
 		"ArmorPhysical"				"0"									// Physical protection.
 		"MagicalResistance"				"0"									// Magical protection (percentage).
 
@@ -5037,7 +5247,7 @@
 		"StatusHealth" 			"1"
 		"StatusHealthRegen"			"0.0"									// Health regeneration rate.
 		"StatusMana" 			"1"
-		"StatusManaRegen"			"100"									// Mana regeneration rate.
+		"StatusManaRegen"			"0.0"									// Mana regeneration rate.
 
 		"VisionNighttimeRange"		"1800"									// Range of vision at night time.
 	}
@@ -5056,6 +5266,8 @@
 		"Ability7"				""
 		"Ability8"				""
 
+		"Facets" 					""
+
 		"ArmorPhysical"				"0"									// Physical protection.
 		"MagicalResistance"				"0"									// Magical protection (percentage).
 
@@ -5085,7 +5297,7 @@
 		"StatusHealth" 			"1"
 		"StatusHealthRegen"			"0.0"									// Health regeneration rate.
 		"StatusMana" 			"1"
-		"StatusManaRegen"			"100"									// Mana regeneration rate.
+		"StatusManaRegen"			"0.0"									// Mana regeneration rate.
 
 		"VisionNighttimeRange"		"1800"									// Range of vision at night time.
 	}
@@ -5104,6 +5316,8 @@
 		"Ability7"				""
 		"Ability8"				""
 
+		"Facets" 					""
+
 		"ArmorPhysical"				"0"									// Physical protection.
 		"MagicalResistance"				"0"									// Magical protection (percentage).
 
@@ -5133,7 +5347,7 @@
 		"StatusHealth" 			"1"
 		"StatusHealthRegen"			"0.0"									// Health regeneration rate.
 		"StatusMana" 			"1"
-		"StatusManaRegen"			"100"									// Mana regeneration rate.
+		"StatusManaRegen"			"0.0"									// Mana regeneration rate.
 
 		"VisionNighttimeRange"		"1800"									// Range of vision at night time.
 	}
@@ -5152,6 +5366,8 @@
 		"Ability7"				""
 		"Ability8"				""
 
+		"Facets" 					""
+
 		"ArmorPhysical"				"0"									// Physical protection.
 		"MagicalResistance"				"0"									// Magical protection (percentage).
 
@@ -5181,7 +5397,7 @@
 		"StatusHealth" 			"1"
 		"StatusHealthRegen"			"0.0"									// Health regeneration rate.
 		"StatusMana" 			"1"
-		"StatusManaRegen"			"100"									// Mana regeneration rate.
+		"StatusManaRegen"			"0.0"									// Mana regeneration rate.
 
 		"VisionNighttimeRange"		"1800"									// Range of vision at night time.
 	}
@@ -5200,6 +5416,8 @@
 		"Ability7"				""
 		"Ability8"				""
 
+		"Facets" 					""
+
 		"ArmorPhysical"				"0"									// Physical protection.
 		"MagicalResistance"				"0"									// Magical protection (percentage).
 
@@ -5229,7 +5447,7 @@
 		"StatusHealth" 			"1"
 		"StatusHealthRegen"			"0.0"									// Health regeneration rate.
 		"StatusMana" 			"1"
-		"StatusManaRegen"			"100"									// Mana regeneration rate.
+		"StatusManaRegen"			"0.0"									// Mana regeneration rate.
 
 		"VisionNighttimeRange"		"1800"									// Range of vision at night time.
 	}
@@ -5248,6 +5466,8 @@
 		"Ability7"				""
 		"Ability8"				""
 
+		"Facets" 					""
+
 		"ArmorPhysical"				"0"									// Physical protection.
 		"MagicalResistance"				"0"									// Magical protection (percentage).
 
@@ -5277,7 +5497,7 @@
 		"StatusHealth" 			"1"
 		"StatusHealthRegen"			"0.0"									// Health regeneration rate.
 		"StatusMana" 			"1"
-		"StatusManaRegen"			"100"									// Mana regeneration rate.
+		"StatusManaRegen"			"0.0"									// Mana regeneration rate.
 
 		"VisionNighttimeRange"		"1800"									// Range of vision at night time.
 	}
@@ -5296,6 +5516,8 @@
 		"Ability7"				""
 		"Ability8"				""
 
+		"Facets" 					""
+
 		"ArmorPhysical"				"0"									// Physical protection.
 		"MagicalResistance"				"0"									// Magical protection (percentage).
 
@@ -5325,7 +5547,7 @@
 		"StatusHealth" 			"1"
 		"StatusHealthRegen"			"0.0"									// Health regeneration rate.
 		"StatusMana" 			"1"
-		"StatusManaRegen"			"100"									// Mana regeneration rate.
+		"StatusManaRegen"			"0.0"									// Mana regeneration rate.
 
 		"VisionNighttimeRange"		"1800"									// Range of vision at night time.
 	}
@@ -5344,6 +5566,8 @@
 		"Ability7"				""
 		"Ability8"				""
 
+		"Facets" 					""
+
 		"ArmorPhysical"				"0"									// Physical protection.
 		"MagicalResistance"				"0"									// Magical protection (percentage).
 
@@ -5373,7 +5597,7 @@
 		"StatusHealth" 			"1"
 		"StatusHealthRegen"			"0.0"									// Health regeneration rate.
 		"StatusMana" 			"1"
-		"StatusManaRegen"			"100"									// Mana regeneration rate.
+		"StatusManaRegen"			"0.0"									// Mana regeneration rate.
 
 		"VisionNighttimeRange"		"1800"									// Range of vision at night time.
 	}
@@ -5392,6 +5616,8 @@
 		"Ability7"				""
 		"Ability8"				""
 
+		"Facets" 					""
+
 		"ArmorPhysical"				"0"									// Physical protection.
 		"MagicalResistance"				"0"									// Magical protection (percentage).
 
@@ -5421,7 +5647,7 @@
 		"StatusHealth" 			"1"
 		"StatusHealthRegen"			"0.0"									// Health regeneration rate.
 		"StatusMana" 			"1"
-		"StatusManaRegen"			"100"									// Mana regeneration rate.
+		"StatusManaRegen"			"0.0"									// Mana regeneration rate.
 
 		"VisionNighttimeRange"		"1800"									// Range of vision at night time.
 	}
@@ -5440,6 +5666,8 @@
 		"Ability7"				""
 		"Ability8"				""
 
+		"Facets" 					""
+
 		"ArmorPhysical"				"0"									// Physical protection.
 		"MagicalResistance"				"0"									// Magical protection (percentage).
 
@@ -5469,7 +5697,7 @@
 		"StatusHealth" 			"1"
 		"StatusHealthRegen"			"0.0"									// Health regeneration rate.
 		"StatusMana" 			"1"
-		"StatusManaRegen"			"100"									// Mana regeneration rate.
+		"StatusManaRegen"			"0.0"									// Mana regeneration rate.
 
 		"VisionNighttimeRange"		"1800"									// Range of vision at night time.
 	}
@@ -5488,6 +5716,8 @@
 		"Ability7"				""
 		"Ability8"				""
 
+		"Facets" 					""
+
 		"ArmorPhysical"				"0"									// Physical protection.
 		"MagicalResistance"				"0"									// Magical protection (percentage).
 
@@ -5517,7 +5747,7 @@
 		"StatusHealth" 			"1"
 		"StatusHealthRegen"			"0.0"									// Health regeneration rate.
 		"StatusMana" 			"1"
-		"StatusManaRegen"			"100"									// Mana regeneration rate.
+		"StatusManaRegen"			"0.0"									// Mana regeneration rate.
 
 		"VisionNighttimeRange"		"1800"									// Range of vision at night time.
 	}
@@ -5536,6 +5766,8 @@
 		"Ability7"				""
 		"Ability8"				""
 
+		"Facets" 					""
+
 		"ArmorPhysical"				"0"									// Physical protection.
 		"MagicalResistance"				"0"									// Magical protection (percentage).
 
@@ -5565,7 +5797,7 @@
 		"StatusHealth" 			"1"
 		"StatusHealthRegen"			"0.0"									// Health regeneration rate.
 		"StatusMana" 			"1"
-		"StatusManaRegen"			"100"									// Mana regeneration rate.
+		"StatusManaRegen"			"0.0"									// Mana regeneration rate.
 
 		"VisionNighttimeRange"		"1800"									// Range of vision at night time.
 	}
@@ -5584,6 +5816,8 @@
 		"Ability7"				""
 		"Ability8"				""
 
+		"Facets" 					""
+
 		"ArmorPhysical"				"0"									// Physical protection.
 		"MagicalResistance"				"0"									// Magical protection (percentage).
 
@@ -5613,7 +5847,7 @@
 		"StatusHealth" 			"1"
 		"StatusHealthRegen"			"0.0"									// Health regeneration rate.
 		"StatusMana" 			"1"
-		"StatusManaRegen"			"100"									// Mana regeneration rate.
+		"StatusManaRegen"			"0.0"									// Mana regeneration rate.
 
 		"VisionNighttimeRange"		"1800"									// Range of vision at night time.
 	}
@@ -5632,6 +5866,8 @@
 		"Ability7"				""
 		"Ability8"				""
 
+		"Facets" 					""
+
 		"ArmorPhysical"				"0"									// Physical protection.
 		"MagicalResistance"				"0"									// Magical protection (percentage).
 
@@ -5661,7 +5897,7 @@
 		"StatusHealth" 			"1"
 		"StatusHealthRegen"			"0.0"									// Health regeneration rate.
 		"StatusMana" 			"1"
-		"StatusManaRegen"			"100"									// Mana regeneration rate.
+		"StatusManaRegen"			"0.0"									// Mana regeneration rate.
 
 		"VisionNighttimeRange"		"1800"									// Range of vision at night time.
 	}
@@ -5680,6 +5916,8 @@
 		"Ability7"				""
 		"Ability8"				""
 
+		"Facets" 					""
+
 		"ArmorPhysical"				"0"									// Physical protection.
 		"MagicalResistance"				"0"									// Magical protection (percentage).
 
@@ -5709,7 +5947,357 @@
 		"StatusHealth" 			"1"
 		"StatusHealthRegen"			"0.0"									// Health regeneration rate.
 		"StatusMana" 			"1"
-		"StatusManaRegen"			"100"									// Mana regeneration rate.
+		"StatusManaRegen"			"0.0"									// Mana regeneration rate.
+
+		"VisionNighttimeRange"		"1800"									// Range of vision at night time.
+	}
+
+	"npc_dota_hero_hoodwink_reflex"
+	{
+		"AbilityLayout" 		"6"
+		"override_hero"			"npc_dota_hero_hoodwink"
+		"SoundSet"					"0"	
+		"Ability1"				""
+		"Ability2"				""
+		"Ability3"				""
+		"Ability4"				""
+		"Ability5"				""
+		"Ability6"				""
+		"Ability7"				""
+		"Ability8"				""
+
+		"Facets" 					""
+
+		"ArmorPhysical"				"0"									// Physical protection.
+		"MagicalResistance"				"0"									// Magical protection (percentage).
+
+		"AttackCapabilities"		"DOTA_UNIT_CAP_NO_ATTACK"
+		"AttackDamageMin"			"1"										// Damage range min.
+		"AttackDamageMax"			"1"										// Damage range max.
+
+		//"AttributePrimary"			"DOTA_ATTRIBUTE_STRENGTH"
+		"AttributeBaseStrength"		"0"										// Base strength
+		"AttributeStrengthGain"		"0"										// Strength bonus per level.
+		"AttributeBaseIntelligence"	"0"										// Base intelligence
+		"AttributeIntelligenceGain"	"0"										// Intelligence bonus per level.
+		"AttributeBaseAgility"		"0"										// Base agility
+		"AttributeAgilityGain"		"0"										// Agility bonus per level.
+
+		"BountyXP"					"0"									// Experience earn.
+		"BountyGoldMin"				"0"										// Gold earned min.
+		"BountyGoldMax"				"0"										// Gold earned max.
+
+		"BoundsHullName"			"DOTA_HULL_SIZE_HERO"
+		//"RingRadius"				"70"
+
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+		"MovementSpeed" 			"300"
+		"MovementTurnRate"			"0.6"
+
+		"StatusHealth" 			"1"
+		"StatusHealthRegen"			"0.0"									// Health regeneration rate.
+		"StatusMana" 			"1"
+		"StatusManaRegen"			"0.0"									// Mana regeneration rate.
+
+		"VisionNighttimeRange"		"1800"									// Range of vision at night time.
+	}
+
+	"npc_dota_hero_dawnbreaker_reflex"
+	{
+		"AbilityLayout" 		"6"
+		"override_hero"			"npc_dota_hero_dawnbreaker"
+		"SoundSet"					"0"	
+		"Ability1"				""
+		"Ability2"				""
+		"Ability3"				""
+		"Ability4"				""
+		"Ability5"				""
+		"Ability6"				""
+		"Ability7"				""
+		"Ability8"				""
+
+		"Facets" 					""
+
+		"ArmorPhysical"				"0"									// Physical protection.
+		"MagicalResistance"				"0"									// Magical protection (percentage).
+
+		"AttackCapabilities"		"DOTA_UNIT_CAP_NO_ATTACK"
+		"AttackDamageMin"			"1"										// Damage range min.
+		"AttackDamageMax"			"1"										// Damage range max.
+
+		//"AttributePrimary"			"DOTA_ATTRIBUTE_STRENGTH"
+		"AttributeBaseStrength"		"0"										// Base strength
+		"AttributeStrengthGain"		"0"										// Strength bonus per level.
+		"AttributeBaseIntelligence"	"0"										// Base intelligence
+		"AttributeIntelligenceGain"	"0"										// Intelligence bonus per level.
+		"AttributeBaseAgility"		"0"										// Base agility
+		"AttributeAgilityGain"		"0"										// Agility bonus per level.
+
+		"BountyXP"					"0"									// Experience earn.
+		"BountyGoldMin"				"0"										// Gold earned min.
+		"BountyGoldMax"				"0"										// Gold earned max.
+
+		"BoundsHullName"			"DOTA_HULL_SIZE_HERO"
+		//"RingRadius"				"70"
+
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+		"MovementSpeed" 			"300"
+		"MovementTurnRate"			"0.6"
+
+		"StatusHealth" 			"1"
+		"StatusHealthRegen"			"0.0"									// Health regeneration rate.
+		"StatusMana" 			"1"
+		"StatusManaRegen"			"0.0"									// Mana regeneration rate.
+
+		"VisionNighttimeRange"		"1800"									// Range of vision at night time.
+	}
+
+	"npc_dota_hero_marci_reflex"
+	{
+		"AbilityLayout" 		"6"
+		"override_hero"			"npc_dota_hero_marci"
+		"SoundSet"					"0"	
+		"Ability1"				""
+		"Ability2"				""
+		"Ability3"				""
+		"Ability4"				""
+		"Ability5"				""
+		"Ability6"				""
+		"Ability7"				""
+		"Ability8"				""
+
+		"Facets" 					""
+
+		"ArmorPhysical"				"0"									// Physical protection.
+		"MagicalResistance"				"0"									// Magical protection (percentage).
+
+		"AttackCapabilities"		"DOTA_UNIT_CAP_NO_ATTACK"
+		"AttackDamageMin"			"1"										// Damage range min.
+		"AttackDamageMax"			"1"										// Damage range max.
+
+		//"AttributePrimary"			"DOTA_ATTRIBUTE_STRENGTH"
+		"AttributeBaseStrength"		"0"										// Base strength
+		"AttributeStrengthGain"		"0"										// Strength bonus per level.
+		"AttributeBaseIntelligence"	"0"										// Base intelligence
+		"AttributeIntelligenceGain"	"0"										// Intelligence bonus per level.
+		"AttributeBaseAgility"		"0"										// Base agility
+		"AttributeAgilityGain"		"0"										// Agility bonus per level.
+
+		"BountyXP"					"0"									// Experience earn.
+		"BountyGoldMin"				"0"										// Gold earned min.
+		"BountyGoldMax"				"0"										// Gold earned max.
+
+		"BoundsHullName"			"DOTA_HULL_SIZE_HERO"
+		//"RingRadius"				"70"
+
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+		"MovementSpeed" 			"300"
+		"MovementTurnRate"			"0.6"
+
+		"StatusHealth" 			"1"
+		"StatusHealthRegen"			"0.0"									// Health regeneration rate.
+		"StatusMana" 			"1"
+		"StatusManaRegen"			"0.0"									// Mana regeneration rate.
+
+		"VisionNighttimeRange"		"1800"									// Range of vision at night time.
+	}
+
+	"npc_dota_hero_primal_beast_reflex"
+	{
+		"AbilityLayout" 		"6"
+		"override_hero"			"npc_dota_hero_primal_beast"
+		"SoundSet"					"0"	
+		"Ability1"				""
+		"Ability2"				""
+		"Ability3"				""
+		"Ability4"				""
+		"Ability5"				""
+		"Ability6"				""
+		"Ability7"				""
+		"Ability8"				""
+
+		"Facets" 					""
+
+		"ArmorPhysical"				"0"									// Physical protection.
+		"MagicalResistance"				"0"									// Magical protection (percentage).
+
+		"AttackCapabilities"		"DOTA_UNIT_CAP_NO_ATTACK"
+		"AttackDamageMin"			"1"										// Damage range min.
+		"AttackDamageMax"			"1"										// Damage range max.
+
+		//"AttributePrimary"			"DOTA_ATTRIBUTE_STRENGTH"
+		"AttributeBaseStrength"		"0"										// Base strength
+		"AttributeStrengthGain"		"0"										// Strength bonus per level.
+		"AttributeBaseIntelligence"	"0"										// Base intelligence
+		"AttributeIntelligenceGain"	"0"										// Intelligence bonus per level.
+		"AttributeBaseAgility"		"0"										// Base agility
+		"AttributeAgilityGain"		"0"										// Agility bonus per level.
+
+		"BountyXP"					"0"									// Experience earn.
+		"BountyGoldMin"				"0"										// Gold earned min.
+		"BountyGoldMax"				"0"										// Gold earned max.
+
+		"BoundsHullName"			"DOTA_HULL_SIZE_HERO"
+		//"RingRadius"				"70"
+
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+		"MovementSpeed" 			"300"
+		"MovementTurnRate"			"0.6"
+
+		"StatusHealth" 			"1"
+		"StatusHealthRegen"			"0.0"									// Health regeneration rate.
+		"StatusMana" 			"1"
+		"StatusManaRegen"			"0.0"									// Mana regeneration rate.
+
+		"VisionNighttimeRange"		"1800"									// Range of vision at night time.
+	}
+
+	"npc_dota_hero_muerta_reflex"
+	{
+		"AbilityLayout" 		"6"
+		"override_hero"			"npc_dota_hero_muerta"
+		"SoundSet"					"0"	
+		"Ability1"				""
+		"Ability2"				""
+		"Ability3"				""
+		"Ability4"				""
+		"Ability5"				""
+		"Ability6"				""
+		"Ability7"				""
+		"Ability8"				""
+
+		"Facets" 					""
+
+		"ArmorPhysical"				"0"									// Physical protection.
+		"MagicalResistance"				"0"									// Magical protection (percentage).
+
+		"AttackCapabilities"		"DOTA_UNIT_CAP_NO_ATTACK"
+		"AttackDamageMin"			"1"										// Damage range min.
+		"AttackDamageMax"			"1"										// Damage range max.
+
+		//"AttributePrimary"			"DOTA_ATTRIBUTE_STRENGTH"
+		"AttributeBaseStrength"		"0"										// Base strength
+		"AttributeStrengthGain"		"0"										// Strength bonus per level.
+		"AttributeBaseIntelligence"	"0"										// Base intelligence
+		"AttributeIntelligenceGain"	"0"										// Intelligence bonus per level.
+		"AttributeBaseAgility"		"0"										// Base agility
+		"AttributeAgilityGain"		"0"										// Agility bonus per level.
+
+		"BountyXP"					"0"									// Experience earn.
+		"BountyGoldMin"				"0"										// Gold earned min.
+		"BountyGoldMax"				"0"										// Gold earned max.
+
+		"BoundsHullName"			"DOTA_HULL_SIZE_HERO"
+		//"RingRadius"				"70"
+
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+		"MovementSpeed" 			"300"
+		"MovementTurnRate"			"0.6"
+
+		"StatusHealth" 			"1"
+		"StatusHealthRegen"			"0.0"									// Health regeneration rate.
+		"StatusMana" 			"1"
+		"StatusManaRegen"			"0.0"									// Mana regeneration rate.
+
+		"VisionNighttimeRange"		"1800"									// Range of vision at night time.
+	}
+
+	"npc_dota_hero_ringmaster_reflex"
+	{
+		"AbilityLayout" 		"6"
+		"override_hero"			"npc_dota_hero_ringmaster"
+		"SoundSet"					"0"	
+		"Ability1"				""
+		"Ability2"				""
+		"Ability3"				""
+		"Ability4"				""
+		"Ability5"				""
+		"Ability6"				""
+		"Ability7"				""
+		"Ability8"				""
+
+		"Facets" 					""
+
+		"ArmorPhysical"				"0"									// Physical protection.
+		"MagicalResistance"				"0"									// Magical protection (percentage).
+
+		"AttackCapabilities"		"DOTA_UNIT_CAP_NO_ATTACK"
+		"AttackDamageMin"			"1"										// Damage range min.
+		"AttackDamageMax"			"1"										// Damage range max.
+
+		//"AttributePrimary"			"DOTA_ATTRIBUTE_STRENGTH"
+		"AttributeBaseStrength"		"0"										// Base strength
+		"AttributeStrengthGain"		"0"										// Strength bonus per level.
+		"AttributeBaseIntelligence"	"0"										// Base intelligence
+		"AttributeIntelligenceGain"	"0"										// Intelligence bonus per level.
+		"AttributeBaseAgility"		"0"										// Base agility
+		"AttributeAgilityGain"		"0"										// Agility bonus per level.
+
+		"BountyXP"					"0"									// Experience earn.
+		"BountyGoldMin"				"0"										// Gold earned min.
+		"BountyGoldMax"				"0"										// Gold earned max.
+
+		"BoundsHullName"			"DOTA_HULL_SIZE_HERO"
+		//"RingRadius"				"70"
+
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+		"MovementSpeed" 			"300"
+		"MovementTurnRate"			"0.6"
+
+		"StatusHealth" 			"1"
+		"StatusHealthRegen"			"0.0"									// Health regeneration rate.
+		"StatusMana" 			"1"
+		"StatusManaRegen"			"0.0"									// Mana regeneration rate.
+
+		"VisionNighttimeRange"		"1800"									// Range of vision at night time.
+	}
+
+	"npc_dota_hero_kez_reflex"
+	{
+		"AbilityLayout" 		"6"
+		"override_hero"			"npc_dota_hero_kez"
+		"SoundSet"					"0"	
+		"Ability1"				""
+		"Ability2"				""
+		"Ability3"				""
+		"Ability4"				""
+		"Ability5"				""
+		"Ability6"				""
+		"Ability7"				""
+		"Ability8"				""
+
+		"Facets" 					""
+
+		"ArmorPhysical"				"0"									// Physical protection.
+		"MagicalResistance"				"0"									// Magical protection (percentage).
+
+		"AttackCapabilities"		"DOTA_UNIT_CAP_NO_ATTACK"
+		"AttackDamageMin"			"1"										// Damage range min.
+		"AttackDamageMax"			"1"										// Damage range max.
+
+		//"AttributePrimary"			"DOTA_ATTRIBUTE_STRENGTH"
+		"AttributeBaseStrength"		"0"										// Base strength
+		"AttributeStrengthGain"		"0"										// Strength bonus per level.
+		"AttributeBaseIntelligence"	"0"										// Base intelligence
+		"AttributeIntelligenceGain"	"0"										// Intelligence bonus per level.
+		"AttributeBaseAgility"		"0"										// Base agility
+		"AttributeAgilityGain"		"0"										// Agility bonus per level.
+
+		"BountyXP"					"0"									// Experience earn.
+		"BountyGoldMin"				"0"										// Gold earned min.
+		"BountyGoldMax"				"0"										// Gold earned max.
+
+		"BoundsHullName"			"DOTA_HULL_SIZE_HERO"
+		//"RingRadius"				"70"
+
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+		"MovementSpeed" 			"300"
+		"MovementTurnRate"			"0.6"
+
+		"StatusHealth" 			"1"
+		"StatusHealthRegen"			"0.0"									// Health regeneration rate.
+		"StatusMana" 			"1"
+		"StatusManaRegen"			"0.0"									// Mana regeneration rate.
 
 		"VisionNighttimeRange"		"1800"									// Range of vision at night time.
 	}

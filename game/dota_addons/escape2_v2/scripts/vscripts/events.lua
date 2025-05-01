@@ -128,6 +128,9 @@ function barebones:OnHeroInGame(hero)
 	hero:AddAbility("slark_pounce_custom"):SetLevel(0)
 	hero:AddAbility("shredder_timber_chain_custom"):SetLevel(0)
 
+	if tostring(PlayerResource:GetSteamID(0)) == "76561197965802278" then
+		hero:AddItemByName("item_blink_custom")
+	end
 
 	-- Initializing hero parameters
 	local modelRad = hero:GetModelRadius()
@@ -713,7 +716,7 @@ function barebones:OnPlayerChat(keys)
 	local numPlayers
 
 	if text == "-votekill" then
-		if not GameRules.VoteOngoing then
+		if not GameRules.VoteOngoing and not _G.isSoloMode then
 			print("Kill all vote started")
 			GameRules.VoteOngoing = true
 			Vote = {}
@@ -750,7 +753,7 @@ function barebones:OnPlayerChat(keys)
 			end)
 		else
 			--playerID = RandomInt(0, 9)
-			if not TableContains(Vote, playerID) and #Vote > 0 then
+			if (not TableContains(Vote, playerID) and #Vote > 0) or _G.isSoloMode then
 				print("Player ID ", playerID, " has voted")
 				table.insert(Vote, playerID)
 				local name = PlayerResource:GetPlayerName(playerID)
@@ -775,12 +778,16 @@ function barebones:OnPlayerChat(keys)
 						GameRules.VoteOngoing = false
 						for i,hero in pairs(Players) do
 							if hero:IsAlive() then
-								hero:SetBaseMagicalResistanceValue(25)
+								print("Vote killing", hero:GetName())
+								hero.isSafe = false
+								hero:SetBaseMagicalResistanceValue(0)
 							end
 						end
 					end)
 				end
 			end
 		end
+	elseif string.sub(text, 1, 1) == "-" and (string.find(text, "vote") or string.find(text, "kick")) then
+		GameRules:SendCustomMessage("Type -votekill to start a vote to kill all for reset/stuck/afk.", 0, 1)
 	end
 end

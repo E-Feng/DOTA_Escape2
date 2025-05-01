@@ -2,175 +2,6 @@
 
 "DOTAAbilities"
 {
-	//Shield
-	"item_example_item"
-	{
-		"ID"              			"1836"
-		"AbilityBehavior"       	"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"
-		"AbilityUnitTargetTeam"     "DOTA_UNIT_TARGET_TEAM_ENEMY"
-		"AbilityUnitTargetType"     "DOTA_UNIT_TARGET_HERO"
-		"BaseClass"           		"item_datadriven"
-		"AbilityCastAnimation"      "ACT_DOTA_DISABLED"
-		"AbilityTextureName"		"item_example_item"
-
-		// Stats
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCastRange"			"900"
-		"AbilityCastPoint"			"0.2"
-		"AbilityCooldown"			"13.0"
-
-		// Item Info
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityManaCost"			"100"
-		"ItemCost"					"750"
-
-		"ItemPurchasable" 			"1"
-		"ItemDroppable"				"1"
-		"ItemSellable"				"1"
-
-		"ItemShareability"			"ITEM_NOT_SHAREABLE"
-
-		"precache"
-		{
-			"particle"				"particles/frostivus_herofx/queen_shadow_strike_linear_parent.vpcf"
-			"particle_folder"		"particles/test_particle"
-			"soundfile"				"soundevents/game_sounds_heroes/game_sounds_abaddon.vsndevts"
-		}
-
-		"OnSpellStart"
-		{
-			"LinearProjectile"
-			{
-				"EffectName"		"particles/frostivus_herofx/queen_shadow_strike_linear_parent.vpcf"
-				"MoveSpeed"			"%speed"
-				"FixedDistance"		"%distance"
-				"StartRadius"		"%radius"
-				"EndRadius"			"%radius"
-				"TargetTeams"		"DOTA_UNIT_TARGET_TEAM_ENEMY"
-				"TargetTypes"		"DOTA_UNIT_TARGET_HERO"
-				"TargetFlags"		"DOTA_UNIT_TARGET_FLAG_NONE"
-				"HasFrontalCone"	"0"
-				"ProvidesVision"	"0"
-				"VisionRadius"		"0"
-			}
-
-			"FireSound"
-			{
-				"EffectName"		"Hero_Abaddon.AphoticShield.Cast"
-				"Target"			"CASTER"
-			}
-
-			"ApplyModifier"
-			{
-				"Target"			"CASTER"
-				"ModifierName"		"modifier_item_shield"
-			}
-		}
-		
-		"OnProjectileHitUnit"
-		{     
-			"DeleteOnHit"			"0"
-
-			"Damage"
-			{
-				"Target"			"TARGET"
-				"Type"				"DAMAGE_TYPE_PURE"
-				"Damage"			"%damage"
-			}
-		}
-
-		"Modifiers"
-		{
-			"modifier_item_shield"
-			{
-				"IsHidden"			"0"
-				"IsBuff"			"1"
-				"IsPurgable"		"1"
-
-				"EffectName"		"particles/test_particle/damage_immunity.vpcf"
-				"EffectAttachType"	"follow_origin"
-				"Target"			"CASTER"
-			
-				"Duration"			"%duration"
-				"TextureName"		"abaddon_aphotic_shield"
-
-				"Properties"
-				{
-					"MODIFIER_PROPERTY_INCOMING_DAMAGE_PERCENTAGE"		"%damage_reduction"
-				}
-			}
-
-			"modifier_item_example_passive"
-			{
-				"Passive"			"1"
-				"IsHidden"			"1"
-				"IsBuff"			"1"
-				"IsPurgable"		"0"
-
-				"Attributes"		"MODIFIER_ATTRIBUTE_MULTIPLE" // This makes duplicate items stack their properties
-
-				"Properties"
-				{
-					"MODIFIER_PROPERTY_STATS_AGILITY_BONUS"    		"%bonus_agi"
-					"MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE"    	"%bonus_damage"
-				}
-			}
-		}
-		
-		// Special  
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilitySpecial"
-		{
-			"01"
-			{
-				"var_type"			"FIELD_INTEGER"
-				"duration"			"4"
-			}
-
-			"02"
-			{
-				"var_type"			"FIELD_INTEGER"
-				"damage_reduction"	"-50"
-			}
-
-			"03"
-			{
-				"var_type"			"FIELD_INTEGER"
-				"radius"			"150"
-			}
-
-			"04"
-			{
-				"var_type"			"FIELD_INTEGER"
-				"speed"				"1800"
-			}
-
-			"05"
-			{
-				"var_type"			"FIELD_INTEGER"
-				"distance"			"900"
-			}
-
-			"06"
-			{
-				"var_type"			"FIELD_INTEGER"
-				"damage"			"125"
-			}
-
-			"07"
-			{
-				"var_type"			"FIELD_INTEGER"
-				"bonus_agi"			"13"
-			}
-
-			"08"
-			{
-				"var_type"			"FIELD_INTEGER"
-				"bonus_damage"		"33"
-			}
-		}
-	}
-
   // Custom Mango
   "item_mango_custom"
   {
@@ -210,20 +41,11 @@
     "AbilityCooldown"               "0"
     "AbilityManaCost"               "0"   
     
-    "AbilitySpecial"
+    "AbilityValues"
     {
-        "01"
-        {
-            "var_type"              "FIELD_INTEGER"
-            "mana_amount"           "1"
-        }
-        "02"
-        {
-            "var_type"              "FIELD_INTEGER"
-            "range_tooltip"         "400"
-        }        
-
-    }
+      "mana_amount"                   "1"
+      "range_tooltip"                   "400"
+    }  
 
     "OnSpellStart"
     {
@@ -296,14 +118,10 @@
     "AbilityCooldown"               "0"
     "AbilityManaCost"               "0"   
     
-    "AbilitySpecial"
+    "AbilityValues"
     {
-        "01"
-        {
-            "var_type"              "FIELD_INTEGER"
-            "life_gained"           "1"
-        }
-    }
+      "life_gained"                   "1"
+    }  
 
     "OnSpellStart"
     {
@@ -341,4 +159,40 @@
       }
     }  
   }	
+
+  
+  // Custom blink for easy debugging
+  "item_blink_custom"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+    "BaseClass"                 "item_blink"
+
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_DIRECTIONAL | DOTA_ABILITY_BEHAVIOR_ROOT_DISABLES"
+
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"99999"
+		"AbilityCastPoint"				"0.0"
+		"AbilityCooldown"				"0"
+		"AbilityManaCost"				"0"
+		"AbilitySharedCooldown"			"blink"
+		
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"0"
+		"ItemShopTags"					"teleport"
+		"ItemQuality"					"component"
+		"ItemAliases"					"blink dagger"
+		//"SideShop"						"1"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ShouldBeSuggested"				"1"
+		
+    "AbilityValues"
+    {
+      "blink_range"                   "999999"
+      "blink_damage_cooldown"                   "0"
+      "blink_range_clamp"                   "999999"    
+    }  
+	}
 }
